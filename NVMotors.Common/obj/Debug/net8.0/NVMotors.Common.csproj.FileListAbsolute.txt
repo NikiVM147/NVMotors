@@ -1,0 +1,15 @@
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Common\bin\Debug\net8.0\NVMotors.Common.deps.json
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Common\bin\Debug\net8.0\NVMotors.Common.runtimeconfig.json
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Common\bin\Debug\net8.0\NVMotors.Common.dll
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Common\bin\Debug\net8.0\NVMotors.Common.pdb
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Common\obj\Debug\net8.0\NVMotors.Common.csproj.AssemblyReference.cache
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Common\obj\Debug\net8.0\NVMotors.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Common\obj\Debug\net8.0\NVMotors.Common.AssemblyInfoInputs.cache
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Common\obj\Debug\net8.0\NVMotors.Common.AssemblyInfo.cs
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Common\obj\Debug\net8.0\NVMotors.Common.csproj.CoreCompileInputs.cache
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Common\obj\Debug\net8.0\NVMotors.Common.sourcelink.json
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Common\obj\Debug\net8.0\NVMotors.Common.dll
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Common\obj\Debug\net8.0\refint\NVMotors.Common.dll
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Common\obj\Debug\net8.0\NVMotors.Common.pdb
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Common\obj\Debug\net8.0\NVMotors.Common.genruntimeconfig.cache
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Common\obj\Debug\net8.0\ref\NVMotors.Common.dll

@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVMotors", "NVMotors\NVMotors.csproj", "{E7BC5006-328F-4F85-AB25-221A2C0765F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NVMotors.Web", "NVMotors\NVMotors.Web.csproj", "{E7BC5006-328F-4F85-AB25-221A2C0765F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{070B13C7-0619-4E39-8E1F-1AC134D6A8E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{FA5C1DCB-1D63-4A7A-871D-1946420FEF6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVMotors.Web.ViewModels", "NVMotors.Web.ViewModels\NVMotors.Web.ViewModels.csproj", "{17496BA6-D9D5-45A1-B9EE-453271309751}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVMotors.Data", "NVMotors.Data\NVMotors.Data.csproj", "{20828968-4067-4F6B-AF1C-33C7694C1690}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVMotors.Data.Models", "NVMotors.Data.Models\NVMotors.Data.Models.csproj", "{11937E83-55A8-4FB9-B60D-D7685FA6EFB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVMotors.Common", "NVMotors.Common\NVMotors.Common.csproj", "{01F12876-843D-488B-89C9-74A7A2785A19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +27,31 @@ Global
 		{E7BC5006-328F-4F85-AB25-221A2C0765F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7BC5006-328F-4F85-AB25-221A2C0765F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7BC5006-328F-4F85-AB25-221A2C0765F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17496BA6-D9D5-45A1-B9EE-453271309751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17496BA6-D9D5-45A1-B9EE-453271309751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17496BA6-D9D5-45A1-B9EE-453271309751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17496BA6-D9D5-45A1-B9EE-453271309751}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20828968-4067-4F6B-AF1C-33C7694C1690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20828968-4067-4F6B-AF1C-33C7694C1690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20828968-4067-4F6B-AF1C-33C7694C1690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20828968-4067-4F6B-AF1C-33C7694C1690}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11937E83-55A8-4FB9-B60D-D7685FA6EFB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11937E83-55A8-4FB9-B60D-D7685FA6EFB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11937E83-55A8-4FB9-B60D-D7685FA6EFB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11937E83-55A8-4FB9-B60D-D7685FA6EFB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01F12876-843D-488B-89C9-74A7A2785A19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01F12876-843D-488B-89C9-74A7A2785A19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01F12876-843D-488B-89C9-74A7A2785A19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01F12876-843D-488B-89C9-74A7A2785A19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E7BC5006-328F-4F85-AB25-221A2C0765F3} = {070B13C7-0619-4E39-8E1F-1AC134D6A8E0}
+		{17496BA6-D9D5-45A1-B9EE-453271309751} = {070B13C7-0619-4E39-8E1F-1AC134D6A8E0}
+		{20828968-4067-4F6B-AF1C-33C7694C1690} = {FA5C1DCB-1D63-4A7A-871D-1946420FEF6C}
+		{11937E83-55A8-4FB9-B60D-D7685FA6EFB7} = {FA5C1DCB-1D63-4A7A-871D-1946420FEF6C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {108E37F8-CDC3-494D-AC22-2BE77B074A09}
