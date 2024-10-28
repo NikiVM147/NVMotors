@@ -13,3 +13,8 @@ C:\Users\Niki\source\repos\NVMotors\NVMotors.Web.ViewModels\obj\Debug\net8.0\ref
 C:\Users\Niki\source\repos\NVMotors\NVMotors.Web.ViewModels\obj\Debug\net8.0\NVMotors.Web.ViewModels.pdb
 C:\Users\Niki\source\repos\NVMotors\NVMotors.Web.ViewModels\obj\Debug\net8.0\NVMotors.Web.ViewModels.genruntimeconfig.cache
 C:\Users\Niki\source\repos\NVMotors\NVMotors.Web.ViewModels\obj\Debug\net8.0\ref\NVMotors.Web.ViewModels.dll
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Web.ViewModels\bin\Debug\net8.0\NVMotors.Common.dll
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Web.ViewModels\bin\Debug\net8.0\NVMotors.Common.pdb
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Web.ViewModels\obj\Debug\net8.0\NVMotors.B548B248.Up2Date
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Web.ViewModels\bin\Debug\net8.0\NVMotors.Data.Models.dll
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Web.ViewModels\bin\Debug\net8.0\NVMotors.Data.Models.pdb

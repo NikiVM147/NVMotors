@@ -11,7 +11,9 @@ namespace NVMotors.Data
             : base(options)
         {
         }
-
+        public DbSet<Vechicle> Vechicles { get; set; }
+        public DbSet<Specification> Specifications { get; set; }
+        public DbSet<Ad> Ads { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

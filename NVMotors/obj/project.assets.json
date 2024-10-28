@@ -1723,7 +1723,9 @@
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "8.0.10",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.10",
           "Microsoft.AspNetCore.Identity.UI": "8.0.10",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10",
+          "NVMotors.Common": "1.0.0",
+          "NVMotors.Data.Models": "1.0.0"
         },
         "compile": {
           "bin/placeholder/NVMotors.Web.ViewModels.dll": {}
@@ -4572,6 +4574,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10",
       "NVMotors.Common >= 1.0.0",
       "NVMotors.Data >= 1.0.0",
+      "NVMotors.Data.Models >= 1.0.0",
       "NVMotors.Web.ViewModels >= 1.0.0"
     ]
   },
@@ -4605,6 +4608,9 @@
           "projectReferences": {
             "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Common\\NVMotors.Common.csproj": {
               "projectPath": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Common\\NVMotors.Common.csproj"
+            },
+            "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\NVMotors.Data.Models.csproj": {
+              "projectPath": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\NVMotors.Data.Models.csproj"
             },
             "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\NVMotors.Data.csproj": {
               "projectPath": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\NVMotors.Data.csproj"

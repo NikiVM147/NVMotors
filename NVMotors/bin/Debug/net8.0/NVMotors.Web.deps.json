@@ -15,6 +15,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "8.0.10",
           "NVMotors.Common": "1.0.0",
           "NVMotors.Data": "1.0.0",
+          "NVMotors.Data.Models": "1.0.0",
           "NVMotors.Web.ViewModels": "1.0.0"
         },
         "runtime": {
@@ -1032,7 +1033,9 @@
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "8.0.10",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.10",
           "Microsoft.AspNetCore.Identity.UI": "8.0.10",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10",
+          "NVMotors.Common": "1.0.0",
+          "NVMotors.Data.Models": "1.0.0"
         },
         "runtime": {
           "NVMotors.Web.ViewModels.dll": {}

@@ -17,4 +17,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NVMotors.Common\NVMotors.Common.csproj" />
+    <ProjectReference Include="..\NVMotors.Data.Models\NVMotors.Data.Models.csproj" />
+  </ItemGroup>
+
 </Project>

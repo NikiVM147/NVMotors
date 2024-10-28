@@ -294,7 +294,14 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Common\\NVMotors.Common.csproj": {
+                "projectPath": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Common\\NVMotors.Common.csproj"
+              },
+              "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\NVMotors.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\NVMotors.Data.Models.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -382,6 +389,9 @@
             "projectReferences": {
               "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Common\\NVMotors.Common.csproj": {
                 "projectPath": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Common\\NVMotors.Common.csproj"
+              },
+              "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\NVMotors.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\NVMotors.Data.Models.csproj"
               },
               "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\NVMotors.Data.csproj": {
                 "projectPath": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\NVMotors.Data.csproj"
