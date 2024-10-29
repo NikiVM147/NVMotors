@@ -7,75 +7,72 @@
 <div class="container mt-5">
     <h2 class="text-center mb-4">@ViewData["Title"]</h2>
 
-    <form asp-action="Create" method="post">
+    <form asp-action="Add" method="post">
         <div class="card">
             <div class="card-header">
                 <h5 class="mb-0">Vehicle Details</h5>
             </div>
             <div class="card-body">
                 <div class="form-group">
-                    <label asp-for="Make" class="control-label">Make:</label>
-                    <input asp-for="Make" class="form-control" placeholder="Enter vehicle make" />
-                    <span asp-validation-for="Make" class="text-danger"></span>
+                    <label asp-for="@Model.Make" class="form-label-add-edit">Product Name</label>
+                    <input asp-for="@Model.Make" class="form-control" aria-required="true" />
+                    <span asp-validation-for="@Model.Make" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="Model" class="control-label">Model:</label>
-                    <input asp-for="Model" class="form-control" placeholder="Enter vehicle model" />
-                    <span asp-validation-for="Model" class="text-danger"></span>
+                    <label asp-for="@Model.Model" class="control-label">Model:</label>
+                    <input asp-for="@Model.Model" class="form-control" placeholder="Enter vehicle model" />
+                    <span asp-validation-for="@Model.Model" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label for="year">Choose Year:</label>
-                    <input type="number" id="year" name="Year" min="1900" max="2100" class="form-control" placeholder="Year" required />
-                    <span asp-validation-for="Year" class="text-danger"></span>
+                    <label for="@Model.Year">Choose Year:</label>
+                    <input type="number" id="@Model.Year" name="Year" min="1900" max="2100" class="form-control" placeholder="Year" required />
+                    <span asp-validation-for="@Model.Year" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="HorsePower" class="control-label">Horse Powers:</label>
-                    <input asp-for="HorsePower" type="number" class="form-control" placeholder="Enter horsepower" required />
-                    <span asp-validation-for="HorsePower" class="text-danger"></span>
+                    <label asp-for="@Model.HorsePower" class="control-label">Horse Powers:</label>
+                    <input asp-for="@Model.HorsePower" type="number" class="form-control" placeholder="Enter horsepower" required />
+                    <span asp-validation-for="@Model.HorsePower" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="TransmissionType" class="control-label">Transmission Type:</label>
-                    <input asp-for="TransmissionType" class="form-control" placeholder="Enter transmission type" />
-                    <span asp-validation-for="TransmissionType" class="text-danger"></span>
-                </div>
-
-                <div class="form-group">
-                    <label asp-for="SelectedFuelType" class="control-label">Choose Fuel Type:</label>
-                    <select asp-for="SelectedFuelType" asp-items="Model.FuelTypes" class="form-control">
-                        <option value="">-- Select Fuel Type --</option>
+                    <label asp-for="@Model.SelectedTransmissionType" class="control-label">Choose Transmission Type:</label>
+                    <select asp-for="@Model.SelectedTransmissionType" asp-items="Model.TransmissionTypes" class="form-control">
                     </select>
-                    <span asp-validation-for="SelectedFuelType" class="text-danger"></span>
+                    <span asp-validation-for="@Model.SelectedTransmissionType" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="SelectedColor" class="control-label">Choose Color:</label>
-                    <select asp-for="SelectedColor" asp-items="Model.Colors" class="form-control">
-                        <option value="">-- Select Color --</option>
+                    <label asp-for="@Model.SelectedFuelType" class="control-label">Choose Fuel Type:</label>
+                    <select asp-for="@Model.SelectedFuelType" asp-items="Model.FuelTypes" class="form-control">
                     </select>
-                    <span asp-validation-for="SelectedColor" class="text-danger"></span>
+                    <span asp-validation-for="@Model.SelectedFuelType" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="SelectedCondition" class="control-label">Choose Condition:</label>
-                    <select asp-for="SelectedCondition" asp-items="Model.Conditions" class="form-control">
-                        <option value="">-- Select Condition --</option>
+                    <label asp-for="@Model.SelectedColor" class="control-label">Choose Color:</label>
+                    <select asp-for="@Model.SelectedColor" asp-items="Model.Colors" class="form-control">
                     </select>
-                    <span asp-validation-for="SelectedCondition" class="text-danger"></span>
+                    <span asp-validation-for="@Model.SelectedColor" class="text-danger"></span>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-block mt-3">Save</button>
+                <div class="form-group">
+                    <label asp-for="@Model.SelectedCondition" class="control-label">Choose Condition:</label>
+                    <select asp-for="@Model.SelectedCondition" asp-items="Model.Conditions" class="form-control">
+                    </select>
+                    <span asp-validation-for="@Model.SelectedCondition" class="text-danger"></span>
+                </div>
+
+                <div class="mb-2">
+                    <input class="btn btn-warning btn-dark-text w-100 py-2 fw-bold rounded" type="submit" value="Save" />
+                </div>
 
             </div>
         </div>
     </form>
 
-    <div class="text-center mt-3">
-        <a asp-action="Index" class="btn btn-link">Back to Vehicle List</a>
-    </div>
 </div>
 
 @section Scripts {

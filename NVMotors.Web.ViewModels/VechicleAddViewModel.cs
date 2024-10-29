@@ -19,8 +19,8 @@ namespace NVMotors.Web.ViewModels
         public int Year { get; set; }
         [Required]
         public int HorsePower { get; set; }
-        [Required]
-        public string TransmissionType { get; set; } = String.Empty;
+        public TransmissionType SelectedTransmissionType { get; set; }
+        public IEnumerable<SelectListItem> TransmissionTypes { get; set; }
         public FuelType SelectedFuelType { get; set; }
         public IEnumerable<SelectListItem> FuelTypes { get; set; }
         public VechicleColor SelectedColor { get; set; }

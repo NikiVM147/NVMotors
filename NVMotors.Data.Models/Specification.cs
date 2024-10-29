@@ -19,7 +19,7 @@ namespace NVMotors.Data.Models
         [Required]
         public int HorsePower { get; set; }
         [Required]
-        public string TransmissionType { get; set; } = String.Empty;
+        public TransmissionType TransmissionType { get; set; }
         public FuelType FuelType { get; set; }
         public VechicleColor Color { get; set; }
         public Condition Condition { get; set; }
