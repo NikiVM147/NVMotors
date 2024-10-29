@@ -19,13 +19,11 @@ namespace NVMotors.Web.Controllers
         [HttpGet]
         public IActionResult Add()
         {
-            var model = new VechicleAddViewModel
-            {
-                FuelTypes = LoadFuelTypes(),
-                Colors = LoadColors(),
-                Conditions = LoadConditions(),
-                TransmissionTypes = LoadTransmissions(),
-            };
+            var model = new VechicleAddViewModel();
+            model.FuelTypes = LoadFuelTypes();
+            model.Colors = LoadColors();
+            model.Conditions = LoadConditions();
+            model.TransmissionTypes = LoadTransmissions();
             return View(model);
         }
         [HttpPost]

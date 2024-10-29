@@ -20,12 +20,12 @@ namespace NVMotors.Web.ViewModels
         [Required]
         public int HorsePower { get; set; }
         public TransmissionType SelectedTransmissionType { get; set; }
-        public IEnumerable<SelectListItem> TransmissionTypes { get; set; }
+        public IEnumerable<SelectListItem>? TransmissionTypes { get; set; }
         public FuelType SelectedFuelType { get; set; }
-        public IEnumerable<SelectListItem> FuelTypes { get; set; }
+        public IEnumerable<SelectListItem>? FuelTypes { get; set; }
         public VechicleColor SelectedColor { get; set; }
-        public IEnumerable<SelectListItem> Colors { get; set; }
+        public IEnumerable<SelectListItem>? Colors { get; set; }
         public Condition SelectedCondition { get; set; }
-        public IEnumerable<SelectListItem> Conditions { get; set; }
+        public IEnumerable<SelectListItem>? Conditions { get; set; }
     }
 }

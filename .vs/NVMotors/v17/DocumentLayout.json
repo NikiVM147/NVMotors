@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|solutionrelative:nvmotors\\controllers\\vechiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17496BA6-D9D5-45A1-B9EE-453271309751}|NVMotors.Web.ViewModels\\NVMotors.Web.ViewModels.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.web.viewmodels\\vechicleaddviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17496BA6-D9D5-45A1-B9EE-453271309751}|NVMotors.Web.ViewModels\\NVMotors.Web.ViewModels.csproj|solutionrelative:nvmotors.web.viewmodels\\vechicleaddviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{11937E83-55A8-4FB9-B60D-D7685FA6EFB7}|NVMotors.Data.Models\\NVMotors.Data.Models.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.data.models\\specification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11937E83-55A8-4FB9-B60D-D7685FA6EFB7}|NVMotors.Data.Models\\NVMotors.Data.Models.csproj|solutionrelative:nvmotors.data.models\\specification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors\\views\\vechicle\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|solutionrelative:nvmotors\\views\\vechicle\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11937E83-55A8-4FB9-B60D-D7685FA6EFB7}|NVMotors.Data.Models\\NVMotors.Data.Models.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.data.models\\specification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11937E83-55A8-4FB9-B60D-D7685FA6EFB7}|NVMotors.Data.Models\\NVMotors.Data.Models.csproj|solutionrelative:nvmotors.data.models\\specification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{17496BA6-D9D5-45A1-B9EE-453271309751}|NVMotors.Web.ViewModels\\NVMotors.Web.ViewModels.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.web.viewmodels\\vechicleaddviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17496BA6-D9D5-45A1-B9EE-453271309751}|NVMotors.Web.ViewModels\\NVMotors.Web.ViewModels.csproj|solutionrelative:nvmotors.web.viewmodels\\vechicleaddviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11937E83-55A8-4FB9-B60D-D7685FA6EFB7}|NVMotors.Data.Models\\NVMotors.Data.Models.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.data.models\\vechicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -137,8 +137,7 @@
               "RelativeToolTip": "NVMotors.Data.Models\\Enums\\TransmissionType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T14:05:17.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T14:05:17.342Z"
             },
             {
               "$type": "Document",
@@ -148,7 +147,7 @@
               "RelativeDocumentMoniker": "NVMotors\\Views\\Vechicle\\Add.cshtml",
               "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Vechicle\\Add.cshtml",
               "RelativeToolTip": "NVMotors\\Views\\Vechicle\\Add.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEsAAAAGAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAEsAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-28T17:03:18.8Z",
               "EditorCaption": ""
@@ -173,20 +172,20 @@
               "RelativeDocumentMoniker": "NVMotors\\Controllers\\VechicleController.cs",
               "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Controllers\\VechicleController.cs",
               "RelativeToolTip": "NVMotors\\Controllers\\VechicleController.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAADwvykAAAANAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAUwB4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-28T16:41:57.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "VechicleAddViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Web.ViewModels\\VechicleAddViewModel.cs",
               "RelativeDocumentMoniker": "NVMotors.Web.ViewModels\\VechicleAddViewModel.cs",
               "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Web.ViewModels\\VechicleAddViewModel.cs",
               "RelativeToolTip": "NVMotors.Web.ViewModels\\VechicleAddViewModel.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwBcAAAA2AAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAswBwAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-28T10:04:15.715Z",
               "EditorCaption": ""
@@ -225,8 +224,7 @@
               "RelativeToolTip": "NVMotors.Data.Models\\Enums\\VechicleColor.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T15:46:32.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T15:46:32.894Z"
             },
             {
               "$type": "Document",
@@ -254,13 +252,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Specification.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\Specification.cs",
               "RelativeDocumentMoniker": "NVMotors.Data.Models\\Specification.cs",
               "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\Specification.cs",
               "RelativeToolTip": "NVMotors.Data.Models\\Specification.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAiwBUAAAA+AAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAwA8AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-28T15:30:57.411Z",
               "EditorCaption": ""
@@ -287,8 +285,7 @@
               "RelativeToolTip": "NVMotors.Data.Models\\Vechicle.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAABkAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T15:13:27.302Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T15:13:27.302Z"
             },
             {
               "$type": "Document",
@@ -408,8 +405,7 @@
               "RelativeToolTip": "NVMotors\\Program.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAAACUAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T10:13:44.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T10:13:44.721Z"
             },
             {
               "$type": "Document",
@@ -469,8 +465,7 @@
               "RelativeToolTip": "NVMotors.Common\\Constants.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAAAAUAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T10:05:53.274Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T10:05:53.274Z"
             },
             {
               "$type": "Document",
