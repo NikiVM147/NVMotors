@@ -15,7 +15,7 @@ namespace NVMotors.Web.ViewModels
         [MaxLength(ModelMaxLenght)]
         [MinLength(ModelMinLenght)]
         public string Model { get; set; } = string.Empty;
-
+        [Required]
         public int Year { get; set; }
         [Required]
         public int HorsePower { get; set; }
@@ -23,7 +23,7 @@ namespace NVMotors.Web.ViewModels
         public string TransmissionType { get; set; } = String.Empty;
         public FuelType SelectedFuelType { get; set; }
         public IEnumerable<SelectListItem> FuelTypes { get; set; }
-        public Color SelectedColor { get; set; }
+        public VechicleColor SelectedColor { get; set; }
         public IEnumerable<SelectListItem> Colors { get; set; }
         public Condition SelectedCondition { get; set; }
         public IEnumerable<SelectListItem> Conditions { get; set; }

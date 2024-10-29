@@ -8,6 +8,7 @@ namespace NVMotors.Data.Models.Enums
 {
     public enum Condition
     {
+        None,
         New,
         Used,
         Damaged,

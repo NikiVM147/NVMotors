@@ -1,68 +1,82 @@
 ﻿@model NVMotors.Web.ViewModels.VechicleAddViewModel
 
 @{
-    ViewData["Title"] = "Добавяне на Превозно Средство";
+    ViewData["Title"] = "Add Vehicle";
 }
 
-<h2>@ViewData["Title"]</h2>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">@ViewData["Title"]</h2>
 
-<form asp-action="Create" method="post">
-    <div class="form-group">
-        <label asp-for="Make" class="control-label">Марка:</label>
-        <input asp-for="Make" class="form-control" />
-        <span asp-validation-for="Make" class="text-danger"></span>
+    <form asp-action="Create" method="post">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Vehicle Details</h5>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label asp-for="Make" class="control-label">Make:</label>
+                    <input asp-for="Make" class="form-control" placeholder="Enter vehicle make" />
+                    <span asp-validation-for="Make" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Model" class="control-label">Model:</label>
+                    <input asp-for="Model" class="form-control" placeholder="Enter vehicle model" />
+                    <span asp-validation-for="Model" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="year">Choose Year:</label>
+                    <input type="number" id="year" name="Year" min="1900" max="2100" class="form-control" placeholder="Year" required />
+                    <span asp-validation-for="Year" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="HorsePower" class="control-label">Horse Powers:</label>
+                    <input asp-for="HorsePower" type="number" class="form-control" placeholder="Enter horsepower" required />
+                    <span asp-validation-for="HorsePower" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="TransmissionType" class="control-label">Transmission Type:</label>
+                    <input asp-for="TransmissionType" class="form-control" placeholder="Enter transmission type" />
+                    <span asp-validation-for="TransmissionType" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="SelectedFuelType" class="control-label">Choose Fuel Type:</label>
+                    <select asp-for="SelectedFuelType" asp-items="Model.FuelTypes" class="form-control">
+                        <option value="">-- Select Fuel Type --</option>
+                    </select>
+                    <span asp-validation-for="SelectedFuelType" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="SelectedColor" class="control-label">Choose Color:</label>
+                    <select asp-for="SelectedColor" asp-items="Model.Colors" class="form-control">
+                        <option value="">-- Select Color --</option>
+                    </select>
+                    <span asp-validation-for="SelectedColor" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="SelectedCondition" class="control-label">Choose Condition:</label>
+                    <select asp-for="SelectedCondition" asp-items="Model.Conditions" class="form-control">
+                        <option value="">-- Select Condition --</option>
+                    </select>
+                    <span asp-validation-for="SelectedCondition" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block mt-3">Save</button>
+
+            </div>
+        </div>
+    </form>
+
+    <div class="text-center mt-3">
+        <a asp-action="Index" class="btn btn-link">Back to Vehicle List</a>
     </div>
-
-    <div class="form-group">
-        <label asp-for="Model" class="control-label">Модел:</label>
-        <input asp-for="Model" class="form-control" />
-        <span asp-validation-for="Model" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Year" class="control-label">Година на производство:</label>
-        <input asp-for="Year" type="number" class="form-control" />
-        <span asp-validation-for="Year" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="HorsePower" class="control-label">Конски сили:</label>
-        <input asp-for="HorsePower" type="number" class="form-control" />
-        <span asp-validation-for="HorsePower" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="TransmissionType" class="control-label">Тип трансмисия:</label>
-        <input asp-for="TransmissionType" class="form-control" />
-        <span asp-validation-for="TransmissionType" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="SelectedFuelType" class="control-label">Изберете Тип Гориво:</label>
-        <select asp-for="SelectedFuelType" asp-items="Model.FuelTypes" class="form-control">
-            <option value="">-- Изберете тип гориво --</option>
-        </select>
-        <span asp-validation-for="SelectedFuelType" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="SelectedColor" class="control-label">Изберете Цвят:</label>
-        <select asp-for="SelectedColor" asp-items="Model.Colors" class="form-control">
-            <option value="">-- Изберете цвят --</option>
-        </select>
-        <span asp-validation-for="SelectedColor" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="SelectedCondition" class="control-label">Изберете Състояние:</label>
-        <select asp-for="SelectedCondition" asp-items="Model.Conditions" class="form-control">
-            <option value="">-- Изберете състояние --</option>
-        </select>
-        <span asp-validation-for="SelectedCondition" class="text-danger"></span>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Запази</button>
-</form>
+</div>
 
 @section Scripts {
     @{
