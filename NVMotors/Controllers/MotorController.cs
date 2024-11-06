@@ -9,10 +9,10 @@ using System.Drawing;
 
 namespace NVMotors.Web.Controllers
 {
-    public class VechicleController : Controller
+    public class MotorController : Controller
     {
         private readonly NVMotorsDbContext context;
-        public VechicleController(NVMotorsDbContext _context)
+        public MotorController(NVMotorsDbContext _context)
         {
             context = _context;
         }

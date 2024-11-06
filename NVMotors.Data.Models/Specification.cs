@@ -3,6 +3,7 @@ using NVMotors.Data.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,21 +24,21 @@ namespace NVMotors.Data.Models
         [Range(MinEngineDisplacement, MaxEngineDisplacement)]
         public int EngineDisplacement { get; set; }
         [Required]
-        [MinLength(MinTransmissionTypeLength)]
-        [MaxLength(MaxTransmissionTypeLength)]
-        public string TransmissionType { get; set; } = string.Empty;
+        //[MinLength(MinTransmissionTypeLength)]
+        //[MaxLength(MaxTransmissionTypeLength)]
+        public TransmissionType TransmissionType { get; set; } 
         [Required]
-        [MinLength(MinFuelTypeLength)]
-        [MaxLength(MaxFuelTypeLength)]
-        public string FuelType { get; set; } = string.Empty;
+        //[MinLength(MinFuelTypeLength)]
+        //[MaxLength(MaxFuelTypeLength)]
+        public FuelType FuelType { get; set; } 
         [Required]
-        [MinLength(MinColorLength)]
-        [MaxLength(MaxColorLength)]
-        public string Color { get; set; } = string.Empty;
+        //[MinLength(MinColorLength)]
+        //[MaxLength(MaxColorLength)]
+        public MotorColor Color { get; set; } 
         [Required]
-        [MinLength(MinConditionLength)]
-        [MaxLength(MaxConditionLength)]
-        public string Condition { get; set; } = string.Empty;
+        //[MinLength(MinConditionLength)]
+        //[MaxLength(MaxConditionLength)]
+        public Condition Condition { get; set; } 
         public Motor Vechicle { get; set; }
 
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NVMotors.Data.Models.Enums
 {
-    public enum VechicleColor
+    public enum MotorColor
     {
         None,
         Red,

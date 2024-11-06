@@ -24,7 +24,7 @@ body {
 .hero-section {
     background-image: url('~/images/motor.jpg');
     background-size: cover;
-    margin-top: 5vh;
+    margin-top: 4vh;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using static NVMotors.Common.Constants;
 namespace NVMotors.Web.ViewModels
 {
-    public class VechicleAddViewModel
+    public class MotorAddViewModel
     {
         [Required]
         [MaxLength(MakeMaxLength)]
@@ -18,12 +18,12 @@ namespace NVMotors.Web.ViewModels
         [Required]
         public int Year { get; set; }
         [Required]
-        public int HorsePower { get; set; }
-        public TransmissionType SelectedTransmissionType { get; set; }
+        public int HorsePower { get; set; } 
+        public string SelectedTransmissionType { get; set; }
         public IEnumerable<SelectListItem>? TransmissionTypes { get; set; }
         public FuelType SelectedFuelType { get; set; }
         public IEnumerable<SelectListItem>? FuelTypes { get; set; }
-        public VechicleColor SelectedColor { get; set; }
+        public MotorColor SelectedColor { get; set; }
         public IEnumerable<SelectListItem>? Colors { get; set; }
         public Condition SelectedCondition { get; set; }
         public IEnumerable<SelectListItem>? Conditions { get; set; }
