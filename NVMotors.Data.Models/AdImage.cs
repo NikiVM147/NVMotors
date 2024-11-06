@@ -16,7 +16,7 @@ namespace NVMotors.Data.Models
         [Required]
         [ForeignKey(nameof(ImageId))]
         public Guid ImageId { get; set; }
-        public Image Image { get; set; }
+        public MotorImage Image { get; set; }
         [Required]
         [ForeignKey(nameof(AdId))]
         public Guid AdId { get; set; }

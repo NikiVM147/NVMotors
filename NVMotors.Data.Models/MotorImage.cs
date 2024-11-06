@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NVMotors.Data.Models
 {
-    public class Image
+    public class MotorImage
     {
         [Key]
         public Guid Id { get; set; } = Guid.NewGuid();

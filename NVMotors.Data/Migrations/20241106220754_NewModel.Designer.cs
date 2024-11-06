@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NVMotors.Data;
 
@@ -11,9 +12,11 @@ using NVMotors.Data;
 namespace NVMotors.Data.Migrations
 {
     [DbContext(typeof(NVMotorsDbContext))]
-    partial class NVMotorsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241106220754_NewModel")]
+    partial class NewModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -192,7 +195,7 @@ namespace NVMotors.Data.Migrations
 
                     b.HasIndex("AdId");
 
-                    b.ToTable("AdsImages");
+                    b.ToTable("AdImage");
                 });
 
             modelBuilder.Entity("NVMotors.Data.Models.AppUser", b =>
@@ -265,6 +268,21 @@ namespace NVMotors.Data.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("NVMotors.Data.Models.Image", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Image");
+                });
+
             modelBuilder.Entity("NVMotors.Data.Models.Motor", b =>
                 {
                     b.Property<Guid>("Id")
@@ -299,7 +317,7 @@ namespace NVMotors.Data.Migrations
                     b.HasIndex("SpecificationId")
                         .IsUnique();
 
-                    b.ToTable("Motors");
+                    b.ToTable("Vechicles");
                 });
 
             modelBuilder.Entity("NVMotors.Data.Models.MotorCategory", b =>
@@ -314,22 +332,7 @@ namespace NVMotors.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MotorCategories");
-                });
-
-            modelBuilder.Entity("NVMotors.Data.Models.MotorImage", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("MotorImages");
+                    b.ToTable("MotorCategory");
                 });
 
             modelBuilder.Entity("NVMotors.Data.Models.Specification", b =>
@@ -442,7 +445,7 @@ namespace NVMotors.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("NVMotors.Data.Models.MotorImage", "Image")
+                    b.HasOne("NVMotors.Data.Models.Image", "Image")
                         .WithMany("AdsImages")
                         .HasForeignKey("ImageId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -485,6 +488,11 @@ namespace NVMotors.Data.Migrations
                     b.Navigation("AdsImages");
                 });
 
+            modelBuilder.Entity("NVMotors.Data.Models.Image", b =>
+                {
+                    b.Navigation("AdsImages");
+                });
+
             modelBuilder.Entity("NVMotors.Data.Models.Motor", b =>
                 {
                     b.Navigation("Ads");
@@ -493,11 +501,6 @@ namespace NVMotors.Data.Migrations
             modelBuilder.Entity("NVMotors.Data.Models.MotorCategory", b =>
                 {
                     b.Navigation("Motors");
-                });
-
-            modelBuilder.Entity("NVMotors.Data.Models.MotorImage", b =>
-                {
-                    b.Navigation("AdsImages");
                 });
 
             modelBuilder.Entity("NVMotors.Data.Models.Specification", b =>

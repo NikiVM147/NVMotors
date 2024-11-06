@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NVMotors.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+653f5d6b541fa0989df480eaef26d6adeb0cb035")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4bcf1064d18d0131466595ab8c4182eeffd6ef6f")]
 [assembly: System.Reflection.AssemblyProductAttribute("NVMotors.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NVMotors.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -11,9 +11,14 @@ namespace NVMotors.Data
             : base(options)
         {
         }
-        public DbSet<Motor> Vechicles { get; set; }
+        public DbSet<Motor> Motors { get; set; }
         public DbSet<Specification> Specifications { get; set; }
         public DbSet<Ad> Ads { get; set; }
+        public DbSet<AdImage> AdsImages { get; set; }
+        public DbSet<MotorImage> MotorImages { get; set; }
+        public DbSet<MotorCategory> MotorCategories { get; set; }
+
+        //public DbSet<AppUser> AppUsers { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
