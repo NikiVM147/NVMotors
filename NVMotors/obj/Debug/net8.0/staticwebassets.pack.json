@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\NVMotors.Web.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\css\\CustomTheme.css",
+      "PackagePath": "staticwebassets\\css\\CustomTheme.css"
+    },
+    {
       "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\motor.jpg",
+      "PackagePath": "staticwebassets\\images\\motor.jpg"
     },
     {
       "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\js\\site.js",

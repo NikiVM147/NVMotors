@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5fOtpm5fhAiAJdIhWinni/4k3fJw0h/xEoC7A5ZlQpA=",
+  "Hash": "jJ4H2y+fAh6BwAr0tAvX2v9RXMEH8YKdruAENnWoytY=",
   "Source": "NVMotors.Web",
   "BasePath": "_content/NVMotors.Web",
   "Mode": "Default",
@@ -1195,6 +1195,25 @@
       "OriginalItemSpec": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\NVMotors.Web.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\css\\CustomTheme.css",
+      "SourceId": "NVMotors.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\",
+      "BasePath": "_content/NVMotors.Web",
+      "RelativePath": "css/CustomTheme.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\CustomTheme.css"
+    },
+    {
       "Identity": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\css\\site.css",
       "SourceId": "NVMotors.Web",
       "SourceType": "Discovered",
@@ -1231,6 +1250,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\motor.jpg",
+      "SourceId": "NVMotors.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\",
+      "BasePath": "_content/NVMotors.Web",
+      "RelativePath": "images/motor.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\motor.jpg"
     },
     {
       "Identity": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\js\\site.js",

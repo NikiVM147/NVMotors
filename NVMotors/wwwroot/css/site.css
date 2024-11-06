@@ -20,3 +20,51 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.hero-section {
+    background-image: url('~/images/motor.jpg');
+    background-size: cover;
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    padding: 20px;
+}
+
+/* About Us Section */
+section.container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+section.container p {
+    font-size: 1.25rem;
+}
+
+/* Features Section */
+section.container img {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+section.container h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+.logo-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius:5px;
+}

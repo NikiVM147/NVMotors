@@ -1,8 +1,43 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Welcome to NVMotors";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div class="container-fluid hero-section">
+    <div class="hero-content">
+        <h1 class="display-4 font-weight-bold">Unleash the Power of the Road</h1>
+        <p class="lead">Find the perfect motorcycle tailored to your needs at NVMotors.</p>
+        <a href="@Url.Action("Models", "Home")" class="btn btn-primary btn-lg mt-3">Explore Our Models</a>
+    </div>
 </div>
+<div class="container-fluid pt-5">
+    <img src="~/images/motor.jpg" alt="NVMotors Logo" class="img-fluid logo-img mb-4">
+</div>
+
+<section class="container py-5 text-center">
+    <h2>Welcome to NVMotors</h2>
+    <p class="lead">We offer premium motorcycles designed for both enthusiasts and beginners. Our bikes combine cutting-edge technology with exceptional design for an unmatched riding experience.</p>
+    <p>Discover our collection of powerful and stylish motorcycles that bring performance and comfort to the road.</p>
+    <a href="@Url.Action("Models", "Home")" class="btn btn-secondary btn-lg">Explore Our Bikes</a>
+</section>
+
+<section class="container py-5">
+    <div class="row text-center">
+        <div class="col-md-6 mb-4">
+            <h4>Performance</h4>
+            <p>Our motorcycles are engineered for high performance, providing the perfect balance of power and control on every ride.</p>
+            <img src="~/images/motor.jpg" alt="Motorcycle Performance" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6 mb-4">
+            <h4>Design</h4>
+            <p>Each bike is crafted with precision and style, making them not just machines, but a statement of elegance and engineering.</p>
+            <img src="~/images/motor.jpg" alt="Motorcycle Design" class="img-fluid rounded">
+        </div>
+    </div>
+</section>
+
+<section class="container py-3 text-center pt-2">
+    <h2>Ready to Ride?</h2>
+    <p>Contact us or visit our showroom to experience the thrill of our motorcycles firsthand. We’ll help you find the bike of your dreams.</p>
+    <a href="@Url.Action("Contact", "Home")" class="btn btn-primary btn-lg">Get in Touch</a>
+</section>
