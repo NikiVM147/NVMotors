@@ -1,0 +1,15 @@
+
+.vs/
+
+
+node_modules/
+
+
+bin/
+obj/
+
+
+*.log
+
+*.mdf
+*.ldf

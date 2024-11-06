@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.ApplicationModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,7 +10,7 @@ using static NVMotors.Common.Constants;
 
 namespace NVMotors.Data.Models
 {
-    public class Vechicle
+    public class Motor
     {
         [Key]
         public Guid Id { get; set; } = Guid.NewGuid();
@@ -26,6 +27,13 @@ namespace NVMotors.Data.Models
         public Guid SpecificationId { get; set; }
         public Specification Specification { get; set; }
         public ICollection<Ad> Ads { get; set; } = new List<Ad>();
+        [ForeignKey(nameof(MotorCategoryId))]
+        [Required]
+        public Guid MotorCategoryId { get; set; }
+        public MotorCategory MotorCategory { get; set; } = null!;
+        public Guid SellerId { get; set; }
+        [ForeignKey(nameof(SellerId))]
+        public AppUser Seller { get; set; } = null!;
 
     }
 }

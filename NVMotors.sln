@@ -9,13 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{070B13C7-061
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{FA5C1DCB-1D63-4A7A-871D-1946420FEF6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVMotors.Web.ViewModels", "NVMotors.Web.ViewModels\NVMotors.Web.ViewModels.csproj", "{17496BA6-D9D5-45A1-B9EE-453271309751}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NVMotors.Web.ViewModels", "NVMotors.Web.ViewModels\NVMotors.Web.ViewModels.csproj", "{17496BA6-D9D5-45A1-B9EE-453271309751}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVMotors.Data", "NVMotors.Data\NVMotors.Data.csproj", "{20828968-4067-4F6B-AF1C-33C7694C1690}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NVMotors.Data", "NVMotors.Data\NVMotors.Data.csproj", "{20828968-4067-4F6B-AF1C-33C7694C1690}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVMotors.Data.Models", "NVMotors.Data.Models\NVMotors.Data.Models.csproj", "{11937E83-55A8-4FB9-B60D-D7685FA6EFB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NVMotors.Data.Models", "NVMotors.Data.Models\NVMotors.Data.Models.csproj", "{11937E83-55A8-4FB9-B60D-D7685FA6EFB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVMotors.Common", "NVMotors.Common\NVMotors.Common.csproj", "{01F12876-843D-488B-89C9-74A7A2785A19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NVMotors.Common", "NVMotors.Common\NVMotors.Common.csproj", "{01F12876-843D-488B-89C9-74A7A2785A19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVMotors.Data.Services", "NVMotors.Data.Services\NVMotors.Data.Services.csproj", "{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{EF1F2BE8-11C2-42EB-98C5-7A70DB0BECF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +47,10 @@ Global
 		{01F12876-843D-488B-89C9-74A7A2785A19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01F12876-843D-488B-89C9-74A7A2785A19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01F12876-843D-488B-89C9-74A7A2785A19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +60,7 @@ Global
 		{17496BA6-D9D5-45A1-B9EE-453271309751} = {070B13C7-0619-4E39-8E1F-1AC134D6A8E0}
 		{20828968-4067-4F6B-AF1C-33C7694C1690} = {FA5C1DCB-1D63-4A7A-871D-1946420FEF6C}
 		{11937E83-55A8-4FB9-B60D-D7685FA6EFB7} = {FA5C1DCB-1D63-4A7A-871D-1946420FEF6C}
+		{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7} = {EF1F2BE8-11C2-42EB-98C5-7A70DB0BECF0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {108E37F8-CDC3-494D-AC22-2BE77B074A09}
