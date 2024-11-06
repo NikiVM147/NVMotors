@@ -1,4 +1,4 @@
-﻿@* @model NVMotors.Web.ViewModels.VechicleAddViewModel
+﻿@model NVMotors.Web.ViewModels.MotorAddViewModel
 
 @{
     ViewData["Title"] = "Add Vehicle";
@@ -53,7 +53,7 @@
 
                 <div class="form-group">
                     <label asp-for="@Model.SelectedColor" class="control-label">Choose Color:</label>
-                    <select asp-for="@Model.SelectedColor" asp-items="Model.Colors" class="form-control">
+                    <select asp-for="@Model.SelectedColor" asp-items="Model.MotorColors" class="form-control">
                     </select>
                     <span asp-validation-for="@Model.SelectedColor" class="text-danger"></span>
                 </div>
@@ -79,4 +79,4 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-} *@
+}
