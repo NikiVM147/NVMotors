@@ -21,6 +21,14 @@
       "PackagePath": "staticwebassets\\images\\motor.jpg"
     },
     {
+      "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\motor2.jpg",
+      "PackagePath": "staticwebassets\\images\\motor2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\motor3.jpg",
+      "PackagePath": "staticwebassets\\images\\motor3.jpg"
+    },
+    {
       "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
