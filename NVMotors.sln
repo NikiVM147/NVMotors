@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NVMotors.Data.Models", "NVM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NVMotors.Common", "NVMotors.Common\NVMotors.Common.csproj", "{01F12876-843D-488B-89C9-74A7A2785A19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVMotors.Data.Services", "NVMotors.Data.Services\NVMotors.Data.Services.csproj", "{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVMotors.Sevices.Data", "NVMotors.Data.Services\NVMotors.Sevices.Data.csproj", "{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{EF1F2BE8-11C2-42EB-98C5-7A70DB0BECF0}"
 EndProject

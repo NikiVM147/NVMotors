@@ -25,7 +25,7 @@ namespace NVMotors.Data.Models
         [Required]
         [ForeignKey(nameof(SpecificationId))]
         public Guid SpecificationId { get; set; }
-        public Specification Specification { get; set; }
+        public Specification Specification { get; set; } = null!;
         public ICollection<Ad> Ads { get; set; } = new List<Ad>();
         [ForeignKey(nameof(MotorCategoryId))]
         [Required]

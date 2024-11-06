@@ -22,9 +22,10 @@ namespace NVMotors.Data.Models
         [Required]
         [ForeignKey(nameof(VechicleId))]
         public Guid VechicleId { get; set; }
-        public Vechicle Vechicle { get; set; }
+        public Motor Vechicle { get; set; }
         [Required]
         [Range(MinPrice, MaxPrice)]
         public decimal Price { get; set; }
+        public virtual ICollection<AdImage> AdsImages { get; set; } = new List<AdImage>();
     }
 }
