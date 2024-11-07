@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.VisualBasic.FileIO;
 using NVMotors.Data;
@@ -17,27 +18,60 @@ namespace NVMotors.Web.Controllers
             context = _context;
         }
         [HttpGet]
-        public IActionResult Add()
+        public IActionResult Index()
         {
-            var model = new MotorAddViewModel();
-            model.TransmissionTypes = GetEnumSelectList<TransmissionType>();
-            model.FuelTypes = GetEnumSelectList<FuelType>();
-            model.MotorColors = GetEnumSelectList<MotorColor>();
-            model.Conditions = GetEnumSelectList<Condition>();
+            return View();
+        }
+        [HttpGet]
+        public async Task<IActionResult> Create()
+        {
+            var model = new MotorAddViewModel
+            {
+                TransmissionTypes = GetEnumSelectList<TransmissionType>(),
+                FuelTypes = GetEnumSelectList<FuelType>(),
+                MotorColors = GetEnumSelectList<MotorColor>(),
+                Conditions = GetEnumSelectList<Condition>()
+            };
 
             return View(model);
         }
-        //[HttpPost]
-        //public async Task<IActionResult> Add(VechicleAddViewModel modelAdd)
-        //{
+        [HttpPost]
+        public async Task<IActionResult> Create(MotorAddViewModel addModel)
+        {
+            var check = addModel;
+            if (!ModelState.IsValid)
+            {
+                addModel.TransmissionTypes = GetEnumSelectList<TransmissionType>();
+                addModel.FuelTypes = GetEnumSelectList<FuelType>();
+                addModel.MotorColors = GetEnumSelectList<MotorColor>();
+                addModel.Conditions = GetEnumSelectList<Condition>();
 
+                return View(addModel);
+            }
 
-        //    context.Specifications.Add(specification);
-        //    context.Vechicles.Add(vechicle);
-        //    await context.SaveChangesAsync();
+            var specification = new Specification
+            {
+                Year = addModel.Year,
+                HorsePower = addModel.HorsePower,
+                TransmissionType = addModel.SelectedTransmissionType.ToString(),
+                FuelType = addModel.SelectedFuelType.ToString(),
+                Color = addModel.SelectedColor.ToString(),
+                Condition = addModel.SelectedCondition.ToString(),
+            };
 
-        //    return View();
-        //}
+            var motor = new Motor
+            {
+                Make = addModel.Make,
+                Model = addModel.Model,
+                Specification = specification,
+            };
+
+            context.Specifications.Add(specification);
+            context.Motors.Add(motor);
+            await context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
 
         private List<SelectListItem> GetEnumSelectList<TEnum>() where TEnum : Enum
         {

@@ -23,6 +23,7 @@ builder.Services.AddIdentity<AppUser, IdentityRole<Guid>>(cfg =>
     .AddDefaultTokenProviders()
     .AddDefaultUI();
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
 var app = builder.Build();
 

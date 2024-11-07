@@ -24,21 +24,21 @@ namespace NVMotors.Data.Models
         [Range(MinEngineDisplacement, MaxEngineDisplacement)]
         public int EngineDisplacement { get; set; }
         [Required]
-        //[MinLength(MinTransmissionTypeLength)]
-        //[MaxLength(MaxTransmissionTypeLength)]
-        public TransmissionType TransmissionType { get; set; } 
+        [MinLength(MinTransmissionTypeLength)]
+        [MaxLength(MaxTransmissionTypeLength)]
+        public string TransmissionType { get; set; } 
         [Required]
-        //[MinLength(MinFuelTypeLength)]
-        //[MaxLength(MaxFuelTypeLength)]
-        public FuelType FuelType { get; set; } 
+        [MinLength(MinFuelTypeLength)]
+        [MaxLength(MaxFuelTypeLength)]
+        public string FuelType { get; set; } 
         [Required]
-        //[MinLength(MinColorLength)]
-        //[MaxLength(MaxColorLength)]
-        public MotorColor Color { get; set; } 
+        [MinLength(MinColorLength)]
+        [MaxLength(MaxColorLength)]
+        public string Color { get; set; } 
         [Required]
-        //[MinLength(MinConditionLength)]
-        //[MaxLength(MaxConditionLength)]
-        public Condition Condition { get; set; } 
+        [MinLength(MinConditionLength)]
+        [MaxLength(MaxConditionLength)]
+        public string Condition { get; set; } 
         public Motor Vechicle { get; set; }
 
     }
