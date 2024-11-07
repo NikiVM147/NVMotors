@@ -10,11 +10,16 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
     ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<NVMotorsDbContext>(options =>
     options.UseSqlServer(connectionString));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentity<AppUser, IdentityRole<Guid>>(cfg =>
 {
     cfg.Password.RequiredLength = 0;
+    cfg.Password.RequireNonAlphanumeric = false;
+    cfg.Password.RequireUppercase = false;
+    cfg.Password.RequireLowercase = false;
+
 })
     .AddEntityFrameworkStores<NVMotorsDbContext>()
     .AddUserManager<UserManager<AppUser>>()

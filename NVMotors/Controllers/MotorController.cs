@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.VisualBasic.FileIO;
@@ -7,15 +8,19 @@ using NVMotors.Data.Models;
 using NVMotors.Data.Models.Enums;
 using NVMotors.Web.ViewModels;
 using System.Drawing;
+using System.Security.Claims;
 
 namespace NVMotors.Web.Controllers
 {
+    //TODO categories, services, async, ads, input for cubics
     public class MotorController : Controller
     {
+        private readonly UserManager<AppUser> _userManager;
         private readonly NVMotorsDbContext context;
-        public MotorController(NVMotorsDbContext _context)
+        public MotorController(NVMotorsDbContext _context, UserManager<AppUser> userManager)
         {
             context = _context;
+            _userManager = userManager;
         }
         [HttpGet]
         public IActionResult Index()
@@ -64,6 +69,7 @@ namespace NVMotors.Web.Controllers
                 Make = addModel.Make,
                 Model = addModel.Model,
                 Specification = specification,
+                SellerId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier))
             };
 
             context.Specifications.Add(specification);
