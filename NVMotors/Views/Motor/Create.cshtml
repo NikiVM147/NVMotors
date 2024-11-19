@@ -14,7 +14,7 @@
 
             <div class="form-group">
                 <label asp-for="@Model.Make" class="form-label-add-edit">Make</label>
-                <input asp-for="@Model.Make" class="form-control" aria-required="true" />
+                <input asp-for="@Model.Make" class="form-control" aria-required="true" placeholder="Enter Make" />
                 <span asp-validation-for="@Model.Make" class="text-danger"></span>
             </div>
 
@@ -45,6 +45,12 @@
                 <label asp-for="HorsePower" class="control-label">Horse Power</label>
                 <input asp-for="HorsePower" type="number" class="form-control" placeholder="Enter horsepower" required />
                 <span asp-validation-for="HorsePower" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EngineDisplacement" class="control-label">Engine Displacement</label>
+                <input asp-for="EngineDisplacement" type="number" class="form-control" placeholder="Enter EngineDisplacement" required />
+                <span asp-validation-for="EngineDisplacement" class="text-danger"></span>
             </div>
 
             <div class="form-group">

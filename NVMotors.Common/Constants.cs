@@ -25,6 +25,9 @@
         public const int MinEngineDisplacement = 49;
         public const int MaxEngineDisplacement = 1400;
 
+        public const int MinLenghtName = 2; 
+        public const int MaxLenghtName = 30;  
+
 
     }
 }

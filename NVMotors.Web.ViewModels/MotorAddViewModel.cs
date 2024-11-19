@@ -18,7 +18,10 @@ namespace NVMotors.Web.ViewModels
         [Required]
         public int Year { get; set; }
         [Required]
-        public int HorsePower { get; set; } 
+        public int HorsePower { get; set; }
+        [Required]
+        [Range(MinEngineDisplacement, MaxEngineDisplacement)]
+        public int EngineDisplacement { get; set; }
         public TransmissionType SelectedTransmissionType { get; set; }
         public IEnumerable<SelectListItem>? TransmissionTypes { get; set; }
         public FuelType SelectedFuelType { get; set; }
