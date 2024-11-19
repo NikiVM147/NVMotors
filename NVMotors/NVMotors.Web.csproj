@@ -23,6 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\NVMotors.Common\NVMotors.Common.csproj" />
     <ProjectReference Include="..\NVMotors.Data.Models\NVMotors.Data.Models.csproj" />
+    <ProjectReference Include="..\NVMotors.Data.Services\NVMotors.Sevices.Data.csproj" />
     <ProjectReference Include="..\NVMotors.Data\NVMotors.Data.csproj" />
     <ProjectReference Include="..\NVMotors.Web.ViewModels\NVMotors.Web.ViewModels.csproj" />
   </ItemGroup>

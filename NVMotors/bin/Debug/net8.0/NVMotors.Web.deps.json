@@ -18,6 +18,7 @@
           "NVMotors.Common": "1.0.0",
           "NVMotors.Data": "1.0.0",
           "NVMotors.Data.Models": "1.0.0",
+          "NVMotors.Sevices.Data": "1.0.0",
           "NVMotors.Web.ViewModels": "1.0.0"
         },
         "runtime": {
@@ -2208,6 +2209,17 @@
           "NVMotors.Data.Models.dll": {}
         }
       },
+      "NVMotors.Sevices.Data/1.0.0": {
+        "dependencies": {
+          "NVMotors.Common": "1.0.0",
+          "NVMotors.Data": "1.0.0",
+          "NVMotors.Data.Models": "1.0.0",
+          "NVMotors.Web.ViewModels": "1.0.0"
+        },
+        "runtime": {
+          "NVMotors.Sevices.Data.dll": {}
+        }
+      },
       "NVMotors.Web.ViewModels/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "8.0.10",
@@ -3465,6 +3477,11 @@
       "sha512": ""
     },
     "NVMotors.Data.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NVMotors.Sevices.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

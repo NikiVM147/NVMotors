@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using NVMotors.Data;
 using NVMotors.Data.Models;
+using NVMotors.Services.Data;
+using NVMotors.Sevices.Data.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +29,8 @@ builder.Services.AddIdentity<AppUser, IdentityRole<Guid>>(cfg =>
     .AddSignInManager<SignInManager<AppUser>>()
     .AddDefaultTokenProviders()
     .AddDefaultUI();
+
+builder.Services.AddScoped<IMotorService, MotorService>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
