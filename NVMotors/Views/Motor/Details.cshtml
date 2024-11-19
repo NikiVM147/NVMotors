@@ -1,0 +1,55 @@
+﻿@model NVMotors.Web.ViewModels.MotorDetailsViewModel
+
+@{
+    ViewData["Title"] = "Motor Details";
+}
+
+<h1 class="text-center mt-5">@Model.Make @Model.Model Details</h1>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h2 class="card-title text-center">@Model.Make @Model.Model (@Model.Year)</h2>
+                    <p class="text-center text-muted">Detailed specifications of the motor</p>
+                    <hr />
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <h5><i class="bi bi-car-front"></i> Engine</h5>
+                                <p><strong>Horsepower:</strong> @Model.HorsePower hp</p>
+                                <p><strong>Engine Displacement:</strong> @Model.EngineDisplacement cm³</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <h5><i class="bi bi-gear"></i> Transmission & Fuel</h5>
+                                <p><strong>Transmission Type:</strong> @Model.TransmissionType</p>
+                                <p><strong>Fuel Type:</strong> @Model.FuelType</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <h5><i class="bi bi-paint-bucket"></i> Appearance</h5>
+                                <p><strong>Color:</strong> @Model.Color</p>
+                                <p><strong>Condition:</strong> @Model.Condition</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-center">
+                                <a href="@Url.Action("CreateListing", "Motors", new { id = Model.Id })"
+                                   class="btn btn-success btn-lg w-100">Create Listing</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

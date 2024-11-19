@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic.FileIO;
 using NVMotors.Data;
 using NVMotors.Data.Models;
@@ -68,6 +69,7 @@ namespace NVMotors.Web.Controllers
             {
                 Year = addModel.Year,
                 HorsePower = addModel.HorsePower,
+                EngineDisplacement = addModel.EngineDisplacement,
                 TransmissionType = addModel.SelectedTransmissionType.ToString(),
                 FuelType = addModel.SelectedFuelType.ToString(),
                 Color = addModel.SelectedColor.ToString(),
@@ -89,7 +91,27 @@ namespace NVMotors.Web.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private List<SelectListItem> GetEnumSelectList<TEnum>() where TEnum : Enum
+        [HttpGet]
+        public IActionResult Details(Guid id)
+        {
+            var motor = context.Motors.Include(x => x.Specification).FirstOrDefault(x => x.Id == id);
+            var model = new MotorDetailsViewModel
+            {
+                Id = id,
+                Make = motor.Make,
+                Model = motor.Model,
+                Year = motor.Specification.Year,
+                HorsePower = motor.Specification.HorsePower,
+                EngineDisplacement = motor.Specification.EngineDisplacement,
+                TransmissionType = motor.Specification.TransmissionType,
+                FuelType = motor.Specification.FuelType,
+                Color = motor.Specification.Color,
+                Condition = motor.Specification.Condition,
+            };
+            return View(model);
+        }
+
+            private List<SelectListItem> GetEnumSelectList<TEnum>() where TEnum : Enum
         {
             
             return Enum.GetValues(typeof(TEnum))
@@ -102,6 +124,8 @@ namespace NVMotors.Web.Controllers
                             })
                             .ToList();
         }
+
+
 
 
     }
