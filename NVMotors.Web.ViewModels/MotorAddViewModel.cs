@@ -18,6 +18,7 @@ namespace NVMotors.Web.ViewModels
         [Required]
         public int Year { get; set; }
         [Required]
+        [Range(MinHorsePower, MaxHorsePower)]
         public int HorsePower { get; set; }
         [Required]
         [Range(MinEngineDisplacement, MaxEngineDisplacement)]

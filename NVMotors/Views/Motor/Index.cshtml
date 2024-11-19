@@ -1,5 +1,47 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<NVMotors.Web.ViewModels.MotorIndexViewModel>
+
 @{
+    ViewData["Title"] = "Motors Index";
 }
+
+<h1 class="text-center mt-3">@ViewData["Title"]</h1>
+
+<div class="container mt-5">
+    <div class="row g-4">
+        @if (Model != null && Model.Any())
+        {
+            foreach (var motor in Model)
+            {
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body d-flex flex-column">
+                            <!-- Карта със съдържание -->
+                            <h5 class="card-title">@motor.Make @motor.Model</h5>
+                            <p class="card-text">
+                                <strong>Year:</strong> @motor.Year
+                            </p>
+
+                            <!-- Бутон за Детайли -->
+                            <a href="@Url.Action("Details", "Motors", new { id = motor.Id })"
+                               class="btn btn-primary mb-2">
+                                Details
+                            </a>
+
+                            <!-- Бутон за Създаване на Обява -->
+                            <a href="@Url.Action("CreateListing", "Motors", new { id = motor.Id })"
+                               class="btn btn-success mt-auto">
+                                Create Listing
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-12 text-center">
+                <p>No motors available.</p>
+            </div>
+        }
+    </div>
+</div>

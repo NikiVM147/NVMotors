@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Views\Motor\Index.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.10" />
@@ -29,18 +25,6 @@
     <ProjectReference Include="..\NVMotors.Data.Models\NVMotors.Data.Models.csproj" />
     <ProjectReference Include="..\NVMotors.Data\NVMotors.Data.csproj" />
     <ProjectReference Include="..\NVMotors.Web.ViewModels\NVMotors.Web.ViewModels.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Views\Motor\Index.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Views\Motor\Index.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Views\Motor\Index.cshtml" />
   </ItemGroup>
 
 </Project>

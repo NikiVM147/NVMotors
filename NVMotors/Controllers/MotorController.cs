@@ -27,7 +27,15 @@ namespace NVMotors.Web.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            var model = context.Motors.Where(m => m.Seller.Id == Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!))
+                .Select(m => new MotorIndexViewModel
+                {
+                    Id = m.Id,
+                    Make = m.Make,
+                    Model = m.Model,
+                    Year = m.Specification.Year,
+                }).ToList();
+            return View(model);
         }
         [HttpGet]
         public async Task<IActionResult> Create()
