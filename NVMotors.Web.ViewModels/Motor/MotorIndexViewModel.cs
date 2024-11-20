@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NVMotors.Web.ViewModels
+namespace NVMotors.Web.ViewModels.Motor
 {
     public class MotorIndexViewModel
     {

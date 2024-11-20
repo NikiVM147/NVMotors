@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using NVMotors.Data.Models;
-using NVMotors.Web.ViewModels;
+using NVMotors.Web.ViewModels.Motor;
 
 namespace NVMotors.Sevices.Data.Interfaces
 {

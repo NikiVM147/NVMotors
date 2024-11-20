@@ -33,6 +33,7 @@ namespace NVMotors.Data.Models
         public Guid SellerId { get; set; }
         [ForeignKey(nameof(SellerId))]
         public AppUser Seller { get; set; } = null!;
+        public bool IsDeleted { get; set; } = false;
 
     }
 }

@@ -9,13 +9,13 @@ using NVMotors.Data;
 using NVMotors.Data.Models;
 using NVMotors.Data.Models.Enums;
 using NVMotors.Sevices.Data.Interfaces;
-using NVMotors.Web.ViewModels;
+using NVMotors.Web.ViewModels.Motor;
 using System.Runtime.ExceptionServices;
 using System.Security.Claims;
 
 namespace NVMotors.Web.Controllers
 {
-    //TODO categories,ads, remove UserManeger
+    //TODO categories,ads, validations
     [Authorize]
     public class MotorController : Controller
     {

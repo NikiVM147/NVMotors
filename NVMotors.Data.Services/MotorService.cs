@@ -4,7 +4,7 @@ using NVMotors.Data;
 using NVMotors.Data.Models;
 using NVMotors.Data.Models.Enums;
 using NVMotors.Sevices.Data.Interfaces;
-using NVMotors.Web.ViewModels;
+using NVMotors.Web.ViewModels.Motor;
 using System.Security.Claims;
 
 namespace NVMotors.Services.Data

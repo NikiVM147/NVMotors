@@ -3,7 +3,7 @@ using Microsoft.VisualBasic.FileIO;
 using NVMotors.Data.Models.Enums;
 using System.ComponentModel.DataAnnotations;
 using static NVMotors.Common.Constants;
-namespace NVMotors.Web.ViewModels
+namespace NVMotors.Web.ViewModels.Motor
 {
     public class MotorAddViewModel
     {
