@@ -1,0 +1,95 @@
+﻿@model NVMotors.Web.ViewModels.MotorAddViewModel
+
+@{
+    ViewData["Title"] = "Edit Motor";
+}
+
+<h2 class="text-center mb-4">@ViewData["Title"]</h2>
+<form asp-action="Edit" method="post">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">Motor Details</h5>
+        </div>
+        <div class="card-body">
+
+            <div class="form-group">
+                <label asp-for="@Model.Make" class="form-label-add-edit">Make</label>
+                <input asp-for="@Model.Make" class="form-control" aria-required="true" placeholder="Enter Make" />
+                <span asp-validation-for="@Model.Make" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@Model.Model" class="control-label">Model</label>
+                <input asp-for="@Model.Model" class="form-control" placeholder="Enter vehicle model" />
+                <span asp-validation-for="@Model.Model" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Year">Choose Year</label>
+                <select asp-for="Year" class="form-control">
+                    <option value="" disabled selected>Select Year</option>
+                    @{
+                        int startYear = 1900;
+                        int currentYear = DateTime.Now.Year;
+
+                        for (int year = currentYear; year >= startYear; year--)
+                        {
+                            <option value="@year">@year</option>
+                        }
+                    }
+                </select>
+                <span asp-validation-for="Year" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="HorsePower" class="control-label">Horse Power</label>
+                <input asp-for="HorsePower" type="number" class="form-control" placeholder="Enter horsepower" required />
+                <span asp-validation-for="HorsePower" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EngineDisplacement" class="control-label">Engine Displacement</label>
+                <input asp-for="EngineDisplacement" type="number" class="form-control" placeholder="Enter EngineDisplacement" required />
+                <span asp-validation-for="EngineDisplacement" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SelectedTransmissionType" class="control-label">Choose Transmission Type</label>
+                <select asp-for="SelectedTransmissionType" asp-items="Model.TransmissionTypes" class="form-control">
+                </select>
+                <span asp-validation-for="SelectedTransmissionType" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SelectedFuelType" class="control-label">Choose Fuel Type</label>
+                <select asp-for="SelectedFuelType" asp-items="Model.FuelTypes" class="form-control">
+                </select>
+                <span asp-validation-for="SelectedFuelType" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SelectedColor" class="control-label">Choose Color</label>
+                <select asp-for="SelectedColor" asp-items="Model.MotorColors" class="form-control">
+                </select>
+                <span asp-validation-for="SelectedColor" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SelectedCondition" class="control-label">Choose Condition</label>
+                <select asp-for="SelectedCondition" asp-items="Model.Conditions" class="form-control">
+                </select>
+                <span asp-validation-for="SelectedCondition" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3">
+                <button type="submit" class="btn btn-primary btn-lg">Edit</button>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

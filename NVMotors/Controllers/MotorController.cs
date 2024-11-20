@@ -2,12 +2,15 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using NVMotors.Data;
 using NVMotors.Data.Models;
 using NVMotors.Data.Models.Enums;
 using NVMotors.Sevices.Data.Interfaces;
 using NVMotors.Web.ViewModels;
+using System.Runtime.ExceptionServices;
 using System.Security.Claims;
 
 namespace NVMotors.Web.Controllers
@@ -17,9 +20,11 @@ namespace NVMotors.Web.Controllers
     public class MotorController : Controller
     {
         private readonly IMotorService motorService;
-        public MotorController(IMotorService _motorService)
+        private readonly NVMotorsDbContext context;
+        public MotorController(IMotorService _motorService, NVMotorsDbContext _context)
         {
             motorService = _motorService;
+            context = _context; 
         }
         public Guid GetCurrentUserId()
         {
@@ -59,5 +64,23 @@ namespace NVMotors.Web.Controllers
             var model = await motorService.DetailsMotorAsync(id);
             return View(model);
         }
-    }
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid id)
+        {
+           var model = await motorService.LoadEditModelAsync(id);
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit(MotorAddViewModel editModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                editModel = motorService.LoadMotorViewModel();
+
+                return View(editModel);
+            }
+            await motorService.EditMotorAsync(editModel);
+            return RedirectToAction(nameof(Details), new {id = editModel.Id});
+        }
+     }
 }

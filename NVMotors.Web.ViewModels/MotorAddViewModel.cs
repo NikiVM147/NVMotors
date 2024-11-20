@@ -7,6 +7,7 @@ namespace NVMotors.Web.ViewModels
 {
     public class MotorAddViewModel
     {
+        public Guid Id { get; set; }
         [Required]
         [MaxLength(MakeMaxLength)]
         [MinLength(MakeMinLenght)]

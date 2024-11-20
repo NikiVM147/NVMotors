@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using NVMotors.Data.Models;
 using NVMotors.Web.ViewModels;
 
 namespace NVMotors.Sevices.Data.Interfaces
@@ -12,5 +13,9 @@ namespace NVMotors.Sevices.Data.Interfaces
         MotorAddViewModel LoadMotorViewModel();
         Task CreateMotorAsync(MotorAddViewModel addModel, Guid userId);
         Task<MotorDetailsViewModel> DetailsMotorAsync(Guid id);
+
+        Task<Motor> FindMotorByIdAsync(Guid id);
+        Task<MotorAddViewModel> LoadEditModelAsync(Guid id);
+        Task EditMotorAsync(MotorAddViewModel editModel);
     }
 }

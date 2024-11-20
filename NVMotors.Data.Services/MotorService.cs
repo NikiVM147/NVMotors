@@ -62,6 +62,28 @@ namespace NVMotors.Services.Data
             return model;
         }
 
+        public async Task EditMotorAsync(MotorAddViewModel editModel)
+        {
+            var motor = await FindMotorByIdAsync(editModel.Id);
+
+            motor.Make = editModel.Make;
+            motor.Model = editModel.Model;
+            motor.Specification.Year = editModel.Year;
+            motor.Specification.HorsePower = editModel.HorsePower;
+            motor.Specification.EngineDisplacement = editModel.EngineDisplacement;
+            motor.Specification.TransmissionType = editModel.SelectedTransmissionType.ToString();
+            motor.Specification.FuelType = editModel.SelectedFuelType.ToString();
+            motor.Specification.Color = editModel.SelectedColor.ToString();
+            motor.Specification.Condition = editModel.SelectedCondition.ToString();
+
+           await context.SaveChangesAsync();
+        }
+
+        public async Task<Motor> FindMotorByIdAsync(Guid id)
+        {
+           return await context.Motors.Include(m => m.Specification).FirstOrDefaultAsync(m => m.Id == id);
+        }
+
         public async Task<List<MotorIndexViewModel>> GetAllMotorsForCurrentUserAsync(Guid userId)
         {
           return await context.Motors.Where(m => m.Seller.Id == userId)
@@ -85,6 +107,34 @@ namespace NVMotors.Services.Data
                          Disabled = e.ToString() == "None"
                      })
                      .ToList();
+        }
+
+        public async Task<MotorAddViewModel> LoadEditModelAsync(Guid id)
+        {
+            var motor = await FindMotorByIdAsync(id);
+
+            if (motor == null)
+            {
+                throw new InvalidOperationException("Motor not found.");
+            }
+            var model = new MotorAddViewModel()
+            {
+                Id = id,
+                Make = motor.Make,
+                Model = motor.Model,
+                Year = motor.Specification.Year,
+                HorsePower = motor.Specification.HorsePower,
+                EngineDisplacement = motor.Specification.EngineDisplacement,
+                SelectedTransmissionType = Enum.Parse<TransmissionType>(motor.Specification.TransmissionType),
+                SelectedFuelType = Enum.Parse<FuelType>(motor.Specification.FuelType),
+                SelectedColor = Enum.Parse<MotorColor>(motor.Specification.Color),
+                SelectedCondition = Enum.Parse<Condition>(motor.Specification.Condition),
+                TransmissionTypes = GetEnumSelectList<TransmissionType>(),
+                FuelTypes = GetEnumSelectList<FuelType>(),
+                MotorColors = GetEnumSelectList<MotorColor>(),
+                Conditions = GetEnumSelectList<Condition>()
+            };
+            return model;
         }
 
         public MotorAddViewModel LoadMotorViewModel()
