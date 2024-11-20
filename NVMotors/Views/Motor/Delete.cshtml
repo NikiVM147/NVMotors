@@ -1,0 +1,26 @@
+﻿@using NVMotors.Web.ViewModels.Motor;
+@model MotorIndexViewModel
+
+@{
+    ViewData["Title"] = "Confirm Deletion";
+}
+
+<h2 class="text-center mb-4">Confirm Deletion</h2>
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">Are you sure you want to delete the motor?</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>Make:</strong> @Model.Make</p>
+        <p><strong>Model:</strong> @Model.Model</p>
+        <p><strong>Year:</strong> @Model.Year</p>
+
+        <form asp-action="Delete" method="post" class="mt-3">
+            <input type="hidden" name="id" value="@Model.Id" />
+
+            <button type="submit" class="btn btn-danger">Yes, Delete</button>
+            <a href="@Url.Action("Details",  new { id = Model.Id })" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>

@@ -45,7 +45,7 @@ namespace NVMotors.Services.Data
 
         public async Task<MotorDetailsViewModel> DetailsMotorAsync(Guid id)
         {
-            var motor = await context.Motors.Include(x => x.Specification).FirstOrDefaultAsync(x => x.Id == id);
+            var motor = await FindMotorByIdAsync(id);
             var model = new MotorDetailsViewModel
             {
                 Id = id,
@@ -81,12 +81,13 @@ namespace NVMotors.Services.Data
 
         public async Task<Motor> FindMotorByIdAsync(Guid id)
         {
-           return await context.Motors.Include(m => m.Specification).FirstOrDefaultAsync(m => m.Id == id);
+           return await context.Motors.Include(m => m.Specification).Where(m => m.IsDeleted == false).FirstOrDefaultAsync(m => m.Id == id);
         }
 
         public async Task<List<MotorIndexViewModel>> GetAllMotorsForCurrentUserAsync(Guid userId)
         {
           return await context.Motors.Where(m => m.Seller.Id == userId)
+               .Where(m => m.IsDeleted == false)
                .Select(m => new MotorIndexViewModel
                {
                    Id = m.Id,
