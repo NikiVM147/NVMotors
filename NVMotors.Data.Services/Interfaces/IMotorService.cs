@@ -17,5 +17,8 @@ namespace NVMotors.Sevices.Data.Interfaces
         Task<Motor> FindMotorByIdAsync(Guid id);
         Task<MotorAddViewModel> LoadEditModelAsync(Guid id);
         Task EditMotorAsync(MotorAddViewModel editModel);
+        Task<MotorIndexViewModel> GetDeleteMotorModelAsync(Guid id);
+
+        Task DeleteMotorAsync(MotorIndexViewModel deleteModel);
     }
 }

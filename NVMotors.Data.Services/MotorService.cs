@@ -43,6 +43,13 @@ namespace NVMotors.Services.Data
             await context.SaveChangesAsync();
         }
 
+        public async Task DeleteMotorAsync(MotorIndexViewModel deleteModel)
+        {
+            var motor = await FindMotorByIdAsync(deleteModel.Id);
+            motor.IsDeleted = true;
+            await context.SaveChangesAsync();
+        }
+
         public async Task<MotorDetailsViewModel> DetailsMotorAsync(Guid id)
         {
             var motor = await FindMotorByIdAsync(id);
@@ -95,6 +102,19 @@ namespace NVMotors.Services.Data
                    Model = m.Model,
                    Year = m.Specification.Year,
                }).ToListAsync();
+        }
+
+        public async Task<MotorIndexViewModel> GetDeleteMotorModelAsync(Guid id)
+        {
+            var motor = await FindMotorByIdAsync(id);
+            var model = new MotorIndexViewModel
+            {
+                Id = id,
+                Make = motor.Make,
+                Model = motor.Model,
+                Year = motor.Specification.Year,
+            }; 
+            return model;
         }
 
         public List<SelectListItem> GetEnumSelectList<TEnum>() where TEnum : Enum

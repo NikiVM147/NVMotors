@@ -85,22 +85,13 @@ namespace NVMotors.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> Delete(Guid id)
         {
-            var motor = await motorService.FindMotorByIdAsync(id);
-            var model = new MotorIndexViewModel
-            {
-                Id = id,
-                Make = motor.Make,
-                Model = motor.Model,
-                Year = motor.Specification.Year,
-            };
+            var model = await motorService.GetDeleteMotorModelAsync(id);
             return View(model);
         }
         [HttpPost]
         public async Task<IActionResult> Delete(MotorIndexViewModel deleteModel)
         {
-            var motor = await motorService.FindMotorByIdAsync(deleteModel.Id);
-            motor.IsDeleted = true;
-            await context.SaveChangesAsync();
+            await motorService.DeleteMotorAsync(deleteModel);
             return RedirectToAction(nameof(Index));
         }
         }
