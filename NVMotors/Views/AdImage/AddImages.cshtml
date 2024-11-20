@@ -1,0 +1,25 @@
+﻿@model NVMotors.Web.ViewModels.AdImage.CreateAdImagesViewModel
+
+@{
+    ViewData["Title"] = "Add Images for Ad";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="AdId" />
+
+    <div class="form-group">
+        <label asp-for="Images" class="control-label">Upload Images</label>
+        <input asp-for="Images" type="file" multiple class="form-control" />
+        <span asp-validation-for="Images" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Images</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
