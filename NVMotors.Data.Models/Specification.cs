@@ -39,7 +39,7 @@ namespace NVMotors.Data.Models
         [MinLength(MinConditionLength)]
         [MaxLength(MaxConditionLength)]
         public string Condition { get; set; } 
-        public Motor Vechicle { get; set; }
+        public Motor Motor { get; set; }
 
     }
     

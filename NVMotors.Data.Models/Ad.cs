@@ -20,9 +20,9 @@ namespace NVMotors.Data.Models
         [MaxLength(DescriptionMaxLengt)]
         public string Description { get; set; } = string.Empty;
         [Required]
-        [ForeignKey(nameof(VechicleId))]
-        public Guid VechicleId { get; set; }
-        public Motor Vechicle { get; set; }
+        [ForeignKey(nameof(MotorId))]
+        public Guid MotorId { get; set; }
+        public Motor Motor { get; set; }
         [Required]
         [Range(MinPrice, MaxPrice)]
         public decimal Price { get; set; }

@@ -1,0 +1,79 @@
+﻿@model NVMotors.Web.ViewModels.Ad.AdDetailViewModel
+
+@{
+    ViewData["Title"] = "Ad Details";
+}
+
+<div class="ad-detail-container">
+    <div class="ad-header">
+        <h1>@Model.Make @Model.Model (@Model.Year)</h1>
+        <h2 class="ad-price">@Model.Price.ToString("C")</h2>
+    </div>
+
+    <div class="ad-content">
+        <div class="ad-images-section">
+            <div class="main-image">
+                @if (Model.ImageURLs.Any())
+                {
+                    <img src="@Model.ImageURLs.First()" alt="Main Image" class="img-fluid" id="mainImage" />
+                }
+                else
+                {
+                    <img src="/images/default-placeholder.jpg" alt="No Image Available" class="img-fluid" id="mainImage" />
+                }
+            </div>
+
+            <div class="image-gallery">
+                @foreach (var imageUrl in Model.ImageURLs)
+                {
+                    <img src="@imageUrl" alt="Gallery Image" class="gallery-thumbnail" data-image-url="@imageUrl" />
+                }
+            </div>
+        </div>
+
+        <div class="ad-details-section">
+            <div class="specifications">
+                <h3>Specifications</h3>
+                <ul>
+                    <li><strong>Make:</strong> @Model.Make</li>
+                    <li><strong>Model:</strong> @Model.Model</li>
+                    <li><strong>Year:</strong> @Model.Year</li>
+                    <li><strong>Horse Power:</strong> @Model.HorsePower HP</li>
+                    <li><strong>Engine Displacement:</strong> @Model.EngineDisplacement cc</li>
+                    <li><strong>Transmission:</strong> @Model.TransmissionType</li>
+                    <li><strong>Fuel Type:</strong> @Model.FuelType</li>
+                    <li><strong>Color:</strong> @Model.Color</li>
+                    <li><strong>Condition:</strong> @Model.Condition</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ad-description-section">
+        <h3>Description</h3>
+        <p>@Model.Description</p>
+    </div>
+
+    <div class="ad-contact-section">
+        <h3>Contact Information</h3>
+        <p><strong>Town:</strong> @Model.Town</p>
+        <p><strong>Phone Number:</strong> @Model.PhoneNumber</p>
+    </div>
+
+    <div class="back-link">
+        <a href="@Url.Action("Index", "Ad")"
+           class="btn btn-primary mb-2">
+            Back to Ads
+        </a>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        document.querySelectorAll('.gallery-thumbnail').forEach(function (thumbnail) {
+            thumbnail.addEventListener('click', function () {
+                var imageUrl = thumbnail.getAttribute('data-image-url');
+                document.getElementById('mainImage').src = imageUrl;
+            });
+        });
+    </script>
+}

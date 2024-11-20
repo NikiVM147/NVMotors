@@ -65,7 +65,7 @@ namespace NVMotors.Web.Controllers
 
             await context.SaveChangesAsync();
 
-            return RedirectToAction("Details", "Ad", new { id = imageModel.AdId });
+            return RedirectToAction("Index", "Ad");
         }
     }
 }

@@ -36,7 +36,6 @@ body {
     padding: 20px;
 }
 
-/* About Us Section */
 section.container h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -46,7 +45,6 @@ section.container p {
     font-size: 1.25rem;
 }
 
-/* Features Section */
 section.container img {
     width: 100%;
     height: auto;
@@ -67,4 +65,127 @@ section.container h4 {
     display: block;
     margin: 0 auto;
     border-radius:5px;
+}
+
+.ad-detail-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #999797;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.ad-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ad-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #000; 
+}
+
+.ad-header .ad-price {
+    font-size: 2rem;
+    color: #13911d;
+    margin-top: 10px;
+}
+
+.ad-content {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.ad-images-section {
+    flex: 2;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.image-gallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+.gallery-thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+    .gallery-thumbnail:hover {
+        border-color: #007bff;
+    }
+
+.ad-details-section {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.specifications h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #000; 
+}
+
+.specifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+    .specifications ul li {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+.ad-description-section,
+.ad-contact-section {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333; 
+}
+
+    .ad-description-section h3,
+    .ad-contact-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: #000; 
+    }
+
+.back-link {
+    text-align: center;
+}
+
+.btn-primary {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
 }

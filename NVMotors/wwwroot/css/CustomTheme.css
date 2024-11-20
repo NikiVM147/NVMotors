@@ -12118,7 +12118,8 @@ textarea.form-control-lg {
   background-color: #444;
 }
 .alert-success {
-  background-color: #00bc8c;
+    background-image: url('../images/motor.jpg');
+    background-color: #00bc8c;
 }
 .alert-info {
   background-color: #3498db;
