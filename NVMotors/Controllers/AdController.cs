@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
 using NVMotors.Data;
 using NVMotors.Data.Models;
 using NVMotors.Web.ViewModels.Ad;
@@ -58,10 +59,11 @@ namespace NVMotors.Web.Controllers
         [HttpGet]
         public IActionResult Details(Guid id)
         { 
-            var ad = context.Ads.Include(a => a.Motor).ThenInclude(m => m.Specification).Include(a => a.AdsImages).ThenInclude(ai => ai.Image).FirstOrDefault(a => a.Id == id);
+            var ad = context.Ads.Include(a => a.Motor).ThenInclude(m => m.MotorCategory).Include(a => a.Motor).ThenInclude(m => m.Specification).Include(a => a.AdsImages).ThenInclude(ai => ai.Image).FirstOrDefault(a => a.Id == id);
             var model = new AdDetailViewModel
             {
                 Id = id,
+                Category = ad.Motor.MotorCategory.Name,
                 Make = ad.Motor.Make,
                 Model = ad.Motor.Model,
                 Year = ad.Motor.Specification.Year,

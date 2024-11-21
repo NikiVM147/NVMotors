@@ -9,6 +9,9 @@ namespace NVMotors.Web.ViewModels.Motor
     {
         public Guid Id { get; set; }
         [Required]
+        public Guid CategoryId { get; set; } 
+        public IEnumerable<SelectListItem> Categories { get; set; } = new List<SelectListItem>();
+        [Required]
         [MaxLength(MakeMaxLength)]
         [MinLength(MakeMinLenght)]
         public string Make { get; set; } = string.Empty;

@@ -40,7 +40,7 @@ namespace NVMotors.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-            var model = motorService.LoadMotorViewModel();
+            var model = await motorService.LoadMotorViewModel();
 
             return View(model);
         }
@@ -49,7 +49,7 @@ namespace NVMotors.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                addModel = motorService.LoadMotorViewModel();
+                addModel = await motorService.LoadMotorViewModel();
 
                 return View(addModel);
             }
@@ -75,7 +75,7 @@ namespace NVMotors.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                editModel = motorService.LoadMotorViewModel();
+                editModel = await motorService.LoadMotorViewModel();
 
                 return View(editModel);
             }

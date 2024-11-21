@@ -10,7 +10,7 @@ namespace NVMotors.Sevices.Data.Interfaces
         Task<List<MotorIndexViewModel>> GetAllMotorsForCurrentUserAsync(Guid userId);
         List<SelectListItem> GetEnumSelectList<TEnum>() where TEnum : Enum;
 
-        MotorAddViewModel LoadMotorViewModel();
+        Task<MotorAddViewModel> LoadMotorViewModel();
         Task CreateMotorAsync(MotorAddViewModel addModel, Guid userId);
         Task<MotorDetailsViewModel> DetailsMotorAsync(Guid id);
 
@@ -20,5 +20,6 @@ namespace NVMotors.Sevices.Data.Interfaces
         Task<MotorIndexViewModel> GetDeleteMotorModelAsync(Guid id);
 
         Task DeleteMotorAsync(MotorIndexViewModel deleteModel);
+        Task<List<SelectListItem>> LoadCategoriesAsync();
     }
 }

@@ -36,6 +36,7 @@ namespace NVMotors.Services.Data
                 Model = addModel.Model,
                 Specification = specification,
                 SellerId = userId,
+                MotorCategoryId = addModel.CategoryId,
             };
 
             await context.Specifications.AddAsync(specification);
@@ -65,6 +66,7 @@ namespace NVMotors.Services.Data
                 FuelType = motor.Specification.FuelType,
                 Color = motor.Specification.Color,
                 Condition = motor.Specification.Condition,
+                Category = motor.MotorCategory.Name ?? string.Empty,
             };
             return model;
         }
@@ -82,13 +84,13 @@ namespace NVMotors.Services.Data
             motor.Specification.FuelType = editModel.SelectedFuelType.ToString();
             motor.Specification.Color = editModel.SelectedColor.ToString();
             motor.Specification.Condition = editModel.SelectedCondition.ToString();
-
+            motor.MotorCategoryId = editModel.CategoryId;
            await context.SaveChangesAsync();
         }
 
         public async Task<Motor> FindMotorByIdAsync(Guid id)
         {
-           return await context.Motors.Include(m => m.Specification).Where(m => m.IsDeleted == false).FirstOrDefaultAsync(m => m.Id == id);
+           return await context.Motors.Include(m => m.Specification).Include(m => m.MotorCategory).Where(m => m.IsDeleted == false).FirstOrDefaultAsync(m => m.Id == id);
         }
 
         public async Task<List<MotorIndexViewModel>> GetAllMotorsForCurrentUserAsync(Guid userId)
@@ -130,6 +132,15 @@ namespace NVMotors.Services.Data
                      .ToList();
         }
 
+        public async Task<List<SelectListItem>> LoadCategoriesAsync()
+        {
+            return await context.MotorCategories.Select(c => new SelectListItem
+            {
+                Value = c.Id.ToString(),
+                Text = c.Name,
+            }).ToListAsync();
+        }
+
         public async Task<MotorAddViewModel> LoadEditModelAsync(Guid id)
         {
             var motor = await FindMotorByIdAsync(id);
@@ -153,19 +164,22 @@ namespace NVMotors.Services.Data
                 TransmissionTypes = GetEnumSelectList<TransmissionType>(),
                 FuelTypes = GetEnumSelectList<FuelType>(),
                 MotorColors = GetEnumSelectList<MotorColor>(),
-                Conditions = GetEnumSelectList<Condition>()
+                Conditions = GetEnumSelectList<Condition>(),
+                Categories = await LoadCategoriesAsync(),
+                CategoryId = motor.MotorCategoryId,
             };
             return model;
         }
 
-        public MotorAddViewModel LoadMotorViewModel()
+        public async Task<MotorAddViewModel> LoadMotorViewModel()
         {
             return new MotorAddViewModel
             {
                 TransmissionTypes = GetEnumSelectList<TransmissionType>(),
                 FuelTypes = GetEnumSelectList<FuelType>(),
                 MotorColors = GetEnumSelectList<MotorColor>(),
-                Conditions = GetEnumSelectList<Condition>()
+                Conditions = GetEnumSelectList<Condition>(),
+                Categories = await LoadCategoriesAsync(),
             };
         }
     }

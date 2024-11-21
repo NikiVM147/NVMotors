@@ -10,6 +10,7 @@ namespace NVMotors.Web.ViewModels.Ad
     public class AdDetailViewModel
     {
         public Guid Id { get; set; }
+        public required string Category { get; set; }
         public required string Make { get; set; }
         public required string Model { get; set; }
         public int Year { get; set; }

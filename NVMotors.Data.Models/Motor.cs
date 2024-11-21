@@ -28,7 +28,7 @@ namespace NVMotors.Data.Models
         public Specification Specification { get; set; } = null!;
         public ICollection<Ad> Ads { get; set; } = new List<Ad>();
         [ForeignKey(nameof(MotorCategoryId))]
-        public Guid? MotorCategoryId { get; set; }
+        public Guid MotorCategoryId { get; set; }
         public MotorCategory? MotorCategory { get; set; }
         public Guid SellerId { get; set; }
         [ForeignKey(nameof(SellerId))]
