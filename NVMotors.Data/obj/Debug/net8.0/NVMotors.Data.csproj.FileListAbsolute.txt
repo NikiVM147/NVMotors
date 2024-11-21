@@ -18,3 +18,4 @@ C:\Users\Niki\source\repos\NVMotors\NVMotors.Data\obj\Debug\net8.0\refint\NVMoto
 C:\Users\Niki\source\repos\NVMotors\NVMotors.Data\obj\Debug\net8.0\NVMotors.Data.pdb
 C:\Users\Niki\source\repos\NVMotors\NVMotors.Data\obj\Debug\net8.0\NVMotors.Data.genruntimeconfig.cache
 C:\Users\Niki\source\repos\NVMotors\NVMotors.Data\obj\Debug\net8.0\ref\NVMotors.Data.dll
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Data\bin\Debug\net8.0\DataSets\MotorCategories.json

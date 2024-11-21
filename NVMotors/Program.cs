@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using NVMotors.Data;
 using NVMotors.Data.Models;
 using NVMotors.Services.Data;
+using NVMotors.Sevices.Data;
 using NVMotors.Sevices.Data.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -33,11 +34,18 @@ builder.Services.AddIdentity<AppUser, IdentityRole<Guid>>(cfg =>
 builder.Services.AddScoped<IMotorService, MotorService>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-
+builder.Services.AddTransient<SeedService>();
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+using (var scope = app.Services.CreateScope())
+{
+    var seedService = scope.ServiceProvider.GetRequiredService<SeedService>();
+    var json = "DataSets/MotorCategories.json";
+    seedService.SeedCategories(json);
+}
+
+    // Configure the HTTP request pipeline.
+    if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();
 }
