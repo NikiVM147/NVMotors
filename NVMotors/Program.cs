@@ -42,6 +42,18 @@ using (var scope = app.Services.CreateScope())
     var seedService = scope.ServiceProvider.GetRequiredService<SeedService>();
     var json = "DataSets/MotorCategories.json";
     seedService.SeedCategories(json);
+
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
+    var roles = new[] { "User", "Administrator" };
+
+    foreach (var role in roles)
+    {
+        if (!await roleManager.RoleExistsAsync(role))
+        {
+            await roleManager.CreateAsync(new IdentityRole<Guid>(role));
+        }
+    }
+    await SeedUsers.SeedRolesAndUsers(scope.ServiceProvider);
 }
 
     // Configure the HTTP request pipeline.

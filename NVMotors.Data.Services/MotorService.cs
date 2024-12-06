@@ -88,7 +88,7 @@ namespace NVMotors.Services.Data
            await context.SaveChangesAsync();
         }
 
-        public async Task<Motor> FindMotorByIdAsync(Guid id)
+        private async Task<Motor> FindMotorByIdAsync(Guid id)
         {
            return await context.Motors.Include(m => m.Specification).Include(m => m.MotorCategory).Where(m => m.IsDeleted == false).FirstOrDefaultAsync(m => m.Id == id);
         }
@@ -132,7 +132,7 @@ namespace NVMotors.Services.Data
                      .ToList();
         }
 
-        public async Task<List<SelectListItem>> LoadCategoriesAsync()
+        private async Task<List<SelectListItem>> LoadCategoriesAsync()
         {
             return await context.MotorCategories.Select(c => new SelectListItem
             {

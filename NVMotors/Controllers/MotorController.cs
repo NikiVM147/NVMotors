@@ -15,7 +15,7 @@ using System.Security.Claims;
 
 namespace NVMotors.Web.Controllers
 {
-    //TODO categories,ads, validations
+    //TODO categories, validations
     [Authorize]
     public class MotorController : Controller
     {
