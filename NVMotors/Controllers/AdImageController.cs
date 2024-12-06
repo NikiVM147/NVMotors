@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NVMotors.Data;
 using NVMotors.Data.Models;
@@ -7,6 +8,7 @@ using NVMotors.Web.ViewModels.AdImage;
 
 namespace NVMotors.Web.Controllers
 {
+    [Authorize(Roles = "User")]
     public class AdImageController : Controller
     {
         private readonly NVMotorsDbContext context;

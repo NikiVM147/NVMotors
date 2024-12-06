@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using NVMotors.Web.ViewModels.Ad;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,12 @@ using System.Threading.Tasks;
 
 namespace NVMotors.Sevices.Data.Interfaces
 {
-    internal interface IAdService
+    public interface IAdService
     {
+        Task<IEnumerable<AdIndexViewModel>> IndexGetAllAds();
+        Task CreateAdAsync(CreateAdViewModel adModel);
+        Task<AdDetailViewModel> GetAdDetailsAsync(Guid id);
+
+
     }
 }

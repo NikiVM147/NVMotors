@@ -4,7 +4,7 @@ namespace NVMotors.Web.Controllers
 {
     public class AdminController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Approve()
         {
             return View();
         }

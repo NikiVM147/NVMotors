@@ -18,9 +18,9 @@ namespace NVMotors.Web.Controllers
             context = _context;
             adService = _adService;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var model = adService.IndexGetAllAds();
+            var model = await adService.IndexGetAllAds();
             return View(model);
         }
         [HttpGet]
@@ -43,28 +43,10 @@ namespace NVMotors.Web.Controllers
             return RedirectToAction("AddImages", "AdImage", new { id = adModel.Id });
         }
         [HttpGet]
-        public IActionResult Details(Guid id)
-        { 
-            var ad = context.Ads.Include(a => a.Motor).ThenInclude(m => m.MotorCategory).Include(a => a.Motor).ThenInclude(m => m.Specification).Include(a => a.AdsImages).ThenInclude(ai => ai.Image).FirstOrDefault(a => a.Id == id);
-            var model = new AdDetailViewModel
-            {
-                Id = id,
-                Category = ad.Motor.MotorCategory.Name,
-                Make = ad.Motor.Make,
-                Model = ad.Motor.Model,
-                Year = ad.Motor.Specification.Year,
-                HorsePower = ad.Motor.Specification.HorsePower,
-                EngineDisplacement = ad.Motor.Specification.EngineDisplacement,
-                TransmissionType = ad.Motor.Specification.TransmissionType,
-                FuelType = ad.Motor.Specification.FuelType,
-                Color = ad.Motor.Specification.Color,
-                Condition = ad.Motor.Specification.Condition,
-                Town = ad.Town,
-                Description = ad.Description,
-                PhoneNumber = ad.PhoneNumber,
-                Price = ad.Price,
-                ImageURLs = ad.AdsImages.Select(ai => ai.Image.ImageUrl).ToList(),
-            };
+        public async Task<IActionResult> Details(Guid id)
+        {
+
+            var model = await adService.GetAdDetailsAsync(id);
             return View(model);
         }
 
