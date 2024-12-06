@@ -32,6 +32,7 @@ builder.Services.AddIdentity<AppUser, IdentityRole<Guid>>(cfg =>
     .AddDefaultUI();
 
 builder.Services.AddScoped<IMotorService, MotorService>();
+builder.Services.AddScoped<IAdService, AdService>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<SeedService>();

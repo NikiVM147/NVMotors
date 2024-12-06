@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
 using NVMotors.Data;
 using NVMotors.Data.Models;
+using NVMotors.Sevices.Data.Interfaces;
 using NVMotors.Web.ViewModels.Ad;
 
 namespace NVMotors.Web.Controllers
@@ -10,26 +12,19 @@ namespace NVMotors.Web.Controllers
     public class AdController : Controller
     {
         private readonly NVMotorsDbContext context;
-        public AdController(NVMotorsDbContext _context)
+        private readonly IAdService adService;
+        public AdController(NVMotorsDbContext _context, IAdService _adService)
         {
             context = _context;
+            adService = _adService;
         }
         public IActionResult Index()
         {
-            var model = context.Ads.Where(a => a.IsApproved == true).Select(a => new AdIndexViewModel
-            {
-                Id = a.Id,
-                Make = a.Motor.Make,
-                Model = a.Motor.Model,
-                Year = a.Motor.Specification.Year,
-                Town = a.Town,
-                Price = a.Price,
-                ImageURL = a.AdsImages.Select(ai => ai.Image.ImageUrl).FirstOrDefault(),
-
-            });
+            var model = adService.IndexGetAllAds();
             return View(model);
         }
         [HttpGet]
+        [Authorize(Roles = "User")]
         public IActionResult CreateAd(Guid id)
         {
             var model = new CreateAdViewModel();
@@ -37,24 +32,15 @@ namespace NVMotors.Web.Controllers
             return View(model);
         }
         [HttpPost]
-        public IActionResult CreateAd(CreateAdViewModel adModel)
+        [Authorize(Roles = "User")]
+        public async Task<IActionResult> CreateAd(CreateAdViewModel adModel)
         {
             if (!ModelState.IsValid)
             {
                 return View(adModel);
             }
-            var ad = new Ad
-            {
-                DateAd = DateTime.Now,
-                Description = adModel.Description,
-                Price = adModel.Price,
-                Town = adModel.Town,
-                PhoneNumber = adModel.PhoneNumber,
-                MotorId = adModel.Id,
-            };
-            context.Ads.Add(ad);
-            context.SaveChanges();
-            return RedirectToAction("AddImages", "AdImage", new { id = ad.Id });
+            await adService.CreateAdAsync(adModel);
+            return RedirectToAction("AddImages", "AdImage", new { id = adModel.Id });
         }
         [HttpGet]
         public IActionResult Details(Guid id)
