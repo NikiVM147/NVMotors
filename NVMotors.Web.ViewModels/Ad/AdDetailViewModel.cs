@@ -25,6 +25,7 @@ namespace NVMotors.Web.ViewModels.Ad
         public required string Town { get; set; }
         public required string PhoneNumber { get; set; }
         public List<string> ImageURLs { get; set; } = new List<string>();
+        public bool IsSeller { get; set; }
 
 
     }

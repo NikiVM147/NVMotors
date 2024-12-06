@@ -6,6 +6,7 @@ using NVMotors.Data;
 using NVMotors.Data.Models;
 using NVMotors.Sevices.Data.Interfaces;
 using NVMotors.Web.ViewModels.Ad;
+using System.Security.Claims;
 
 namespace NVMotors.Web.Controllers
 {
@@ -18,7 +19,11 @@ namespace NVMotors.Web.Controllers
             context = _context;
             adService = _adService;
         }
-        public async Task<IActionResult> Index()
+        public Guid GetCurrentUserId()
+        {
+            return Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+        }
+        public async Task<IActionResult> IndexAds()
         {
             var model = await adService.IndexGetAllAds();
             return View(model);
@@ -46,7 +51,7 @@ namespace NVMotors.Web.Controllers
         public async Task<IActionResult> Details(Guid id)
         {
 
-            var model = await adService.GetAdDetailsAsync(id);
+            var model = await adService.GetAdDetailsAsync(id, GetCurrentUserId());
             return View(model);
         }
 

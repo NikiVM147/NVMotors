@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using NVMotors.Data.Models;
 using NVMotors.Web.ViewModels.Ad;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,8 @@ namespace NVMotors.Sevices.Data.Interfaces
     {
         Task<IEnumerable<AdIndexViewModel>> IndexGetAllAds();
         Task<Guid> CreateAdAsync(CreateAdViewModel adModel);
-        Task<AdDetailViewModel> GetAdDetailsAsync(Guid id);
+        Task<AdDetailViewModel> GetAdDetailsAsync(Guid id, Guid userId);
+        IEnumerable<AdIndexViewModel> AllAdsToModel(IQueryable<Ad> ads);
 
 
     }

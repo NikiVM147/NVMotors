@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Browse Advertisements";
+    var showApproveButton = ViewBag.ShowApproveButton as bool? ?? false;
 }
 
 <h2 class="text-center my-4">@ViewData["Title"]</h2>
@@ -29,6 +30,15 @@ else
                                class="btn btn-primary mb-2">
                                 Details
                             </a>
+
+                            @if (showApproveButton)
+                            {
+                           
+                                <a href="@Url.Action("ApproveAd", "Admin", new { id = ad.Id })"
+                                   class="btn btn-success mb-2">
+                                    Approve Ad
+                                </a>
+                            }
                         </div>
                     </div>
                 </div>

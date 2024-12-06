@@ -35,7 +35,7 @@ namespace NVMotors.Sevices.Data
            return ad.Id;
         }
 
-        public async Task<AdDetailViewModel> GetAdDetailsAsync(Guid id)
+        public async Task<AdDetailViewModel> GetAdDetailsAsync(Guid id, Guid userId)
         {
             var ad = await context.Ads.Include(a => a.Motor)
                 .ThenInclude(m => m.MotorCategory)
@@ -61,13 +61,21 @@ namespace NVMotors.Sevices.Data
                 PhoneNumber = ad.PhoneNumber,
                 Price = ad.Price,
                 ImageURLs = ad.AdsImages.Select(ai => ai.Image.ImageUrl).ToList(),
+                IsSeller = userId == ad.Motor.SellerId,
             };
             return model;
         }
 
         public async Task<IEnumerable<AdIndexViewModel>> IndexGetAllAds()
         {
-            return context.Ads.Where(a => a.IsApproved == true).Select(a => new AdIndexViewModel
+            var ads = context.Ads.Where(a => a.IsApproved == true).AsQueryable();
+            return AllAdsToModel(ads);
+
+            
+        }
+        public IEnumerable<AdIndexViewModel> AllAdsToModel(IQueryable<Ad> ads) 
+        {
+            return ads.Select(a => new AdIndexViewModel
             {
                 Id = a.Id,
                 Make = a.Motor.Make,
@@ -75,7 +83,7 @@ namespace NVMotors.Sevices.Data
                 Year = a.Motor.Specification.Year,
                 Town = a.Town,
                 Price = a.Price,
-                ImageURL = a.AdsImages.Select(ai => ai.Image.ImageUrl).FirstOrDefault(),
+                ImageURL = a.AdsImages.Select(ai => ai.Image.ImageUrl).FirstOrDefault()!,
 
             });
         }
