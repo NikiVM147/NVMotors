@@ -19,7 +19,7 @@ namespace NVMotors.Sevices.Data
             context = _context;
         }
 
-        public async Task CreateAdAsync(CreateAdViewModel adModel)
+        public async Task<Guid> CreateAdAsync(CreateAdViewModel adModel)
         {
             var ad = new Ad
             {
@@ -28,13 +28,14 @@ namespace NVMotors.Sevices.Data
                 Price = adModel.Price,
                 Town = adModel.Town,
                 PhoneNumber = adModel.PhoneNumber,
-                MotorId = adModel.Id,
+                MotorId = adModel.MotorModelId,
             };
-            context.Ads.Add(ad);
-            context.SaveChanges();
+           await context.Ads.AddAsync(ad);
+           await context.SaveChangesAsync();
+           return ad.Id;
         }
 
-        public async Task<AdDetailViewModel> 0(Guid id)
+        public async Task<AdDetailViewModel> GetAdDetailsAsync(Guid id)
         {
             var ad = await context.Ads.Include(a => a.Motor)
                 .ThenInclude(m => m.MotorCategory)

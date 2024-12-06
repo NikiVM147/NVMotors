@@ -3,12 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Niki\\source\\repos\\NVMotors\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors\\controllers\\adimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|solutionrelative:nvmotors\\controllers\\adimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors\\controllers\\adcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|solutionrelative:nvmotors\\controllers\\adcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}|NVMotors.Data.Services\\NVMotors.Sevices.Data.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.data.services\\adservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}|NVMotors.Data.Services\\NVMotors.Sevices.Data.csproj|solutionrelative:nvmotors.data.services\\adservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11937E83-55A8-4FB9-B60D-D7685FA6EFB7}|NVMotors.Data.Models\\NVMotors.Data.Models.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.data.models\\ad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11937E83-55A8-4FB9-B60D-D7685FA6EFB7}|NVMotors.Data.Models\\NVMotors.Data.Models.csproj|solutionrelative:nvmotors.data.models\\ad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17496BA6-D9D5-45A1-B9EE-453271309751}|NVMotors.Web.ViewModels\\NVMotors.Web.ViewModels.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.web.viewmodels\\ad\\createadviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17496BA6-D9D5-45A1-B9EE-453271309751}|NVMotors.Web.ViewModels\\NVMotors.Web.ViewModels.csproj|solutionrelative:nvmotors.web.viewmodels\\ad\\createadviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors\\views\\ad\\createad.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|solutionrelative:nvmotors\\views\\ad\\createad.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}|NVMotors.Data.Services\\NVMotors.Sevices.Data.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.data.services\\adimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}|NVMotors.Data.Services\\NVMotors.Sevices.Data.csproj|solutionrelative:nvmotors.data.services\\adimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}|NVMotors.Data.Services\\NVMotors.Sevices.Data.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.data.services\\interfaces\\iadimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}|NVMotors.Data.Services\\NVMotors.Sevices.Data.csproj|solutionrelative:nvmotors.data.services\\interfaces\\iadimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors\\views\\adimage\\addimages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|solutionrelative:nvmotors\\views\\adimage\\addimages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17496BA6-D9D5-45A1-B9EE-453271309751}|NVMotors.Web.ViewModels\\NVMotors.Web.ViewModels.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.web.viewmodels\\adimage\\createadimagesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17496BA6-D9D5-45A1-B9EE-453271309751}|NVMotors.Web.ViewModels\\NVMotors.Web.ViewModels.csproj|solutionrelative:nvmotors.web.viewmodels\\adimage\\createadimagesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}|NVMotors.Data.Services\\NVMotors.Sevices.Data.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.data.services\\interfaces\\iadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,12 +51,8 @@
       "RelativeMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|solutionrelative:nvmotors\\controllers\\motorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors\\controllers\\adimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|solutionrelative:nvmotors\\controllers\\adimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors\\views\\adimage\\addimages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|solutionrelative:nvmotors\\views\\adimage\\addimages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors\\views\\motor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|solutionrelative:nvmotors\\views\\motor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,10 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\20241206124754_addModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NVMotors.Data\\Migrations\\20241206124754_addModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11937E83-55A8-4FB9-B60D-D7685FA6EFB7}|NVMotors.Data.Models\\NVMotors.Data.Models.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.data.models\\ad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11937E83-55A8-4FB9-B60D-D7685FA6EFB7}|NVMotors.Data.Models\\NVMotors.Data.Models.csproj|solutionrelative:nvmotors.data.models\\ad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11937E83-55A8-4FB9-B60D-D7685FA6EFB7}|NVMotors.Data.Models\\NVMotors.Data.Models.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.data.models\\motor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -139,28 +163,12 @@
       "RelativeMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|solutionrelative:nvmotors\\views\\ad\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors\\views\\ad\\createad.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|solutionrelative:nvmotors\\views\\ad\\createad.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors\\wwwroot\\css\\customtheme.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|solutionrelative:nvmotors\\wwwroot\\css\\customtheme.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{17496BA6-D9D5-45A1-B9EE-453271309751}|NVMotors.Web.ViewModels\\NVMotors.Web.ViewModels.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.web.viewmodels\\ad\\adindexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17496BA6-D9D5-45A1-B9EE-453271309751}|NVMotors.Web.ViewModels\\NVMotors.Web.ViewModels.csproj|solutionrelative:nvmotors.web.viewmodels\\ad\\adindexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17496BA6-D9D5-45A1-B9EE-453271309751}|NVMotors.Web.ViewModels\\NVMotors.Web.ViewModels.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.web.viewmodels\\ad\\createadviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17496BA6-D9D5-45A1-B9EE-453271309751}|NVMotors.Web.ViewModels\\NVMotors.Web.ViewModels.csproj|solutionrelative:nvmotors.web.viewmodels\\ad\\createadviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors\\views\\motor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E7BC5006-328F-4F85-AB25-221A2C0765F3}|NVMotors\\NVMotors.Web.csproj|solutionrelative:nvmotors\\views\\motor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17496BA6-D9D5-45A1-B9EE-453271309751}|NVMotors.Web.ViewModels\\NVMotors.Web.ViewModels.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.web.viewmodels\\adimage\\createadimagesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17496BA6-D9D5-45A1-B9EE-453271309751}|NVMotors.Web.ViewModels\\NVMotors.Web.ViewModels.csproj|solutionrelative:nvmotors.web.viewmodels\\adimage\\createadimagesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{17496BA6-D9D5-45A1-B9EE-453271309751}|NVMotors.Web.ViewModels\\NVMotors.Web.ViewModels.csproj|c:\\users\\niki\\source\\repos\\nvmotors\\nvmotors.web.viewmodels\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -333,41 +341,55 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdService.cs",
-              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Services\\AdService.cs",
-              "RelativeDocumentMoniker": "NVMotors.Data.Services\\AdService.cs",
-              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Services\\AdService.cs*",
-              "RelativeToolTip": "NVMotors.Data.Services\\AdService.cs*",
-              "ViewState": "AQIAABcAAAAAAAAAAAAcwCQAAAAuAAAA",
+              "DocumentIndex": 6,
+              "Title": "AdImageService.cs",
+              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Services\\AdImageService.cs",
+              "RelativeDocumentMoniker": "NVMotors.Data.Services\\AdImageService.cs",
+              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Services\\AdImageService.cs",
+              "RelativeToolTip": "NVMotors.Data.Services\\AdImageService.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAqwD4AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T13:22:43.909Z",
+              "WhenOpened": "2024-12-06T14:20:17.907Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IAdService.cs",
-              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Services\\Interfaces\\IAdService.cs",
-              "RelativeDocumentMoniker": "NVMotors.Data.Services\\Interfaces\\IAdService.cs",
-              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Services\\Interfaces\\IAdService.cs*",
-              "RelativeToolTip": "NVMotors.Data.Services\\Interfaces\\IAdService.cs*",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAA7AAAA",
+              "DocumentIndex": 7,
+              "Title": "IAdImageService.cs",
+              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Services\\Interfaces\\IAdImageService.cs",
+              "RelativeDocumentMoniker": "NVMotors.Data.Services\\Interfaces\\IAdImageService.cs",
+              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Services\\Interfaces\\IAdImageService.cs",
+              "RelativeToolTip": "NVMotors.Data.Services\\Interfaces\\IAdImageService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T13:22:29.036Z",
+              "WhenOpened": "2024-12-06T14:19:48.72Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AdImageController.cs",
+              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Controllers\\AdImageController.cs",
+              "RelativeDocumentMoniker": "NVMotors\\Controllers\\AdImageController.cs",
+              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Controllers\\AdImageController.cs",
+              "RelativeToolTip": "NVMotors\\Controllers\\AdImageController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAA6wBwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T17:21:25.218Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AdController.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Controllers\\AdController.cs",
               "RelativeDocumentMoniker": "NVMotors\\Controllers\\AdController.cs",
-              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Controllers\\AdController.cs*",
-              "RelativeToolTip": "NVMotors\\Controllers\\AdController.cs*",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAC4AAAAJAAAA",
+              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Controllers\\AdController.cs",
+              "RelativeToolTip": "NVMotors\\Controllers\\AdController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAQwCsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T16:06:23.83Z",
               "IsPinned": true,
@@ -375,7 +397,137 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
+              "Title": "CreateAdImagesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Web.ViewModels\\AdImage\\CreateAdImagesViewModel.cs",
+              "RelativeDocumentMoniker": "NVMotors.Web.ViewModels\\AdImage\\CreateAdImagesViewModel.cs",
+              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Web.ViewModels\\AdImage\\CreateAdImagesViewModel.cs",
+              "RelativeToolTip": "NVMotors.Web.ViewModels\\AdImage\\CreateAdImagesViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAswAwAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T17:24:34.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateAd.cshtml",
+              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Ad\\CreateAd.cshtml",
+              "RelativeDocumentMoniker": "NVMotors\\Views\\Ad\\CreateAd.cshtml",
+              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Ad\\CreateAd.cshtml",
+              "RelativeToolTip": "NVMotors\\Views\\Ad\\CreateAd.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAkAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T16:28:57.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddImages.cshtml",
+              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\AdImage\\AddImages.cshtml",
+              "RelativeDocumentMoniker": "NVMotors\\Views\\AdImage\\AddImages.cshtml",
+              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\AdImage\\AddImages.cshtml",
+              "RelativeToolTip": "NVMotors\\Views\\AdImage\\AddImages.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T17:26:18.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Ad.cs",
+              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\Ad.cs",
+              "RelativeDocumentMoniker": "NVMotors.Data.Models\\Ad.cs",
+              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\Ad.cs",
+              "RelativeToolTip": "NVMotors.Data.Models\\Ad.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAcwCMAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T15:24:34.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateAdViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Web.ViewModels\\Ad\\CreateAdViewModel.cs",
+              "RelativeDocumentMoniker": "NVMotors.Web.ViewModels\\Ad\\CreateAdViewModel.cs",
+              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Web.ViewModels\\Ad\\CreateAdViewModel.cs",
+              "RelativeToolTip": "NVMotors.Web.ViewModels\\Ad\\CreateAdViewModel.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAABwAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T16:23:16.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdService.cs",
+              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Services\\AdService.cs",
+              "RelativeDocumentMoniker": "NVMotors.Data.Services\\AdService.cs",
+              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Services\\AdService.cs",
+              "RelativeToolTip": "NVMotors.Data.Services\\AdService.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAYwCMAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T13:22:43.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IAdService.cs",
+              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Services\\Interfaces\\IAdService.cs",
+              "RelativeDocumentMoniker": "NVMotors.Data.Services\\Interfaces\\IAdService.cs",
+              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Services\\Interfaces\\IAdService.cs",
+              "RelativeToolTip": "NVMotors.Data.Services\\Interfaces\\IAdService.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAUwA4AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T13:22:29.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MotorController.cs",
+              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Controllers\\MotorController.cs",
+              "RelativeDocumentMoniker": "NVMotors\\Controllers\\MotorController.cs",
+              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Controllers\\MotorController.cs",
+              "RelativeToolTip": "NVMotors\\Controllers\\MotorController.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAQwBIAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T16:41:57.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Motor\\Index.cshtml",
+              "RelativeDocumentMoniker": "NVMotors\\Views\\Motor\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Motor\\Index.cshtml",
+              "RelativeToolTip": "NVMotors\\Views\\Motor\\Index.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABsAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T18:06:04.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Program.cs",
+              "RelativeDocumentMoniker": "NVMotors\\Program.cs",
+              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Program.cs",
+              "RelativeToolTip": "NVMotors\\Program.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAYwCMAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T10:13:44.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Approve.cshtml",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Admin\\Approve.cshtml",
               "RelativeDocumentMoniker": "NVMotors\\Views\\Admin\\Approve.cshtml",
@@ -388,7 +540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "NVMotors\\Controllers\\AdminController.cs",
@@ -401,59 +553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MotorController.cs",
-              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Controllers\\MotorController.cs",
-              "RelativeDocumentMoniker": "NVMotors\\Controllers\\MotorController.cs",
-              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Controllers\\MotorController.cs",
-              "RelativeToolTip": "NVMotors\\Controllers\\MotorController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T16:41:57.498Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Program.cs",
-              "RelativeDocumentMoniker": "NVMotors\\Program.cs",
-              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Program.cs",
-              "RelativeToolTip": "NVMotors\\Program.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACIAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T10:13:44.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AddImages.cshtml",
-              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\AdImage\\AddImages.cshtml",
-              "RelativeDocumentMoniker": "NVMotors\\Views\\AdImage\\AddImages.cshtml",
-              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\AdImage\\AddImages.cshtml",
-              "RelativeToolTip": "NVMotors\\Views\\AdImage\\AddImages.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-20T17:26:18.172Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdImageController.cs",
-              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Controllers\\AdImageController.cs",
-              "RelativeDocumentMoniker": "NVMotors\\Controllers\\AdImageController.cs",
-              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Controllers\\AdImageController.cs",
-              "RelativeToolTip": "NVMotors\\Controllers\\AdImageController.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAwwEUAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T17:21:25.218Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "NVMotors\\Views\\Shared\\_Layout.cshtml",
@@ -466,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "20241206124754_addModel.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\20241206124754_addModel.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\Migrations\\20241206124754_addModel.cs",
@@ -479,7 +579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "SeedUsers.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\SeedUsers.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\SeedUsers.cs",
@@ -492,7 +592,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "NVMotors.Web",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\NVMotors.Web.csproj",
               "RelativeDocumentMoniker": "NVMotors\\NVMotors.Web.csproj",
@@ -505,7 +605,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "NVMotors\\Controllers\\HomeController.cs",
@@ -518,7 +618,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "AppUser.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\AppUser.cs",
               "RelativeDocumentMoniker": "NVMotors.Data.Models\\AppUser.cs",
@@ -531,7 +631,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "SeedService.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Services\\SeedService.cs",
               "RelativeDocumentMoniker": "NVMotors.Data.Services\\SeedService.cs",
@@ -544,7 +644,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "IMotorService.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Services\\Interfaces\\IMotorService.cs",
               "RelativeDocumentMoniker": "NVMotors.Data.Services\\Interfaces\\IMotorService.cs",
@@ -557,7 +657,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "MotorService.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Services\\MotorService.cs",
               "RelativeDocumentMoniker": "NVMotors.Data.Services\\MotorService.cs",
@@ -570,7 +670,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "Motor.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\Motor.cs",
               "RelativeDocumentMoniker": "NVMotors.Data.Models\\Motor.cs",
@@ -583,20 +683,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Ad.cs",
-              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\Ad.cs",
-              "RelativeDocumentMoniker": "NVMotors.Data.Models\\Ad.cs",
-              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\Ad.cs",
-              "RelativeToolTip": "NVMotors.Data.Models\\Ad.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAwwCMAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T15:24:34.675Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "AdImage.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\AdImage.cs",
               "RelativeDocumentMoniker": "NVMotors.Data.Models\\AdImage.cs",
@@ -609,7 +696,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 27,
               "Title": "MotorImage.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\MotorImage.cs",
               "RelativeDocumentMoniker": "NVMotors.Data.Models\\MotorImage.cs",
@@ -622,7 +709,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 28,
               "Title": "Specification.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\Specification.cs",
               "RelativeDocumentMoniker": "NVMotors.Data.Models\\Specification.cs",
@@ -635,7 +722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "MotorCategory.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\MotorCategory.cs",
               "RelativeDocumentMoniker": "NVMotors.Data.Models\\MotorCategory.cs",
@@ -648,7 +735,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 31,
               "Title": "AdDetailViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Web.ViewModels\\Ad\\AdDetailViewModel.cs",
               "RelativeDocumentMoniker": "NVMotors.Web.ViewModels\\Ad\\AdDetailViewModel.cs",
@@ -660,7 +747,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Ad\\Details.cshtml",
               "RelativeDocumentMoniker": "NVMotors\\Views\\Ad\\Details.cshtml",
@@ -672,7 +759,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 32,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Motor\\Details.cshtml",
               "RelativeDocumentMoniker": "NVMotors\\Views\\Motor\\Details.cshtml",
@@ -684,7 +771,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 33,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Motor\\Edit.cshtml",
               "RelativeDocumentMoniker": "NVMotors\\Views\\Motor\\Edit.cshtml",
@@ -696,7 +783,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 36,
               "Title": "MotorDetailsViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Web.ViewModels\\Motor\\MotorDetailsViewModel.cs",
               "RelativeDocumentMoniker": "NVMotors.Web.ViewModels\\Motor\\MotorDetailsViewModel.cs",
@@ -708,7 +795,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 35,
               "Title": "MotorAddViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Web.ViewModels\\Motor\\MotorAddViewModel.cs",
               "RelativeDocumentMoniker": "NVMotors.Web.ViewModels\\Motor\\MotorAddViewModel.cs",
@@ -720,7 +807,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 34,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Motor\\Create.cshtml",
               "RelativeDocumentMoniker": "NVMotors\\Views\\Motor\\Create.cshtml",
@@ -732,7 +819,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 37,
               "Title": "MotorCategories.json",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\DataSets\\MotorCategories.json",
               "RelativeDocumentMoniker": "NVMotors.Data\\DataSets\\MotorCategories.json",
@@ -744,19 +831,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "CreateAd.cshtml",
-              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Ad\\CreateAd.cshtml",
-              "RelativeDocumentMoniker": "NVMotors\\Views\\Ad\\CreateAd.cshtml",
-              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Ad\\CreateAd.cshtml",
-              "RelativeToolTip": "NVMotors\\Views\\Ad\\CreateAd.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-20T16:28:57.151Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 39,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Ad\\Index.cshtml",
               "RelativeDocumentMoniker": "NVMotors\\Views\\Ad\\Index.cshtml",
@@ -768,7 +843,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 40,
               "Title": "CustomTheme.css",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\css\\CustomTheme.css",
               "RelativeDocumentMoniker": "NVMotors\\wwwroot\\css\\CustomTheme.css",
@@ -780,7 +855,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 38,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "NVMotors\\wwwroot\\css\\site.css",
@@ -792,7 +867,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "AdIndexViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Web.ViewModels\\Ad\\AdIndexViewModel.cs",
               "RelativeDocumentMoniker": "NVMotors.Web.ViewModels\\Ad\\AdIndexViewModel.cs",
@@ -804,31 +879,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "CreateAdViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Web.ViewModels\\Ad\\CreateAdViewModel.cs",
-              "RelativeDocumentMoniker": "NVMotors.Web.ViewModels\\Ad\\CreateAdViewModel.cs",
-              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Web.ViewModels\\Ad\\CreateAdViewModel.cs",
-              "RelativeToolTip": "NVMotors.Web.ViewModels\\Ad\\CreateAdViewModel.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAIwB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T16:23:16.804Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Motor\\Index.cshtml",
-              "RelativeDocumentMoniker": "NVMotors\\Views\\Motor\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Motor\\Index.cshtml",
-              "RelativeToolTip": "NVMotors\\Views\\Motor\\Index.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABoAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T18:06:04.818Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 81,
               "Title": "20241120213740_fixAdModel.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\20241120213740_fixAdModel.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\Migrations\\20241120213740_fixAdModel.cs",
@@ -840,19 +891,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "CreateAdImagesViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Web.ViewModels\\AdImage\\CreateAdImagesViewModel.cs",
-              "RelativeDocumentMoniker": "NVMotors.Web.ViewModels\\AdImage\\CreateAdImagesViewModel.cs",
-              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Web.ViewModels\\AdImage\\CreateAdImagesViewModel.cs",
-              "RelativeToolTip": "NVMotors.Web.ViewModels\\AdImage\\CreateAdImagesViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAswAoAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T17:24:34.565Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Motor\\Delete.cshtml",
               "RelativeDocumentMoniker": "NVMotors\\Views\\Motor\\Delete.cshtml",
@@ -864,7 +903,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "Constants.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Common\\Constants.cs",
               "RelativeDocumentMoniker": "NVMotors.Common\\Constants.cs",
@@ -876,7 +915,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 44,
               "Title": "ScaffoldingReadMe.txt",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\ScaffoldingReadMe.txt",
               "RelativeDocumentMoniker": "NVMotors\\ScaffoldingReadMe.txt",
@@ -888,7 +927,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Web.ViewModels\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "NVMotors.Web.ViewModels\\ErrorViewModel.cs",
@@ -900,7 +939,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 78,
               "Title": "20241120165253_changeAdModel.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\20241120165253_changeAdModel.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\Migrations\\20241120165253_changeAdModel.cs",
@@ -912,7 +951,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 46,
               "Title": "MotorIndexViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Web.ViewModels\\Motor\\MotorIndexViewModel.cs",
               "RelativeDocumentMoniker": "NVMotors.Web.ViewModels\\Motor\\MotorIndexViewModel.cs",
@@ -924,7 +963,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 79,
               "Title": "20241120154710_changeMOtorModelDelete.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\20241120154710_changeMOtorModelDelete.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\Migrations\\20241120154710_changeMOtorModelDelete.cs",
@@ -936,7 +975,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 47,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "NVMotors\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
@@ -948,7 +987,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 48,
               "Title": "NVMotors.Sevices.Data.csproj",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Services\\NVMotors.Sevices.Data.csproj",
               "RelativeDocumentMoniker": "NVMotors.Data.Services\\NVMotors.Sevices.Data.csproj",
@@ -960,7 +999,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 49,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "NVMotors\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
@@ -972,7 +1011,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 51,
               "Title": "Login.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
               "RelativeDocumentMoniker": "NVMotors\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
@@ -984,7 +1023,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 50,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "NVMotors\\Views\\Shared\\_LoginPartial.cshtml",
@@ -996,7 +1035,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 52,
               "Title": "Register.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeDocumentMoniker": "NVMotors\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
@@ -1008,7 +1047,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 80,
               "Title": "20241119173209_UserModelUpdate.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\20241119173209_UserModelUpdate.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\Migrations\\20241119173209_UserModelUpdate.cs",
@@ -1020,7 +1059,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 53,
               "Title": "TransmissionType.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\Enums\\TransmissionType.cs",
               "RelativeDocumentMoniker": "NVMotors.Data.Models\\Enums\\TransmissionType.cs",
@@ -1032,7 +1071,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 77,
               "Title": "20241107131301_nullableCatForTesting.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\20241107131301_nullableCatForTesting.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\Migrations\\20241107131301_nullableCatForTesting.cs",
@@ -1044,7 +1083,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 54,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "NVMotors\\Views\\_ViewImports.cshtml",
@@ -1056,7 +1095,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 73,
               "Title": "20241106225435_EnumsInTheModels.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\20241106225435_EnumsInTheModels.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\Migrations\\20241106225435_EnumsInTheModels.cs",
@@ -1068,7 +1107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 76,
               "Title": "20241107112049_ModelFixed.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\20241107112049_ModelFixed.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\Migrations\\20241107112049_ModelFixed.cs",
@@ -1080,7 +1119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 55,
               "Title": "Condition.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\Enums\\Condition.cs",
               "RelativeDocumentMoniker": "NVMotors.Data.Models\\Enums\\Condition.cs",
@@ -1092,7 +1131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 56,
               "Title": "FuelType.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\Enums\\FuelType.cs",
               "RelativeDocumentMoniker": "NVMotors.Data.Models\\Enums\\FuelType.cs",
@@ -1104,7 +1143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 57,
               "Title": "MotorColor.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\Enums\\MotorColor.cs",
               "RelativeDocumentMoniker": "NVMotors.Data.Models\\Enums\\MotorColor.cs",
@@ -1116,7 +1155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 59,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "NVMotors\\Views\\Home\\Index.cshtml",
@@ -1128,7 +1167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 74,
               "Title": "20241106221530_DbSets.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\20241106221530_DbSets.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\Migrations\\20241106221530_DbSets.cs",
@@ -1140,7 +1179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 60,
               "Title": "20241106221245_DbSets.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\20241106221245_DbSets.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\Migrations\\20241106221245_DbSets.cs",
@@ -1151,7 +1190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 75,
               "Title": "20241106220754_NewModel.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\20241106220754_NewModel.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\Migrations\\20241106220754_NewModel.cs",
@@ -1163,7 +1202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 63,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "NVMotors\\Properties\\launchSettings.json",
@@ -1175,7 +1214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 64,
               "Title": "NVMotorsDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\NVMotorsDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\Migrations\\NVMotorsDbContextModelSnapshot.cs",
@@ -1187,7 +1226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 71,
               "Title": "20241028164925_PriceAddedToAd.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\20241028164925_PriceAddedToAd.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\Migrations\\20241028164925_PriceAddedToAd.cs",
@@ -1199,7 +1238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 72,
               "Title": "20241028161819_AddedModels.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\20241028161819_AddedModels.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\Migrations\\20241028161819_AddedModels.cs",
@@ -1211,7 +1250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 67,
               "Title": "NVMotors.Data.Models.csproj",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data.Models\\NVMotors.Data.Models.csproj",
               "RelativeDocumentMoniker": "NVMotors.Data.Models\\NVMotors.Data.Models.csproj",
@@ -1223,7 +1262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 65,
               "Title": "20241028104105_fixUsersName.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\20241028104105_fixUsersName.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\Migrations\\20241028104105_fixUsersName.cs",
@@ -1235,7 +1274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 66,
               "Title": "20241028103752_init.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\20241028103752_init.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\Migrations\\20241028103752_init.cs",
@@ -1247,7 +1286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 69,
               "Title": "20241028103550_init.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\Migrations\\20241028103550_init.cs",
               "RelativeDocumentMoniker": "NVMotors.Data\\Migrations\\20241028103550_init.cs",
@@ -1258,7 +1297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 58,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "NVMotors\\Views\\Shared\\Error.cshtml",
@@ -1270,7 +1309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 70,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "NVMotors\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -1282,7 +1321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 61,
               "Title": "secrets.json",
               "DocumentMoniker": "C:\\Users\\Niki\\AppData\\Roaming\\Microsoft\\UserSecrets\\aspnet-NVMotors-badea1ff-5015-4f98-a603-a59d3271596a\\secrets.json",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\aspnet-NVMotors-badea1ff-5015-4f98-a603-a59d3271596a\\secrets.json",
@@ -1294,7 +1333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 62,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\appsettings.json",
               "RelativeDocumentMoniker": "NVMotors\\appsettings.json",
@@ -1306,7 +1345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 68,
               "Title": "NVMotors.Data.csproj",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors.Data\\NVMotors.Data.csproj",
               "RelativeDocumentMoniker": "NVMotors.Data\\NVMotors.Data.csproj",

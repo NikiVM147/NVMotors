@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NVMotors.Data;
 using NVMotors.Data.Models;
+using NVMotors.Sevices.Data.Interfaces;
 using NVMotors.Web.ViewModels.Ad;
 using NVMotors.Web.ViewModels.AdImage;
 
@@ -12,15 +13,19 @@ namespace NVMotors.Web.Controllers
     public class AdImageController : Controller
     {
         private readonly NVMotorsDbContext context;
-        public AdImageController(NVMotorsDbContext _context)
+        private readonly IAdImageService adImageService;
+        public AdImageController(NVMotorsDbContext _context, IAdImageService _adImageService)
         {
             context = _context;
+            adImageService = _adImageService;
         }
         [HttpGet]
-        public IActionResult AddImages(Guid id)
+        public async Task<IActionResult> AddImages(Guid id)
         {
-            var model = new CreateAdImagesViewModel();
-            model.AdId = id;
+            var model = new CreateAdImagesViewModel
+            {
+                AdId = id, 
+            };
             return View(model);
         }
         [HttpPost]
@@ -31,41 +36,7 @@ namespace NVMotors.Web.Controllers
                 return View(imageModel);
             }
 
-            var ad = await context.Ads.FindAsync(imageModel.AdId);
-            if (ad == null)
-            {
-                return NotFound();
-            }
-
-            foreach (var image in imageModel.Images)
-            {
-                if (image.Length > 0)
-                {
-                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", image.FileName);
-
-                    using (var fileStream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await image.CopyToAsync(fileStream);
-                    }
-
-                    var motorImage = new MotorImage
-                    {
-                        ImageUrl = "/images/" + image.FileName
-                    };
-                    context.MotorImages.Add(motorImage);
-                    await context.SaveChangesAsync();
-
-                    var adImage = new AdImage
-                    {
-                        AdId = ad.Id,
-                        ImageId = motorImage.Id
-                    };
-
-                    context.AdsImages.Add(adImage);
-                }
-            }
-
-            await context.SaveChangesAsync();
+            await adImageService.AddImagesAsync(imageModel);
 
             return RedirectToAction("Index", "Ad");
         }

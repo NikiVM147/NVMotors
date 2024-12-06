@@ -13,6 +13,7 @@ namespace NVMotors.Web.ViewModels.Ad
     public class CreateAdViewModel
     {
         public Guid Id { get; set; }
+        public Guid MotorModelId { get; set; }
         public DateTime DateAd { get; set; }
         [Required]
         [MinLength(DescriptionMinLengt)]

@@ -11,7 +11,6 @@ namespace NVMotors.Web.ViewModels.AdImage
     public class CreateAdImagesViewModel
     {
         public Guid AdId { get; set; }
-
         [Required]
         public IFormFileCollection Images { get; set; }
     }

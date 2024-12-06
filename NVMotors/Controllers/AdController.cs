@@ -28,7 +28,7 @@ namespace NVMotors.Web.Controllers
         public IActionResult CreateAd(Guid id)
         {
             var model = new CreateAdViewModel();
-            model.Id = id;
+            model.MotorModelId = id;
             return View(model);
         }
         [HttpPost]
@@ -39,8 +39,8 @@ namespace NVMotors.Web.Controllers
             {
                 return View(adModel);
             }
-            await adService.CreateAdAsync(adModel);
-            return RedirectToAction("AddImages", "AdImage", new { id = adModel.Id });
+            var adId = await adService.CreateAdAsync(adModel);
+            return RedirectToAction("AddImages", "AdImage", new { id = adId });
         }
         [HttpGet]
         public async Task<IActionResult> Details(Guid id)
