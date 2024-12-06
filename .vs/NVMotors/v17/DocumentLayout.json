@@ -317,8 +317,7 @@
               "RelativeToolTip": "NVMotors.Data.Services\\MotorService.cs",
               "ViewState": "AQIAAI8AAAAAAAAAAAA7wKgAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T17:03:45.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T17:03:45.502Z"
             },
             {
               "$type": "Document",
@@ -330,8 +329,7 @@
               "RelativeToolTip": "NVMotors\\Controllers\\MotorController.cs",
               "ViewState": "AQIAADkAAAAAAAAAAAAAwEUAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T16:41:57.498Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T16:41:57.498Z"
             },
             {
               "$type": "Document",
@@ -343,8 +341,7 @@
               "RelativeToolTip": "NVMotors.Data.Models\\MotorCategory.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T18:34:25.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T18:34:25.979Z"
             },
             {
               "$type": "Document",
@@ -356,8 +353,7 @@
               "RelativeToolTip": "NVMotors\\Views\\Motor\\Edit.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-20T14:16:35.144Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T14:16:35.144Z"
             },
             {
               "$type": "Document",
@@ -369,8 +365,7 @@
               "RelativeToolTip": "NVMotors\\Views\\Motor\\Details.cshtml",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T18:27:05.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-19T18:27:05.196Z"
             },
             {
               "$type": "Document",
@@ -382,8 +377,7 @@
               "RelativeToolTip": "NVMotors.Data.Models\\Motor.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAmwB4AAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T12:45:16.563Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T12:45:16.563Z"
             },
             {
               "$type": "Document",
@@ -395,8 +389,7 @@
               "RelativeToolTip": "NVMotors\\Views\\Ad\\Details.cshtml",
               "ViewState": "AQIAABsAAAAAAAAAAAAAACUAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-20T21:52:03.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T21:52:03.817Z"
             },
             {
               "$type": "Document",
@@ -408,8 +401,7 @@
               "RelativeToolTip": "NVMotors.Web.ViewModels\\Ad\\AdDetailViewModel.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T21:45:37.622Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-20T21:45:37.622Z"
             },
             {
               "$type": "Document",
@@ -417,8 +409,8 @@
               "Title": "AdController.cs",
               "DocumentMoniker": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Controllers\\AdController.cs",
               "RelativeDocumentMoniker": "NVMotors\\Controllers\\AdController.cs",
-              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Controllers\\AdController.cs*",
-              "RelativeToolTip": "NVMotors\\Controllers\\AdController.cs*",
+              "ToolTip": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\Controllers\\AdController.cs",
+              "RelativeToolTip": "NVMotors\\Controllers\\AdController.cs",
               "ViewState": "AQIAADAAAAAAAAAAAAAkwD0AAABuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T16:06:23.83Z",
@@ -434,8 +426,7 @@
               "RelativeToolTip": "NVMotors.Web.ViewModels\\Motor\\MotorDetailsViewModel.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T18:22:46.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-19T18:22:46.674Z"
             },
             {
               "$type": "Document",
@@ -447,8 +438,7 @@
               "RelativeToolTip": "NVMotors.Data.Services\\Interfaces\\IMotorService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T19:55:10.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-19T19:55:10.268Z"
             },
             {
               "$type": "Document",
@@ -460,8 +450,7 @@
               "RelativeToolTip": "NVMotors.Web.ViewModels\\Motor\\MotorAddViewModel.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAABhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T10:04:15.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T10:04:15.715Z"
             },
             {
               "$type": "Document",
@@ -473,8 +462,7 @@
               "RelativeToolTip": "NVMotors\\Views\\Motor\\Create.cshtml",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-07T12:21:06.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T12:21:06.12Z"
             },
             {
               "$type": "Document",
@@ -486,8 +474,7 @@
               "RelativeToolTip": "NVMotors.Data.Services\\SeedService.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAA0wB4AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T12:11:46.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T12:11:46.818Z"
             },
             {
               "$type": "Document",
@@ -499,8 +486,7 @@
               "RelativeToolTip": "NVMotors.Data\\DataSets\\MotorCategories.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-21T12:04:40.992Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T12:04:40.992Z"
             },
             {
               "$type": "Document",
@@ -512,8 +498,7 @@
               "RelativeToolTip": "NVMotors\\Program.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAAAACoAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T10:13:44.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T10:13:44.721Z"
             },
             {
               "$type": "Document",
@@ -561,8 +546,7 @@
               "RelativeToolTip": "NVMotors\\wwwroot\\css\\site.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-06T20:03:09.888Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T20:03:09.888Z"
             },
             {
               "$type": "Document",
@@ -586,8 +570,7 @@
               "RelativeToolTip": "NVMotors.Data\\NVMotorsDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T10:07:42.085Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-28T10:07:42.085Z"
             },
             {
               "$type": "Document",

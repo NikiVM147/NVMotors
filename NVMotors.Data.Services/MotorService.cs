@@ -119,7 +119,7 @@ namespace NVMotors.Services.Data
             return model;
         }
 
-        public List<SelectListItem> GetEnumSelectList<TEnum>() where TEnum : Enum
+        private List<SelectListItem> GetEnumSelectList<TEnum>() where TEnum : Enum
         {
             return  Enum.GetValues(typeof(TEnum))
                      .Cast<TEnum>()

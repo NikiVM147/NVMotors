@@ -8,7 +8,6 @@ namespace NVMotors.Sevices.Data.Interfaces
     public interface IMotorService
     {
         Task<List<MotorIndexViewModel>> GetAllMotorsForCurrentUserAsync(Guid userId);
-        List<SelectListItem> GetEnumSelectList<TEnum>() where TEnum : Enum;
 
         Task<MotorAddViewModel> LoadMotorViewModel();
         Task CreateMotorAsync(MotorAddViewModel addModel, Guid userId);
