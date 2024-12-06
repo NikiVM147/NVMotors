@@ -36,11 +36,11 @@ namespace NVMotors.Data
                     await userManager.AddToRoleAsync(adminUser, "Administrator");
                 }
             }
-            foreach (var user in userManager.Users.ToList()) // Ensure Users are materialized before looping
+            foreach (var user in userManager.Users.ToList()) 
             {
                 if (user.UserName != adminEmail)
                 {
-                    if (!await userManager.IsInRoleAsync(user, "User")) // Check before adding to avoid duplication
+                    if (!await userManager.IsInRoleAsync(user, "User")) 
                     {
                         await userManager.AddToRoleAsync(user, "User");
                     }

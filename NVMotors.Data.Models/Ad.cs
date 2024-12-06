@@ -32,5 +32,7 @@ namespace NVMotors.Data.Models
         [Required]
         [RegularExpression(@"^(\+359|0)\d{9}$", ErrorMessage = "Please enter valid phone number")]
         public string PhoneNumber  { get; set; } = string.Empty;
+
+        public bool IsApproved { get; set; } = false;
     }
 }

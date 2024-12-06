@@ -16,7 +16,7 @@ namespace NVMotors.Web.Controllers
         }
         public IActionResult Index()
         {
-            var model = context.Ads.Select(a => new AdIndexViewModel
+            var model = context.Ads.Where(a => a.IsApproved == true).Select(a => new AdIndexViewModel
             {
                 Id = a.Id,
                 Make = a.Motor.Make,

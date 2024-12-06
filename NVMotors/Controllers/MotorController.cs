@@ -16,7 +16,7 @@ using System.Security.Claims;
 namespace NVMotors.Web.Controllers
 {
     //TODO categories, validations
-    [Authorize]
+    [Authorize(Roles = "User")]
     public class MotorController : Controller
     {
         private readonly IMotorService motorService;
