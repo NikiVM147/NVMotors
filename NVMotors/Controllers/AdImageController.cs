@@ -6,6 +6,7 @@ using NVMotors.Data.Models;
 using NVMotors.Sevices.Data.Interfaces;
 using NVMotors.Web.ViewModels.Ad;
 using NVMotors.Web.ViewModels.AdImage;
+using static NVMotors.Common.Constants;
 
 namespace NVMotors.Web.Controllers
 {
@@ -31,14 +32,23 @@ namespace NVMotors.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> AddImages(CreateAdImagesViewModel imageModel)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                return View(imageModel);
+                if (!ModelState.IsValid)
+                {
+                    return View(imageModel);
+                }
+
+                await adImageService.AddImagesAsync(imageModel);
+                TempData[nameof(Success)] = "Successfully created Ad. Pending approval by Admin";
+                return RedirectToAction("IndexAds", "Ad");
             }
-
-            await adImageService.AddImagesAsync(imageModel);
-
-            return RedirectToAction("Index", "Ad");
+            catch (Exception ex) when (ex is ArgumentNullException)
+            {
+                TempData[nameof(Error)] = ex.Message;
+                return RedirectToAction("Index", "Motor");
+            }
+           
         }
     }
 }

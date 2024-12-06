@@ -21,7 +21,11 @@ namespace NVMotors.Web.Controllers
         }
         public Guid GetCurrentUserId()
         {
-            return Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+            if (Guid.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var userId))
+            {
+                return userId;
+            }
+            return Guid.Empty;
         }
         public async Task<IActionResult> IndexAds()
         {
@@ -53,6 +57,17 @@ namespace NVMotors.Web.Controllers
 
             var model = await adService.GetAdDetailsAsync(id, GetCurrentUserId());
             return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var ad = await context.Ads.FirstOrDefaultAsync(a => a.Id == id);
+            if (ad != null) 
+            {
+                 context.Remove(ad);
+                context.SaveChanges();
+            }
+            return RedirectToAction(nameof(IndexAds));
         }
 
     }

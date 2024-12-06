@@ -17,12 +17,28 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\00ca4a6b-5548-45f1-9807-ed77ddb0021f.jpg",
+      "PackagePath": "staticwebassets\\images\\00ca4a6b-5548-45f1-9807-ed77ddb0021f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\139c161d-ced7-4a3d-8636-6072448ead3f.jpg",
+      "PackagePath": "staticwebassets\\images\\139c161d-ced7-4a3d-8636-6072448ead3f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\2a8f6d1d-2dea-494a-91e3-1844a1e55b1e.jpg",
+      "PackagePath": "staticwebassets\\images\\2a8f6d1d-2dea-494a-91e3-1844a1e55b1e.jpg"
+    },
+    {
       "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\2cb930f1-2df9-4afb-9417-6cb2accf7816.jpg",
       "PackagePath": "staticwebassets\\images\\2cb930f1-2df9-4afb-9417-6cb2accf7816.jpg"
     },
     {
       "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\4cd96d11-d431-4a42-96ff-6ee1c4431cac.jpg",
       "PackagePath": "staticwebassets\\images\\4cd96d11-d431-4a42-96ff-6ee1c4431cac.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\5b5a2ded-61ed-40b5-882a-97d46b7171cd.jpg",
+      "PackagePath": "staticwebassets\\images\\5b5a2ded-61ed-40b5-882a-97d46b7171cd.jpg"
     },
     {
       "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\5c82ab19-a60c-44da-968f-a63c19d1c4b4.jpg",
@@ -33,6 +49,10 @@
       "PackagePath": "staticwebassets\\images\\6ea61658-2f03-46ff-9830-7b8a5d8b6a0f.jpg"
     },
     {
+      "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\7270d0b7-2933-4bc0-9c09-4e415b7c2a8f.jpg",
+      "PackagePath": "staticwebassets\\images\\7270d0b7-2933-4bc0-9c09-4e415b7c2a8f.jpg"
+    },
+    {
       "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\74caed86-4f49-4681-9706-9ff3f5fc40e0.jpg",
       "PackagePath": "staticwebassets\\images\\74caed86-4f49-4681-9706-9ff3f5fc40e0.jpg"
     },
@@ -41,8 +61,36 @@
       "PackagePath": "staticwebassets\\images\\7c513326-a37a-441f-890e-0557199eb302.jpg"
     },
     {
+      "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\887806fe-ddae-4b00-aa7c-016b1f0935f1.jpg",
+      "PackagePath": "staticwebassets\\images\\887806fe-ddae-4b00-aa7c-016b1f0935f1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\97f7a07b-9212-4126-99df-c0690e8db4a1.jpg",
+      "PackagePath": "staticwebassets\\images\\97f7a07b-9212-4126-99df-c0690e8db4a1.jpg"
+    },
+    {
       "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\9a9055b6-202a-4347-971b-1fcc28e6f7c4.jpg",
       "PackagePath": "staticwebassets\\images\\9a9055b6-202a-4347-971b-1fcc28e6f7c4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\ce8d6f90-ae89-476c-a85d-c0d4f4082052.jpg",
+      "PackagePath": "staticwebassets\\images\\ce8d6f90-ae89-476c-a85d-c0d4f4082052.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\d1cec0a1-98cf-48ce-87e7-9614e6ba269e.jpg",
+      "PackagePath": "staticwebassets\\images\\d1cec0a1-98cf-48ce-87e7-9614e6ba269e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\e84dceb9-91f5-49b0-bb5d-042a56cb8714.jpg",
+      "PackagePath": "staticwebassets\\images\\e84dceb9-91f5-49b0-bb5d-042a56cb8714.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\efcfd0e2-5d50-4b3a-8cc5-a33f12b779e1.jpg",
+      "PackagePath": "staticwebassets\\images\\efcfd0e2-5d50-4b3a-8cc5-a33f12b779e1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\fbac146f-6572-406d-988c-6add40245ed4.jpg",
+      "PackagePath": "staticwebassets\\images\\fbac146f-6572-406d-988c-6add40245ed4.jpg"
     },
     {
       "Id": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\img4.jpg",

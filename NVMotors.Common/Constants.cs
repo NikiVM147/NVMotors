@@ -26,7 +26,10 @@
         public const int MaxEngineDisplacement = 1400;
 
         public const int MinLenghtName = 2; 
-        public const int MaxLenghtName = 30;  
+        public const int MaxLenghtName = 30;
+
+        public const string Error = "error occured";
+        public const string Success = "Success"; 
 
 
     }

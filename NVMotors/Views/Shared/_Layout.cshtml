@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using static NVMotors.Common.Constants;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -51,8 +52,23 @@
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
+            @if (TempData[nameof(Error)] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert" style="z-index: 1050;">
+                    @TempData[nameof(Error)]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+            @if (TempData[nameof(Success)] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show mt-3" style="z-index: 1050;"  role="alert">
+                    @TempData[nameof(Success)]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            } 
             @RenderBody()
         </main>
     </div>
@@ -63,7 +79,7 @@
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+ <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
