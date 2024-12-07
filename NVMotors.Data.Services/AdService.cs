@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc.ApplicationModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using NVMotors.Data;
 using NVMotors.Data.Models;
 using NVMotors.Sevices.Data.Interfaces;
@@ -8,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace NVMotors.Sevices.Data
 {
@@ -67,13 +70,91 @@ namespace NVMotors.Sevices.Data
             return model;
         }
 
-        public async Task<IEnumerable<AdIndexViewModel>> IndexGetAllAds()
+        public async Task<AdViewModel> IndexGetAllAds(AdFilterViewModel filters)
         {
-            var ads = context.Ads.Where(a => a.IsApproved == true).AsQueryable();
-            return AllAdsToModel(ads);
+            var transmissionTypes = await context.Ads
+                .Select(ad => ad.Motor.Specification.TransmissionType)
+                .Distinct()
+                .ToListAsync();
 
-            
+            var fuelTypes = await context.Ads
+                .Select(ad => ad.Motor.Specification.FuelType)
+                .Distinct()
+                .ToListAsync();
+
+            var colors = await context.Ads
+                .Select(ad => ad.Motor.Specification.Color)
+                .Distinct()
+                .ToListAsync();
+
+            var conditions = await context.Ads
+                .Select(ad => ad.Motor.Specification.Condition)
+                .Distinct()
+                .ToListAsync();
+
+            var towns = await context.Ads
+                .Select(ad => ad.Town)
+                .Distinct()
+                .ToListAsync();
+
+            var adsQuery = context.Ads
+                .Include(a => a.Motor)
+                .ThenInclude(m => m.Specification)
+                .Include(a => a.AdsImages)
+                .ThenInclude(ai => ai.Image)
+                .Where(a => a.IsApproved)
+                .AsQueryable();
+
+            if (filters.MinYear.HasValue)
+                adsQuery = adsQuery.Where(a => a.Motor.Specification.Year >= filters.MinYear.Value);
+            if (filters.MaxYear.HasValue)
+                adsQuery = adsQuery.Where(a => a.Motor.Specification.Year <= filters.MaxYear.Value);
+            if (filters.MinHorsePower.HasValue)
+                adsQuery = adsQuery.Where(a => a.Motor.Specification.HorsePower >= filters.MinHorsePower.Value);
+            if (filters.MaxHorsePower.HasValue)
+                adsQuery = adsQuery.Where(a => a.Motor.Specification.HorsePower <= filters.MaxHorsePower.Value);
+            if (!string.IsNullOrEmpty(filters.Town))
+                adsQuery = adsQuery.Where(a => a.Town.Contains(filters.Town));
+            if (filters.MinPrice.HasValue)
+                adsQuery = adsQuery.Where(a => a.Price >= filters.MinPrice.Value);
+            if (filters.MaxPrice.HasValue)
+                adsQuery = adsQuery.Where(a => a.Price <= filters.MaxPrice.Value);
+            if (!string.IsNullOrEmpty(filters.TransmissionType))
+                adsQuery = adsQuery.Where(a => a.Motor.Specification.TransmissionType.Contains(filters.TransmissionType));
+            if (!string.IsNullOrEmpty(filters.FuelType))
+                adsQuery = adsQuery.Where(a => a.Motor.Specification.FuelType.Contains(filters.FuelType));
+            if (!string.IsNullOrEmpty(filters.Color))
+                adsQuery = adsQuery.Where(a => a.Motor.Specification.Color.Contains(filters.Color));
+            if (!string.IsNullOrEmpty(filters.Condition))
+                adsQuery = adsQuery.Where(a => a.Motor.Specification.Condition.Contains(filters.Condition));
+
+            var filteredAds = await adsQuery.ToListAsync();
+
+            var ads = filteredAds.Select(a => new AdIndexViewModel
+            {
+                Id = a.Id,
+                Make = a.Motor.Make,
+                Model = a.Motor.Model,
+                Year = a.Motor.Specification.Year,
+                Town = a.Town,
+                Price = a.Price,
+                ImageURL = a.AdsImages.Select(ai => ai.Image.ImageUrl).FirstOrDefault() ?? string.Empty
+            }).ToList();
+
+            var viewModel = new AdViewModel
+            {
+                Ads = ads,
+                FilterModel = filters,
+                TransmissionTypes = transmissionTypes.Select(t => new SelectListItem { Value = t, Text = t }).ToList(),
+                FuelTypes = fuelTypes.Select(t => new SelectListItem { Value = t, Text = t }).ToList(),
+                Colors = colors.Select(t => new SelectListItem { Value = t, Text = t }).ToList(),
+                Conditions = conditions.Select(t => new SelectListItem { Value = t, Text = t }).ToList(),
+                Towns = towns.Select(t => new SelectListItem { Value = t, Text = t }).ToList()
+            };
+
+            return viewModel;
         }
+
         public IEnumerable<AdIndexViewModel> AllAdsToModel(IQueryable<Ad> ads) 
         {
             return ads.Select(a => new AdIndexViewModel

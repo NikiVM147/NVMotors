@@ -101,8 +101,8 @@ namespace NVMotors.Web.Controllers
         [HttpPost]
         public IActionResult SetSuccessMessage()
         {
-            TempData[nameof(Success)] = "Successfully created Ad. Pending approval by Admin";
-            return RedirectToAction("IndexAds","Ad"); // Redirect as needed
+            TempData[nameof(Success)] = "Successfull! Pending approval by Admin";
+            return RedirectToAction("IndexAds","Ad");
         }
 
     }

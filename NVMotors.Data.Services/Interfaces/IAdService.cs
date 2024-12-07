@@ -11,7 +11,7 @@ namespace NVMotors.Sevices.Data.Interfaces
 {
     public interface IAdService
     {
-        Task<IEnumerable<AdIndexViewModel>> IndexGetAllAds();
+        Task<AdViewModel> IndexGetAllAds(AdFilterViewModel filters);
         Task<Guid> CreateAdAsync(CreateAdViewModel adModel);
         Task<AdDetailViewModel> GetAdDetailsAsync(Guid id, Guid userId);
         IEnumerable<AdIndexViewModel> AllAdsToModel(IQueryable<Ad> ads);

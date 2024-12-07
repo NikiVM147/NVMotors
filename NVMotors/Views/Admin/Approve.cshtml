@@ -1,1 +1,48 @@
-﻿
+﻿@model IEnumerable<NVMotors.Web.ViewModels.Ad.AdIndexViewModel>
+
+@{
+    ViewData["Title"] = "Browse Advertisements";
+    var showApproveButton = ViewBag.ShowApproveButton as bool? ?? false;
+}
+
+<h2 class="text-center my-4">@ViewData["Title"]</h2>
+
+@if (!Model.Any())
+{
+    <p class="text-center">No advertisements available at the moment. Check back later!</p>
+}
+else
+{
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach (var ad in Model)
+            {
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="@ad.ImageURL" class="card-img-top" alt="Image of @ad.Make @ad.Model" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title text-truncate">@ad.Make @ad.Model (@ad.Year)</h5>
+                            <p class="card-text text-muted">@ad.Town</p>
+                            <h6 class="text-primary fw-bold">@ad.Price.ToString("C")</h6>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="@Url.Action("Details", "Ad", new { id = ad.Id })"
+                               class="btn btn-primary mb-2">
+                                Details
+                            </a>
+
+                            @if (showApproveButton)
+                            {
+
+                                <a href="@Url.Action("ApproveAd", "Admin", new { id = ad.Id })"
+                                   class="btn btn-success mb-2">
+                                    Approve Ad
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}

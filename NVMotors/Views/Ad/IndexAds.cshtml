@@ -1,48 +1,147 @@
-﻿@model IEnumerable<NVMotors.Web.ViewModels.Ad.AdIndexViewModel>
+﻿@model NVMotors.Web.ViewModels.Ad.AdViewModel
 
 @{
-    ViewData["Title"] = "Browse Advertisements";
-    var showApproveButton = ViewBag.ShowApproveButton as bool? ?? false;
+    ViewData["Title"] = "Ads";
 }
 
-<h2 class="text-center my-4">@ViewData["Title"]</h2>
 
-@if (!Model.Any())
+<form method="get" action="@Url.Action("IndexAds", "Ad")">
+    <div class="row mt-4">
+        <!-- First row of filters (5 fields) -->
+        <div class="col-md-1">
+            <div>
+                <label for="MinYear">Min Year:</label>
+                <input class="form-control" type="number" id="MinYear" name="MinYear" value="@Model.FilterModel.MinYear" />
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div>
+                <label for="MaxPrice">Max Year:</label>
+                <input class="form-control" type="number" id="maxYear" name="MaxYear" value="@Model.FilterModel.MaxYear" />
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div>
+                <label for="MinPrice">Min Price:</label>
+                <input class="form-control" type="number" id="MinPrice" name="MinPrice" value="@Model.FilterModel.MinPrice" />
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div>
+                <label for="MaxPrice">Max Price:</label>
+                <input class="form-control" type="number" id="MaxPrice" name="MaxPrice" value="@Model.FilterModel.MaxPrice" />
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div>
+                <label for="TransmissionType">Transmission Type:</label>
+                <select class="form-control" id="TransmissionType" name="TransmissionType">
+                    <option value="">--Select--</option>
+                    @foreach (var item in Model.TransmissionTypes)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+
+        <div class="col-md-2">
+            <div>
+                <label for="FuelType">Fuel Type:</label>
+                <select class="form-control" id="FuelType" name="FuelType">
+                    <option value="">--Select--</option>
+                    @foreach (var item in Model.FuelTypes)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div>
+                <label for="Color">Color:</label>
+                <select class="form-control" id="Color" name="Color">
+                    <option value="">--Select--</option>
+                    @foreach (var item in Model.Colors)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div>
+                <label for="Condition">Condition:</label>
+                <select class="form-control" id="Condition" name="Condition">
+                    <option value="">--Select--</option>
+                    @foreach (var item in Model.Conditions)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <!-- Second row of filters (4 fields) -->
+       
+       
+       
+    
+        <div class="col-md-3">
+            <div>
+                <label for="Town">Town:</label>
+                <select class="form-control" id="Town" name="Town">
+                    <option value="">--Select--</option>
+                    @foreach (var item in Model.Towns)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3 mt-3">
+            <div>
+                <button class="btn btn-primary" type="submit">Filter</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Submit Button -->
+  
+</form>
+
+
+@if (Model.Ads.Any())
 {
-    <p class="text-center">No advertisements available at the moment. Check back later!</p>
+    <div class="row mt-5">
+        @foreach (var ad in Model.Ads)
+        {
+            <div class="col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="@ad.ImageURL" class="card-img-top" alt="Image of @ad.Make @ad.Model" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title text-truncate">@ad.Make @ad.Model (@ad.Year)</h5>
+                        <p class="card-text text-muted">@ad.Town</p>
+                        <h6 class="text-primary fw-bold">@ad.Price.ToString("C")</h6>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="@Url.Action("Details", "Ad", new { id = ad.Id })"
+                           class="btn btn-primary mb-2">
+                            Details
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 }
 else
 {
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            @foreach (var ad in Model)
-            {
-                <div class="col">
-                    <div class="card h-100 shadow-sm">
-                        <img src="@ad.ImageURL" class="card-img-top" alt="Image of @ad.Make @ad.Model" style="height: 200px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title text-truncate">@ad.Make @ad.Model (@ad.Year)</h5>
-                            <p class="card-text text-muted">@ad.Town</p>
-                            <h6 class="text-primary fw-bold">@ad.Price.ToString("C")</h6>
-                        </div>
-                        <div class="card-footer text-center">
-                            <a href="@Url.Action("Details", "Ad", new { id = ad.Id })"
-                               class="btn btn-primary mb-2">
-                                Details
-                            </a>
-
-                            @if (showApproveButton)
-                            {
-                           
-                                <a href="@Url.Action("ApproveAd", "Admin", new { id = ad.Id })"
-                                   class="btn btn-success mb-2">
-                                    Approve Ad
-                                </a>
-                            }
-                        </div>
-                    </div>
-                </div>
-            }
-        </div>
-    </div>
+    <p>No ads found for the selected filters.</p>
 }
+

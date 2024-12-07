@@ -11,11 +11,12 @@ namespace NVMotors.Web.Controllers
         {
             adminService = _adminService;
         }
+        [HttpGet]
         public async Task<IActionResult> Approve()
         {
             var model = await adminService.IndexGetAllAdsToBeApproved();
             ViewBag.ShowApproveButton = true;
-            return View("../Ad/IndexAds", model);
+            return View("Approve", model);
         }
         public async Task<IActionResult> ApproveAd(Guid id) 
         {

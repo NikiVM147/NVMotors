@@ -13,18 +13,26 @@ namespace NVMotors.Sevices.Data
     public class AdminService : IAdminService
     {
         private readonly NVMotorsDbContext context;
-        private readonly IAdService adService;
         
-        public AdminService(NVMotorsDbContext _context, IAdService _adService)
+        public AdminService(NVMotorsDbContext _context)
         {
             context = _context;
-            adService = _adService;
         }
 
         public async Task<IEnumerable<AdIndexViewModel>> IndexGetAllAdsToBeApproved()
         {
             var ads = context.Ads.Where(a => a.IsApproved == false).AsQueryable();
-            return adService.AllAdsToModel(ads);
+            return ads.Select(a => new AdIndexViewModel
+            {
+                Id = a.Id,
+                Make = a.Motor.Make,
+                Model = a.Motor.Model,
+                Year = a.Motor.Specification.Year,
+                Town = a.Town,
+                Price = a.Price,
+                ImageURL = a.AdsImages.Select(ai => ai.Image.ImageUrl).FirstOrDefault()!,
+
+            });
         }
 
         public async Task ApproveAdAsync(Guid id)
