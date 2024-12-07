@@ -1,12 +1,10 @@
 ﻿@model NVMotors.Web.ViewModels.Ad.CreateAdViewModel
 
-@{
-    ViewData["Title"] = "Create Ad";
-}
 
-<h2>@ViewData["Title"]</h2>
+<h2>@ViewData["Text"]</h2>
 
 <form method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="@Model.Id"></input>
     <input type="hidden" name="MotorModelId" value="@Model.MotorModelId" />
     <div class="form-group">
         <label asp-for="Description" class="control-label">Description</label>
@@ -29,7 +27,7 @@
         <span asp-validation-for="PhoneNumber" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-primary">Create Ad</button>
+    <button type="submit" class="btn btn-primary">@ViewData["Text"]</button>
 </form>
 @section Scripts {
     @{

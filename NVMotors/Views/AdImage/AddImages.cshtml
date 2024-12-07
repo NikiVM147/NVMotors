@@ -7,7 +7,7 @@
 <h2>@ViewData["Title"]</h2>
 
 <form asp-action="AddImages" method="post" enctype="multipart/form-data">
-    <input type="hidden" name="id" value="@Model.AdId" />
+    <input type="hidden" name="AdId" value="@Model.AdId" />
     <div class="form-group">
         <label asp-for="Images" class="control-label">Upload Images</label>
         <input asp-for="Images" type="file" multiple class="form-control" />

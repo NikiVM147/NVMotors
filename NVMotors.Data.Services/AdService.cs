@@ -62,6 +62,7 @@ namespace NVMotors.Sevices.Data
                 Price = ad.Price,
                 ImageURLs = ad.AdsImages.Select(ai => ai.Image.ImageUrl).ToList(),
                 IsSeller = userId == ad.Motor.SellerId,
+                MotorId = ad.MotorId,
             };
             return model;
         }

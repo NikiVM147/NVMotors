@@ -6,6 +6,7 @@ using NVMotors.Data;
 using NVMotors.Data.Models;
 using NVMotors.Sevices.Data.Interfaces;
 using NVMotors.Web.ViewModels.Ad;
+using System.Runtime.ExceptionServices;
 using System.Security.Claims;
 
 namespace NVMotors.Web.Controllers
@@ -36,6 +37,7 @@ namespace NVMotors.Web.Controllers
         [Authorize(Roles = "User")]
         public IActionResult CreateAd(Guid id)
         {
+            ViewData["Text"] = "Create Ad";
             var model = new CreateAdViewModel();
             model.MotorModelId = id;
             return View(model);
@@ -69,6 +71,47 @@ namespace NVMotors.Web.Controllers
             }
             return RedirectToAction(nameof(IndexAds));
         }
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid id, Guid motorId)
+        {
+            ViewData["Text"] = "Edit Ad";
+            var ad = await context.Ads
+               .Include(a => a.AdsImages) 
+               .ThenInclude(ai => ai.Image)
+               .FirstOrDefaultAsync(a => a.Id == id);
+            var model = new CreateAdViewModel()
+            {
+                Id = id,
+                MotorModelId = motorId,
+                DateAd = ad.DateAd,
+                Description = ad.Description,
+                Price = ad.Price,
+                Town = ad.Town,
+                PhoneNumber = ad.PhoneNumber,
+            };
+            return View("CreateAd", model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit(CreateAdViewModel editModel)
+        {
+            var ad = await context.Ads.FirstOrDefaultAsync(a => a.Id == editModel.Id);
+            if (!ModelState.IsValid) 
+            {
+                return View("CreateAd", editModel);
+            }
+            if (ad != null) 
+            {
+                ad.Description = editModel.Description;
+                ad.Price = editModel.Price;
+                ad.Town = editModel.Town;
+                ad.PhoneNumber = editModel.PhoneNumber;
+                ad.IsApproved = false;
+            }
+            await context.SaveChangesAsync();
+            return RedirectToAction("ManageImages", "AdImage", new { id = ad.Id });
 
-    }
+
+        }
+
+        }
 }

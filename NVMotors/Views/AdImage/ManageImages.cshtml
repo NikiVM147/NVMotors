@@ -1,0 +1,26 @@
+﻿@model NVMotors.Web.ViewModels.AdImage.ManageAdImagesViewModel
+
+<h2>Manage Images for Ad</h2>
+
+<div>
+    <h4>Existing Images</h4>
+    <div class="d-flex flex-wrap">
+        @foreach (var image in Model.ExistingImages)
+        {
+            <div class="image-item me-3 mb-3 text-center">
+                <img src="@image.Url" alt="Ad Image" style="max-width: 100px; max-height: 100px;" />
+                <form asp-action="DeleteImage" asp-controller="AdImage" method="post" class="mt-2">
+                    <input type="hidden" name="imageId" value="@image.Id" />
+                    <input type="hidden" name="adId" value="@Model.AdId" />
+                    <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+                </form>
+            </div>
+        }
+    </div>
+</div>
+
+<a asp-action="AddImages" asp-route-id="@Model.AdId" class="btn btn-primary mt-4">Add New Images</a>
+<form asp-action="SetSuccessMessage" method="post">
+    <button type="submit" class="btn btn-primary mt-4">Continue</button>
+</form>
+

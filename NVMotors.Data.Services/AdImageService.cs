@@ -28,20 +28,16 @@ namespace NVMotors.Sevices.Data
             }
             var motorImages = new List<MotorImage>();
             var adImages = new List<AdImage>();
-
             foreach (var image in imageModel.Images)
             {
                 if (image.Length > 0)
                 {
                     var uniqueFileName = Guid.NewGuid() + Path.GetExtension(image.FileName);
-
                     var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", uniqueFileName);
-
                     using (var fileStream = new FileStream(filePath, FileMode.Create))
                     {
                         await image.CopyToAsync(fileStream);
                     }
-
                     var motorImage = new MotorImage
                     {
                         ImageUrl = "/images/" + uniqueFileName
@@ -49,11 +45,8 @@ namespace NVMotors.Sevices.Data
                     motorImages.Add(motorImage);
                 }
             }
-
             context.MotorImages.AddRange(motorImages);
-            await context.SaveChangesAsync(); 
-
-
+            await context.SaveChangesAsync();
             foreach (var motorImage in motorImages)
             {
                 adImages.Add(new AdImage
@@ -62,10 +55,10 @@ namespace NVMotors.Sevices.Data
                     ImageId = motorImage.Id
                 });
             }
-
             context.AdsImages.AddRange(adImages);
             await context.SaveChangesAsync();
         }
+
 
     }
 }
