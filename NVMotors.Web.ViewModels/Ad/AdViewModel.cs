@@ -17,5 +17,8 @@ namespace NVMotors.Web.ViewModels.Ad
         public List<SelectListItem> Colors { get; set; }
         public List<SelectListItem> Conditions { get; set; }
         public List<SelectListItem> Towns { get; set; }
+        public int CurrentPage { get; set; }
+        public int TotalPages { get; set; }
+        public string SearchQuery { get; set; }
     }
 }

@@ -70,7 +70,7 @@ namespace NVMotors.Sevices.Data
             return model;
         }
      
-        public async Task<AdViewModel> IndexGetAllAds(AdFilterViewModel filters, string searchQuery)
+        public async Task<AdViewModel> IndexGetAllAds(AdFilterViewModel filters, string searchQuery, int page, int pageSize)
         {
             var transmissionTypes = await context.Ads
                 .Select(ad => ad.Motor.Specification.TransmissionType)
@@ -114,7 +114,11 @@ namespace NVMotors.Sevices.Data
 
             }
 
-            var filteredAds = await adsQuery.ToListAsync();
+            var totalAds = await adsQuery.CountAsync();
+            var filteredAds = await adsQuery
+                .Skip((page - 1) * pageSize) 
+                .Take(pageSize)  
+                .ToListAsync();
 
             var ads = filteredAds.Select(a => new AdIndexViewModel
             {
@@ -127,6 +131,8 @@ namespace NVMotors.Sevices.Data
                 ImageURL = a.AdsImages.Select(ai => ai.Image.ImageUrl).FirstOrDefault() ?? string.Empty
             }).ToList();
 
+            var totalPages = (int)Math.Ceiling((double)totalAds / pageSize);
+
             var viewModel = new AdViewModel
             {
                 Ads = ads,
@@ -135,7 +141,10 @@ namespace NVMotors.Sevices.Data
                 FuelTypes = fuelTypes.Select(t => new SelectListItem { Value = t, Text = t }).ToList(),
                 Colors = colors.Select(t => new SelectListItem { Value = t, Text = t }).ToList(),
                 Conditions = conditions.Select(t => new SelectListItem { Value = t, Text = t }).ToList(),
-                Towns = towns.Select(t => new SelectListItem { Value = t, Text = t }).ToList()
+                Towns = towns.Select(t => new SelectListItem { Value = t, Text = t }).ToList(),
+                CurrentPage = page,
+                TotalPages = totalPages,
+                SearchQuery = searchQuery
             };
 
             return viewModel;
