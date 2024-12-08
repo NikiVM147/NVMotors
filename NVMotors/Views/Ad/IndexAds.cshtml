@@ -7,41 +7,37 @@
 
 <form method="get" action="@Url.Action("IndexAds", "Ad")">
     <div class="row mt-4">
-        <!-- First row of filters (5 fields) -->
         <div class="col-md-1">
             <div>
                 <label for="MinYear">Min Year:</label>
-                <input class="form-control" type="number" id="MinYear" name="MinYear" value="@Model.FilterModel.MinYear" />
+                <input class="form-control" type="number" id="MinYear" name="MinYear" min="2000" max="@DateTime.Now.Year" value="@Model.FilterModel.MinYear" />
             </div>
         </div>
         <div class="col-md-1">
             <div>
                 <label for="MaxPrice">Max Year:</label>
-                <input class="form-control" type="number" id="maxYear" name="MaxYear" value="@Model.FilterModel.MaxYear" />
+                <input class="form-control" type="number" id="maxYear" name="MaxYear" min="2000" max="@DateTime.Now.Year" value="@Model.FilterModel.MaxYear" />
             </div>
         </div>
         <div class="col-md-1">
             <div>
                 <label for="MinPrice">Min Price:</label>
-                <input class="form-control" type="number" id="MinPrice" name="MinPrice" value="@Model.FilterModel.MinPrice" />
+                <input class="form-control" type="number" id="MinPrice" name="MinPrice" min="0" value="@Model.FilterModel.MinPrice" />
             </div>
         </div>
         <div class="col-md-1">
             <div>
                 <label for="MaxPrice">Max Price:</label>
-                <input class="form-control" type="number" id="MaxPrice" name="MaxPrice" value="@Model.FilterModel.MaxPrice" />
+                <input class="form-control" type="number" id="MaxPrice" name="MaxPrice" min="0" value="@Model.FilterModel.MaxPrice" />
             </div>
         </div>
         <div class="col-md-2">
             <div>
                 <label for="TransmissionType">Transmission Type:</label>
-                <select class="form-control" id="TransmissionType" name="TransmissionType">
+                <select class="form-control" id="TransmissionType" name="TransmissionType" asp-for="FilterModel.TransmissionType" asp-items="Model.TransmissionTypes">
                     <option value="">--Select--</option>
-                    @foreach (var item in Model.TransmissionTypes)
-                    {
-                        <option value="@item.Value">@item.Text</option>
-                    }
                 </select>
+
             </div>
         </div>
 
@@ -49,56 +45,35 @@
         <div class="col-md-2">
             <div>
                 <label for="FuelType">Fuel Type:</label>
-                <select class="form-control" id="FuelType" name="FuelType">
+                <select class="form-control" id="FuelType" name="FuelType" asp-for="FilterModel.FuelType" asp-items="Model.FuelTypes">
                     <option value="">--Select--</option>
-                    @foreach (var item in Model.FuelTypes)
-                    {
-                        <option value="@item.Value">@item.Text</option>
-                    }
                 </select>
             </div>
         </div>
         <div class="col-md-2">
             <div>
                 <label for="Color">Color:</label>
-                <select class="form-control" id="Color" name="Color">
+                <select class="form-control" id="Color" name="Color" asp-for="FilterModel.Color" asp-items="Model.Colors">
                     <option value="">--Select--</option>
-                    @foreach (var item in Model.Colors)
-                    {
-                        <option value="@item.Value">@item.Text</option>
-                    }
                 </select>
             </div>
         </div>
         <div class="col-md-2">
             <div>
                 <label for="Condition">Condition:</label>
-                <select class="form-control" id="Condition" name="Condition">
+                <select class="form-control" id="Condition" name="Condition" asp-for="FilterModel.Condition" asp-items="Model.Conditions">
                     <option value="">--Select--</option>
-                    @foreach (var item in Model.Conditions)
-                    {
-                        <option value="@item.Value">@item.Text</option>
-                    }
                 </select>
             </div>
         </div>
     </div>
     
     <div class="row">
-        <!-- Second row of filters (4 fields) -->
-       
-       
-       
-    
         <div class="col-md-3">
             <div>
                 <label for="Town">Town:</label>
-                <select class="form-control" id="Town" name="Town">
+                <select class="form-control" id="Town" name="Town" asp-for="FilterModel.Town" asp-items="Model.Towns">
                     <option value="">--Select--</option>
-                    @foreach (var item in Model.Towns)
-                    {
-                        <option value="@item.Value">@item.Text</option>
-                    }
                 </select>
             </div>
         </div>
@@ -109,9 +84,6 @@
         </div>
 
     </div>
-
-    <!-- Submit Button -->
-  
 </form>
 
 
