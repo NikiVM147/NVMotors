@@ -97,6 +97,20 @@ namespace NVMotors.Sevices.Data
                 .Distinct()
                 .ToListAsync();
 
+            var categories = await context.MotorCategories
+                .Select(mc => mc.Name)
+                .ToListAsync();
+
+            var makes = await context.Motors
+                .Select(m => m.Make)
+                .Distinct()
+                .ToListAsync();
+
+            var models = await context.Motors
+                .Select(m => m.Model)
+                .Distinct()
+                .ToListAsync();
+
             var adsQuery = context.Ads
                 .Include(a => a.Motor)
                 .ThenInclude(m => m.Specification)
@@ -144,7 +158,10 @@ namespace NVMotors.Sevices.Data
                 Towns = towns.Select(t => new SelectListItem { Value = t, Text = t }).ToList(),
                 CurrentPage = page,
                 TotalPages = totalPages,
-                SearchQuery = searchQuery
+                SearchQuery = searchQuery,
+                Categories = categories.Select(t => new SelectListItem { Value = t, Text = t }).ToList(),
+                Makes = makes.Select(t => new SelectListItem { Value = t, Text = t }).ToList(),
+                Models = models.Select(t => new SelectListItem { Value = t, Text = t }).ToList()
             };
 
             return viewModel;
@@ -178,8 +195,14 @@ namespace NVMotors.Sevices.Data
                 query = query.Where(a => a.Motor.Specification.Color.Contains(filters.Color));
             if (!string.IsNullOrEmpty(filters.Condition))
                 query = query.Where(a => a.Motor.Specification.Condition.Contains(filters.Condition));
+            if (!string.IsNullOrEmpty(filters.Make))
+                query = query.Where(a => a.Motor.Make.Contains(filters.Make));  
+            if (!string.IsNullOrEmpty(filters.Model))
+                query = query.Where(a => a.Motor.Model.Contains(filters.Model));
+            if (!string.IsNullOrEmpty(filters.Category))
+                query = query.Where(a => a.Motor.MotorCategory.Name.Contains(filters.Category));
 
-            return query;
+            return query;   
         }
 
         public IEnumerable<AdIndexViewModel> AllAdsToModel(IQueryable<Ad> ads) 

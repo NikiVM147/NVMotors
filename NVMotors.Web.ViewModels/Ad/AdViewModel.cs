@@ -13,6 +13,9 @@ namespace NVMotors.Web.ViewModels.Ad
         public AdFilterViewModel FilterModel { get; set; }
 
         public List<SelectListItem> TransmissionTypes { get; set; }
+        public List<SelectListItem> Categories { get; set; }
+        public List<SelectListItem> Makes { get; set; }
+        public List<SelectListItem> Models { get; set; }
         public List<SelectListItem> FuelTypes { get; set; }
         public List<SelectListItem> Colors { get; set; }
         public List<SelectListItem> Conditions { get; set; }

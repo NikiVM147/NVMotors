@@ -57,12 +57,39 @@
             </div>
             <div class="col-md-2">
                 <div>
+                    <label for="Make">Make:</label>
+                    <select class="form-control" id="Make" name="Make" asp-for="FilterModel.Make" asp-items="Model.Makes">
+                        <option value="">--Select--</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div>
+                    <label for="Model">Model:</label>
+                    <select class="form-control" id="Model" name="Model" asp-for="FilterModel.Model" asp-items="Model.Models">
+                        <option value="">--Select--</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div>
+                    <label for="Category">Category:</label>
+                    <select class="form-control" id="Category" name="Category" asp-for="FilterModel.Category" asp-items="Model.Categories">
+                        <option value="">--Select--</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div>
                     <label for="TransmissionType">Transmission Type:</label>
                     <select class="form-control" id="TransmissionType" name="TransmissionType" asp-for="FilterModel.TransmissionType" asp-items="Model.TransmissionTypes">
                         <option value="">--Select--</option>
                     </select>
                 </div>
             </div>
+            
+        </div>
+        <div class="row">
             <div class="col-md-2">
                 <div>
                     <label for="FuelType">Fuel Type:</label>
@@ -87,8 +114,6 @@
                     </select>
                 </div>
             </div>
-        </div>
-        <div class="row">
             <div class="col-md-2">
                 <div>
                     <label for="Town">Town:</label>
@@ -97,30 +122,34 @@
                     </select>
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-1">
                 <div>
-                    <label for="MinHorsePower">Min Horse Power:</label>
+                    <label for="MinHorsePower">Min HP:</label>
                     <input class="form-control" type="number" id="MinHorsePower" name="MinHorsePower" min="0" value="@Model.FilterModel.MinHorsePower" />
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-1">
                 <div>
-                    <label for="MaxHorsePower">Max Horse Power:</label>
+                    <label for="MaxHorsePower">Max HP:</label>
                     <input class="form-control" type="number" id="MaxHorsePower" name="MaxHorsePower" min="0" value="@Model.FilterModel.MaxHorsePower" />
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-1">
                 <div>
-                    <label for="MinEngineDisplacement">Min Engine Displacement:</label>
+                    <label for="MinEngineDisplacement">Min CC:</label>
                     <input class="form-control" type="number" id="MinEngineDisplacement" name="MinEngineDisplacement" min="0" value="@Model.FilterModel.MinEngineDisplacement" />
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-1">
                 <div>
-                    <label for="MaxEngineDisplacement">Max Engine Displacement:</label>
+                    <label for="MaxEngineDisplacement">Max CC:</label>
                     <input class="form-control" type="number" id="MaxEngineDisplacement" name="MaxEngineDisplacement" min="0" value="@Model.FilterModel.MaxEngineDisplacement" />
                 </div>
             </div>
+        </div>
+        <div class="row">
+           
+           
             <div class="col-md-2 mt-3">
                 <div>
                     <button class="btn btn-primary" type="submit">Filter</button>
@@ -141,7 +170,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-truncate">@ad.Make @ad.Model (@ad.Year)</h5>
                         <p class="card-text text-muted">@ad.Town</p>
-                        <h6 class="text-primary fw-bold">@ad.Price.ToString("C")</h6>
+                        <h6 class="fw-bold ad-price" style=" color: #13911d;">@ad.Price.ToString("C")</h6>
                     </div>
                     <div class="card-footer text-center">
                         <a href="@Url.Action("Details", "Ad", new { id = ad.Id })"

@@ -21,5 +21,8 @@ namespace NVMotors.Web.ViewModels.Ad
         public string? Town { get; set; }
         public decimal? MinPrice { get; set; }
         public decimal? MaxPrice { get; set; }
+        public string? Category { get; set; }
+        public string? Make { get; set; }
+        public string? Model { get; set; }
     }
 }

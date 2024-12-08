@@ -18,14 +18,31 @@ namespace NVMotors.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+       public IActionResult Test500()
         {
-            return View();
+            try
+            {
+              
+                throw new Exception("Exception");
+            }
+            catch (Exception ex)
+            {
+                return new StatusCodeResult(500);
+            }
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Error(int? statusCode = null)
         {
+
+            if (statusCode == 404)
+            {
+                return this.View("NotFoundCustom");
+            }
+            else if (statusCode == 500)
+            {
+                return this.View("InternalServerErrorCustom");
+            }
+
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
