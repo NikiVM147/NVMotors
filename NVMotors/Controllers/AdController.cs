@@ -28,9 +28,9 @@ namespace NVMotors.Web.Controllers
             }
             return Guid.Empty;
         }
-        public async Task<IActionResult> IndexAds(AdFilterViewModel filters)
+        public async Task<IActionResult> IndexAds(AdFilterViewModel filters, string searchQuery)
         {
-            var model = await adService.IndexGetAllAds(filters);
+            var model = await adService.IndexGetAllAds(filters, searchQuery);
             return View(model);
         }
         [HttpGet]

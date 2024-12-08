@@ -69,8 +69,8 @@ namespace NVMotors.Sevices.Data
             };
             return model;
         }
-
-        public async Task<AdViewModel> IndexGetAllAds(AdFilterViewModel filters)
+     
+        public async Task<AdViewModel> IndexGetAllAds(AdFilterViewModel filters, string searchQuery)
         {
             var transmissionTypes = await context.Ads
                 .Select(ad => ad.Motor.Specification.TransmissionType)
@@ -105,28 +105,14 @@ namespace NVMotors.Sevices.Data
                 .Where(a => a.IsApproved)
                 .AsQueryable();
 
-            if (filters.MinYear.HasValue)
-                adsQuery = adsQuery.Where(a => a.Motor.Specification.Year >= filters.MinYear.Value);
-            if (filters.MaxYear.HasValue)
-                adsQuery = adsQuery.Where(a => a.Motor.Specification.Year <= filters.MaxYear.Value);
-            if (filters.MinHorsePower.HasValue)
-                adsQuery = adsQuery.Where(a => a.Motor.Specification.HorsePower >= filters.MinHorsePower.Value);
-            if (filters.MaxHorsePower.HasValue)
-                adsQuery = adsQuery.Where(a => a.Motor.Specification.HorsePower <= filters.MaxHorsePower.Value);
-            if (!string.IsNullOrEmpty(filters.Town))
-                adsQuery = adsQuery.Where(a => a.Town.Contains(filters.Town));
-            if (filters.MinPrice.HasValue)
-                adsQuery = adsQuery.Where(a => a.Price >= filters.MinPrice.Value);
-            if (filters.MaxPrice.HasValue)
-                adsQuery = adsQuery.Where(a => a.Price <= filters.MaxPrice.Value);
-            if (!string.IsNullOrEmpty(filters.TransmissionType))
-                adsQuery = adsQuery.Where(a => a.Motor.Specification.TransmissionType.Contains(filters.TransmissionType));
-            if (!string.IsNullOrEmpty(filters.FuelType))
-                adsQuery = adsQuery.Where(a => a.Motor.Specification.FuelType.Contains(filters.FuelType));
-            if (!string.IsNullOrEmpty(filters.Color))
-                adsQuery = adsQuery.Where(a => a.Motor.Specification.Color.Contains(filters.Color));
-            if (!string.IsNullOrEmpty(filters.Condition))
-                adsQuery = adsQuery.Where(a => a.Motor.Specification.Condition.Contains(filters.Condition));
+            adsQuery = ApplyFilters(adsQuery, filters);
+
+            if (!string.IsNullOrEmpty(searchQuery))
+            {
+                adsQuery = adsQuery.Where(a => (a.Motor.Make.ToLower() + a.Motor.Model.ToLower()).Contains(searchQuery.ToLower()));
+
+
+            }
 
             var filteredAds = await adsQuery.ToListAsync();
 
@@ -153,6 +139,38 @@ namespace NVMotors.Sevices.Data
             };
 
             return viewModel;
+        }
+
+        private IQueryable<Ad> ApplyFilters(IQueryable<Ad> query, AdFilterViewModel filters)
+        {
+            if (filters.MinYear.HasValue)
+                query = query.Where(a => a.Motor.Specification.Year >= filters.MinYear.Value);
+            if (filters.MaxYear.HasValue)
+                query = query.Where(a => a.Motor.Specification.Year <= filters.MaxYear.Value);
+            if (filters.MinHorsePower.HasValue)
+                query = query.Where(a => a.Motor.Specification.HorsePower >= filters.MinHorsePower.Value);
+            if (filters.MaxHorsePower.HasValue)
+                query = query.Where(a => a.Motor.Specification.HorsePower <= filters.MaxHorsePower.Value);
+            if (filters.MinEngineDisplacement.HasValue)
+                query = query.Where(a => a.Motor.Specification.EngineDisplacement >= filters.MinEngineDisplacement.Value);
+            if (filters.MaxEngineDisplacement.HasValue)
+                query = query.Where(a => a.Motor.Specification.EngineDisplacement <= filters.MaxEngineDisplacement.Value);
+            if (!string.IsNullOrEmpty(filters.Town))
+                query = query.Where(a => a.Town.Contains(filters.Town));
+            if (filters.MinPrice.HasValue)
+                query = query.Where(a => a.Price >= filters.MinPrice.Value);
+            if (filters.MaxPrice.HasValue)
+                query = query.Where(a => a.Price <= filters.MaxPrice.Value);
+            if (!string.IsNullOrEmpty(filters.TransmissionType))
+                query = query.Where(a => a.Motor.Specification.TransmissionType.Contains(filters.TransmissionType));
+            if (!string.IsNullOrEmpty(filters.FuelType))
+                query = query.Where(a => a.Motor.Specification.FuelType.Contains(filters.FuelType));
+            if (!string.IsNullOrEmpty(filters.Color))
+                query = query.Where(a => a.Motor.Specification.Color.Contains(filters.Color));
+            if (!string.IsNullOrEmpty(filters.Condition))
+                query = query.Where(a => a.Motor.Specification.Condition.Contains(filters.Condition));
+
+            return query;
         }
 
         public IEnumerable<AdIndexViewModel> AllAdsToModel(IQueryable<Ad> ads) 
