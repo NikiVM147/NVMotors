@@ -29,6 +29,24 @@ namespace NVMotors.Web.Controllers
                 }).ToList();
             return View(query);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> RequestsReceived()
+        {
+            var query = context.Queries.Where(q => q.Ad.Motor.SellerId == GetCurrentUserId())
+                .Select(q => new QueriesReceivedViewModel
+                {
+                    AdId = q.AdId,
+                    Description = q.Description,
+                    Make = q.Ad.Motor.Make,
+                    Model = q.Ad.Motor.Model,
+                    DateRequested = q.DateRequested.ToString("dd/MM/yyyy"),
+                    PhoneNumber = q.PhoneNumber,
+                    Email = q.Requester.Email!,
+                    FullName = $"{q.Requester.FirstName} {q.Requester.LastName}"
+                }).ToList();
+            return View(query);
+        }
         public Guid GetCurrentUserId()
         {
             if (Guid.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var userId))

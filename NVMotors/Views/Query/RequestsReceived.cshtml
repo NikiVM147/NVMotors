@@ -1,0 +1,52 @@
+﻿@using NVMotors.Web.ViewModels.Query;
+@model IEnumerable<QueriesReceivedViewModel>
+
+@{
+    ViewData["Title"] = "Received Requests";
+}
+
+<div class="container mt-5">
+    <h1 class="mb-4">Received Requests</h1>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            You haven't received any requests yet.
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Ad</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>Phone Number</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var query in Model)
+                    {
+                        <tr>
+                            <td>@query.Make @query.Model</td>
+                            <td>@query.Description</td>
+                            <td>@query.DateRequested</td>
+                            <td>@query.PhoneNumber</td>
+                            <td>@query.FullName</td>
+                            <td>@query.Email</td>
+                            <td>
+                                <a href="@Url.Action("Details", "Ad", new { id = query.AdId })"
+                                   class="btn btn-primary btn-sm">View Ad</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+
