@@ -13,11 +13,9 @@ namespace NVMotors.Web.Controllers
     [Authorize(Roles = "User")]
     public class AdImageController : Controller
     {
-        private readonly NVMotorsDbContext context;
         private readonly IAdImageService adImageService;
-        public AdImageController(NVMotorsDbContext _context, IAdImageService _adImageService)
+        public AdImageController( IAdImageService _adImageService)
         {
-            context = _context;
             adImageService = _adImageService;
         }
         [HttpGet]
