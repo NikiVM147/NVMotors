@@ -5,75 +5,71 @@ using NVMotors.Web.ViewModels.Query;
 using System.Security.Claims;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static NVMotors.Common.Constants;
+using NVMotors.Sevices.Data.Interfaces;
 
 namespace NVMotors.Web.Controllers
 {
-    public class QueryController : Controller
+    public class QueryController : BaseController
     {
         private readonly NVMotorsDbContext context;
-        public QueryController(NVMotorsDbContext _context)
+        private readonly IQueryService queryService;
+        public QueryController(NVMotorsDbContext _context, IQueryService _queryService)
         {
             context = _context;
+            queryService = _queryService;
         }
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var query = context.Queries.Where(q => q.RequesterId == GetCurrentUserId())
-                .Select(q => new QueryIndexViweModel
-                {
-                    AdId = q.AdId,
-                    Description = q.Description,
-                    Make = q.Ad.Motor.Make,
-                    Model = q.Ad.Motor.Model,
-                    Date = q.DateRequested.ToString("dd/MM/yyyy"),
-                }).ToList();
-            return View(query);
+            try
+            {
+                var model = await queryService.IndexGetMyRequestsAsync(GetCurrentUserId());
+                return View(model);
+            }
+            catch (ArgumentException ex)
+            {
+                TempData[nameof(ErrorData)] = ex.Message;
+                return RedirectToAction("Index", "Home");
+            }
+           
         }
 
         [HttpGet]
         public async Task<IActionResult> RequestsReceived()
         {
-            var query = context.Queries.Where(q => q.Ad.Motor.SellerId == GetCurrentUserId())
-                .Select(q => new QueriesReceivedViewModel
-                {
-                    AdId = q.AdId,
-                    Description = q.Description,
-                    Make = q.Ad.Motor.Make,
-                    Model = q.Ad.Motor.Model,
-                    DateRequested = q.DateRequested.ToString("dd/MM/yyyy"),
-                    PhoneNumber = q.PhoneNumber,
-                    Email = q.Requester.Email!,
-                    FullName = $"{q.Requester.FirstName} {q.Requester.LastName}"
-                }).ToList();
-            return View(query);
-        }
-        public Guid GetCurrentUserId()
-        {
-            if (Guid.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var userId))
+            try
             {
-                return userId;
+                var model = await queryService.IndexGetReceivedRequestsAsync(GetCurrentUserId());
+                return View(model);
             }
-            return Guid.Empty;
+            catch (ArgumentException ex)
+            {
+                TempData[nameof(ErrorData)] = ex.Message;
+                return RedirectToAction("Index", "Home");
+            }
+
         }
+      
         [HttpPost]
         public async Task<IActionResult> MakeQuery(MakeQueryViewModel queryModel)
         {
-            if (!ModelState.IsValid) 
+            try
             {
-                return RedirectToAction("Details", "Ad", new {id = queryModel.AdId});
+                if (!ModelState.IsValid)
+                {
+                    return RedirectToAction("Details", "Ad", new { id = queryModel.AdId });
+                }
+                await queryService.CreateQueryAsync(queryModel, GetCurrentUserId());
+                TempData[nameof(SuccessData)] = "Successfully made request!";
+                return RedirectToAction("Index");
             }
-
-            var query = new Query()
+            catch (Exception ex) when (ex is ArgumentException || ex is ArgumentNullException || ex is InvalidOperationException)
             {
-                PhoneNumber = queryModel.PhoneNumber,
-                Description = queryModel.Description,
-                AdId = queryModel.AdId,
-                RequesterId = GetCurrentUserId(),
-                DateRequested = DateTime.Now,
-            }; 
-            await context.Queries.AddAsync(query);
-            await context.SaveChangesAsync();
-            return RedirectToAction("Details", "Ad", new { id = queryModel.AdId });
+
+                TempData[nameof(ErrorData)] = ex.Message;
+                return RedirectToAction("IndexAds", "Ad");
+            }
+           
 
         }
     }
