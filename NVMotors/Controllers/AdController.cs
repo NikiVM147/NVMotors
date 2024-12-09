@@ -27,7 +27,7 @@ namespace NVMotors.Web.Controllers
             catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException)
             {
 
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
                 return RedirectToAction("Index", "Home");
             }
 
@@ -48,7 +48,7 @@ namespace NVMotors.Web.Controllers
             }
             catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException)
             {
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
                 return RedirectToAction("Index", "Motor");
             }
            
@@ -68,7 +68,7 @@ namespace NVMotors.Web.Controllers
             }
             catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException)
             {
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
                 return RedirectToAction("Index", "Motor");
             }
             
@@ -84,7 +84,7 @@ namespace NVMotors.Web.Controllers
             catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException)
             {
 
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
                 return RedirectToAction(nameof(IndexAds));
             }
             
@@ -95,12 +95,13 @@ namespace NVMotors.Web.Controllers
             try
             {
                 await adService.DeleteAdAsync(id);
+                TempData[nameof(SuccessData)] = "Ad successfully deleted!";
                 return RedirectToAction(nameof(IndexAds));
             }
             catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException)
             {
 
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
                 return RedirectToAction(nameof(IndexAds));
             }
         }
@@ -116,7 +117,7 @@ namespace NVMotors.Web.Controllers
             catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException)
             {
 
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
                 return RedirectToAction(nameof(IndexAds));
             }
 
@@ -136,7 +137,7 @@ namespace NVMotors.Web.Controllers
             catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException)
             {
 
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
                 return RedirectToAction(nameof(IndexAds));
             }
 

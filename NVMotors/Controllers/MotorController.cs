@@ -1,18 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic;
 using NVMotors.Data;
-using NVMotors.Data.Models;
-using NVMotors.Data.Models.Enums;
 using NVMotors.Sevices.Data.Interfaces;
 using NVMotors.Web.ViewModels.Motor;
-using System.Runtime.ExceptionServices;
 using System.Security.Claims;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using static NVMotors.Common.Constants;
+using Microsoft.VisualBasic;
 
 namespace NVMotors.Web.Controllers
 {
@@ -42,7 +35,7 @@ namespace NVMotors.Web.Controllers
             }
             catch (ArgumentException ex)
             {
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
                 return RedirectToAction("Index", "Home");
             }
             
@@ -65,14 +58,14 @@ namespace NVMotors.Web.Controllers
 
                     return View(addModel);
                 }
-
+                TempData[nameof(SuccessData)] = "Successfully created motor!";
                 await motorService.CreateMotorAsync(addModel, GetCurrentUserId());
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException || ex is ArgumentException)
             {
 
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
                 return RedirectToAction(nameof(Create));
             }
 
@@ -89,7 +82,7 @@ namespace NVMotors.Web.Controllers
             catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException || ex is ArgumentException)
             {
 
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
                 return RedirectToAction(nameof(Index));
             }
 
@@ -105,7 +98,7 @@ namespace NVMotors.Web.Controllers
             catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException || ex is ArgumentException)
             {
 
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
                 return RedirectToAction(nameof(Index));
             }
 
@@ -122,12 +115,13 @@ namespace NVMotors.Web.Controllers
                     return View(editModel);
                 }
                 await motorService.EditMotorAsync(editModel);
+                TempData[nameof(SuccessData)] = "Successfully edited motor!";
                 return RedirectToAction(nameof(Details), new { id = editModel.Id });
             }
             catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException || ex is ArgumentException)
             {
 
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
                 return RedirectToAction(nameof(Index));
             }
 
@@ -143,7 +137,7 @@ namespace NVMotors.Web.Controllers
             catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException || ex is ArgumentException)
             {
 
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
                 return RedirectToAction(nameof(Index));
             }
 
@@ -154,12 +148,13 @@ namespace NVMotors.Web.Controllers
             try
             {
                 await motorService.DeleteMotorAsync(deleteModel);
+                TempData[nameof(SuccessData)] = "Successfully deleted motor!";
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException || ex is ArgumentException)
             {
 
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
                 return RedirectToAction(nameof(Index));
             }
 

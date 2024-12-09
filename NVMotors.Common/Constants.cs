@@ -28,8 +28,8 @@
         public const int MinLenghtName = 2; 
         public const int MaxLenghtName = 30;
 
-        public const string Error = "Error occured";
-        public const string Success = "Success";
+        public const string ErrorData = "Error occured";
+        public const string SuccessData = "Success";
         public const string Information = "Information";
     }
 }

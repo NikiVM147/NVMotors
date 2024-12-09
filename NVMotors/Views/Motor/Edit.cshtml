@@ -12,6 +12,7 @@
             <h5 class="mb-0">Motor Details</h5>
         </div>
         <div class="card-body">
+            <input type="hidden" name="id" value="@Model.Id" />
             <div class="form-group">
                 <label asp-for="CategoryId" class="control-label">Choose Category</label>
                 <select asp-for="CategoryId" asp-items="Model.Categories" class="form-control">

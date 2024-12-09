@@ -2,6 +2,7 @@
 using NVMotors.Sevices.Data;
 using NVMotors.Sevices.Data.Interfaces;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using static NVMotors.Common.Constants;
 
 namespace NVMotors.Web.Controllers
 {
@@ -24,10 +25,11 @@ namespace NVMotors.Web.Controllers
             try
             {
                 await adminService.ApproveAdAsync(id);
+                TempData[nameof(SuccessData)] = "Ad successfully approved!";
             }
             catch (Exception ex) when (ex is ArgumentNullException || ex is InvalidOperationException || ex is NullReferenceException)
             {
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
             }
             return RedirectToAction(nameof(Approve));
 

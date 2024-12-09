@@ -40,12 +40,12 @@ namespace NVMotors.Web.Controllers
                 }
 
                 await adImageService.AddImagesAsync(imageModel);
-                TempData[nameof(Success)] = "Successfull! Pending approval by Admin";
+                TempData[nameof(SuccessData)] = "Successfull! Pending approval by Admin";
                 return RedirectToAction("IndexAds", "Ad");
             }
             catch (Exception ex) when (ex is ArgumentNullException)
             {
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
                 return RedirectToAction("Index", "Motor");
             }
            
@@ -62,7 +62,7 @@ namespace NVMotors.Web.Controllers
             catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException)
             {
 
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
                 return RedirectToAction("IndexAds", "Ad");
             }
 
@@ -79,7 +79,7 @@ namespace NVMotors.Web.Controllers
             catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException)
             {
 
-                TempData[nameof(Error)] = ex.Message;
+                TempData[nameof(ErrorData)] = ex.Message;
                 return RedirectToAction("IndexAds", "Ad");
             }
 
@@ -87,7 +87,7 @@ namespace NVMotors.Web.Controllers
         [HttpPost]
         public IActionResult SetSuccessMessage()
         {
-            TempData[nameof(Success)] = "Successfull! Pending approval by Admin";
+            TempData[nameof(SuccessData)] = "Successfull! Pending approval by Admin";
             return RedirectToAction("IndexAds","Ad");
         }
 

@@ -60,7 +60,6 @@ namespace NVMotors.Web.Controllers
         {
             if (!ModelState.IsValid) 
             {
-                //ViewData[nameof(Error)] = "Error ";
                 return RedirectToAction("Details", "Ad", new {id = queryModel.AdId});
             }
 
@@ -74,7 +73,6 @@ namespace NVMotors.Web.Controllers
             }; 
             await context.Queries.AddAsync(query);
             await context.SaveChangesAsync();
-            //TempData(nameof(Succsec))
             return RedirectToAction("Details", "Ad", new { id = queryModel.AdId });
 
         }
