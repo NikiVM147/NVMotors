@@ -38,6 +38,14 @@ namespace NVMotors.Sevices.Data
         public async Task ApproveAdAsync(Guid id)
         {
             var ad = await context.Ads.FirstOrDefaultAsync(a => a.Id == id);
+            if (ad == null)
+            {
+                throw new ArgumentNullException("Ad not found");
+            }
+            if(ad.IsApproved == true)
+            {
+                throw new InvalidOperationException("Ad is already approved.");
+            }
             ad.IsApproved = true;
             await context.SaveChangesAsync();
         }

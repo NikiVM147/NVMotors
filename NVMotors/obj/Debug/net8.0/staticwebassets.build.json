@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XAEDUahvYzwyVUG0Pnhay5SBc6T9gYJ8Q3RSEGG3DQU=",
+  "Hash": "UKrtmZ8C9EAXrFV00eKEcPFMSHf10N4Lhs7bBR0p32o=",
   "Source": "NVMotors.Web",
   "BasePath": "_content/NVMotors.Web",
   "Mode": "Default",
@@ -1345,25 +1345,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\535945c7-0a60-40d0-a2d7-129086ed0447.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\5b5cc532-88c1-43a4-bdcd-00d798b63ce5.jpg",
-      "SourceId": "NVMotors.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\",
-      "BasePath": "_content/NVMotors.Web",
-      "RelativePath": "images/5b5cc532-88c1-43a4-bdcd-00d798b63ce5.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\5b5cc532-88c1-43a4-bdcd-00d798b63ce5.jpg"
     },
     {
       "Identity": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\61adf337-1c77-4ba4-b029-0841ed76651e.jpg",

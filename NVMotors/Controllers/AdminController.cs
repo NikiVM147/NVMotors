@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NVMotors.Sevices.Data;
 using NVMotors.Sevices.Data.Interfaces;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace NVMotors.Web.Controllers
 {
@@ -20,8 +21,16 @@ namespace NVMotors.Web.Controllers
         }
         public async Task<IActionResult> ApproveAd(Guid id) 
         {
-            await adminService.ApproveAdAsync(id);
+            try
+            {
+                await adminService.ApproveAdAsync(id);
+            }
+            catch (Exception ex) when (ex is ArgumentNullException || ex is InvalidOperationException || ex is NullReferenceException)
+            {
+                TempData[nameof(Error)] = ex.Message;
+            }
             return RedirectToAction(nameof(Approve));
+
         }
     }
 }
