@@ -130,7 +130,7 @@ namespace NVMotors.Tests
             var result = await motorService.GetAllMotorsForCurrentUserAsync(userId);
             Assert.That(result.Count(), Is.EqualTo(1));
         }
-            [TearDown]
+        [TearDown]
         public void TearDown()
         {
             context.Dispose();
