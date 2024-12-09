@@ -19,6 +19,14 @@ namespace NVMotors.Services.Data
 
         public async Task CreateMotorAsync(MotorAddViewModel addModel, Guid userId)
         {
+            if (addModel == null) 
+            {
+                throw new ArgumentNullException(nameof(addModel));
+            }
+            if (userId == Guid.Empty) 
+            {
+                throw new ArgumentException("Invalid user ID.");
+            }
             var specification = new Specification
             {
                 Year = addModel.Year,
@@ -46,6 +54,10 @@ namespace NVMotors.Services.Data
 
         public async Task DeleteMotorAsync(MotorIndexViewModel deleteModel)
         {
+            if (deleteModel == null) 
+            {
+                throw new ArgumentNullException("Error occured!");
+            }
             var motor = await FindMotorByIdAsync(deleteModel.Id);
             motor.IsDeleted = true;
             await context.SaveChangesAsync();
@@ -73,6 +85,10 @@ namespace NVMotors.Services.Data
 
         public async Task EditMotorAsync(MotorAddViewModel editModel)
         {
+            if (editModel == null) 
+            {
+                throw new ArgumentNullException("Invalid data!");
+            }
             var motor = await FindMotorByIdAsync(editModel.Id);
 
             motor.Make = editModel.Make;
@@ -90,12 +106,23 @@ namespace NVMotors.Services.Data
 
         private async Task<Motor> FindMotorByIdAsync(Guid id)
         {
-           return await context.Motors.Include(m => m.Specification).Include(m => m.MotorCategory).Where(m => m.IsDeleted == false).FirstOrDefaultAsync(m => m.Id == id);
+           var motor = await context.Motors.Include(m => m.Specification).Include(m => m.MotorCategory).Where(m => m.IsDeleted == false).FirstOrDefaultAsync(m => m.Id == id);
+            if (motor == null) 
+            {
+                throw new NullReferenceException($"Motor not found.");
+            }
+
+
+            return motor;
         }
 
         public async Task<List<MotorIndexViewModel>> GetAllMotorsForCurrentUserAsync(Guid userId)
         {
-          return await context.Motors.Where(m => m.Seller.Id == userId)
+            if (userId == Guid.Empty) 
+            {
+                throw new ArgumentException("Invalid user.");
+            }
+            return await context.Motors.Where(m => m.Seller.Id == userId)
                .Where(m => m.IsDeleted == false)
                .Select(m => new MotorIndexViewModel
                {
@@ -144,11 +171,6 @@ namespace NVMotors.Services.Data
         public async Task<MotorAddViewModel> LoadEditModelAsync(Guid id)
         {
             var motor = await FindMotorByIdAsync(id);
-
-            if (motor == null)
-            {
-                throw new InvalidOperationException("Motor not found.");
-            }
             var model = new MotorAddViewModel()
             {
                 Id = id,
@@ -182,5 +204,6 @@ namespace NVMotors.Services.Data
                 Categories = await LoadCategoriesAsync(),
             };
         }
+      
     }
 }

@@ -12,6 +12,7 @@ using NVMotors.Sevices.Data.Interfaces;
 using NVMotors.Web.ViewModels.Motor;
 using System.Runtime.ExceptionServices;
 using System.Security.Claims;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace NVMotors.Web.Controllers
 {
@@ -33,9 +34,18 @@ namespace NVMotors.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var currentUserID = GetCurrentUserId();
-            var model = await motorService.GetAllMotorsForCurrentUserAsync(currentUserID);
-            return View(model);
+            try
+            {
+                var currentUserID = GetCurrentUserId();
+                var model = await motorService.GetAllMotorsForCurrentUserAsync(currentUserID);
+                return View(model);
+            }
+            catch (ArgumentException ex)
+            {
+                TempData[nameof(Error)] = ex.Message;
+                return RedirectToAction("Index", "Home");
+            }
+            
         }
         [HttpGet]
         public async Task<IActionResult> Create()
@@ -47,52 +57,112 @@ namespace NVMotors.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(MotorAddViewModel addModel)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                addModel = await motorService.LoadMotorViewModel();
+                if (!ModelState.IsValid)
+                {
+                    addModel = await motorService.LoadMotorViewModel();
 
-                return View(addModel);
+                    return View(addModel);
+                }
+
+                await motorService.CreateMotorAsync(addModel, GetCurrentUserId());
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException || ex is ArgumentException)
+            {
+
+                TempData[nameof(Error)] = ex.Message;
+                return RedirectToAction(nameof(Create));
             }
 
-            await motorService.CreateMotorAsync(addModel, GetCurrentUserId());
-            return RedirectToAction(nameof(Index));
         }
 
         [HttpGet]
         public async Task<IActionResult> Details(Guid id)
         {
-            var model = await motorService.DetailsMotorAsync(id);
-            return View(model);
+            try
+            {
+                var model = await motorService.DetailsMotorAsync(id);
+                return View(model);
+            }
+            catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException || ex is ArgumentException)
+            {
+
+                TempData[nameof(Error)] = ex.Message;
+                return RedirectToAction(nameof(Index));
+            }
+
         }
         [HttpGet]
         public async Task<IActionResult> Edit(Guid id)
         {
-           var model = await motorService.LoadEditModelAsync(id);
-            return View(model);
+            try
+            {
+                var model = await motorService.LoadEditModelAsync(id);
+                return View(model);
+            }
+            catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException || ex is ArgumentException)
+            {
+
+                TempData[nameof(Error)] = ex.Message;
+                return RedirectToAction(nameof(Index));
+            }
+
         }
         [HttpPost]
         public async Task<IActionResult> Edit(MotorAddViewModel editModel)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                editModel = await motorService.LoadMotorViewModel();
+                if (!ModelState.IsValid)
+                {
+                    editModel = await motorService.LoadMotorViewModel();
 
-                return View(editModel);
+                    return View(editModel);
+                }
+                await motorService.EditMotorAsync(editModel);
+                return RedirectToAction(nameof(Details), new { id = editModel.Id });
             }
-            await motorService.EditMotorAsync(editModel);
-            return RedirectToAction(nameof(Details), new {id = editModel.Id});
+            catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException || ex is ArgumentException)
+            {
+
+                TempData[nameof(Error)] = ex.Message;
+                return RedirectToAction(nameof(Index));
+            }
+
         }
         [HttpGet]
         public async Task<IActionResult> Delete(Guid id)
         {
-            var model = await motorService.GetDeleteMotorModelAsync(id);
-            return View(model);
+            try
+            {
+                var model = await motorService.GetDeleteMotorModelAsync(id);
+                return View(model);
+            }
+            catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException || ex is ArgumentException)
+            {
+
+                TempData[nameof(Error)] = ex.Message;
+                return RedirectToAction(nameof(Index));
+            }
+
         }
         [HttpPost]
         public async Task<IActionResult> Delete(MotorIndexViewModel deleteModel)
         {
-            await motorService.DeleteMotorAsync(deleteModel);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                await motorService.DeleteMotorAsync(deleteModel);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException || ex is ArgumentException)
+            {
+
+                TempData[nameof(Error)] = ex.Message;
+                return RedirectToAction(nameof(Index));
+            }
+
         }
         }
 }
