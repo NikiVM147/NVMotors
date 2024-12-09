@@ -111,8 +111,6 @@ namespace NVMotors.Services.Data
             {
                 throw new NullReferenceException($"Motor not found.");
             }
-
-
             return motor;
         }
 
@@ -122,7 +120,7 @@ namespace NVMotors.Services.Data
             {
                 throw new ArgumentException("Invalid user.");
             }
-            return await context.Motors.Where(m => m.Seller.Id == userId)
+            return await context.Motors.Where(m => m.SellerId == userId)
                .Where(m => m.IsDeleted == false)
                .Select(m => new MotorIndexViewModel
                {

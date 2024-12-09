@@ -20,9 +20,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NVMotors.Sevices.Data", "NVMotors.Data.Services\NVMotors.Sevices.Data.csproj", "{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{EF1F2BE8-11C2-42EB-98C5-7A70DB0BECF0}"
-	ProjectSection(SolutionItems) = preProject
-		NVMotors.Data.Models\Specification.cs = NVMotors.Data.Models\Specification.cs
-	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVMotors.Tests", "NVMotors.Tests\NVMotors.Tests.csproj", "{81694B18-D797-47C8-B768-CB243E540D98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +53,10 @@ Global
 		{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A82A916-DDA3-4446-8F17-1C9E6AB14CA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81694B18-D797-47C8-B768-CB243E540D98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81694B18-D797-47C8-B768-CB243E540D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81694B18-D797-47C8-B768-CB243E540D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81694B18-D797-47C8-B768-CB243E540D98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
