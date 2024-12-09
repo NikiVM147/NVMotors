@@ -11,11 +11,9 @@ namespace NVMotors.Web.Controllers
 {
     public class QueryController : BaseController
     {
-        private readonly NVMotorsDbContext context;
         private readonly IQueryService queryService;
-        public QueryController(NVMotorsDbContext _context, IQueryService _queryService)
+        public QueryController(IQueryService _queryService)
         {
-            context = _context;
             queryService = _queryService;
         }
         [HttpGet]
