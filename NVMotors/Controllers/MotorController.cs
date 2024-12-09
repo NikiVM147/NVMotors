@@ -9,16 +9,13 @@ using Microsoft.VisualBasic;
 
 namespace NVMotors.Web.Controllers
 {
-    //TODO categories, validations
     [Authorize(Roles = "User")]
     public class MotorController : Controller
     {
         private readonly IMotorService motorService;
-        private readonly NVMotorsDbContext context;
-        public MotorController(IMotorService _motorService, NVMotorsDbContext _context)
+        public MotorController(IMotorService _motorService)
         {
             motorService = _motorService;
-            context = _context; 
         }
         public Guid GetCurrentUserId()
         {
