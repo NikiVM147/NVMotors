@@ -34,5 +34,7 @@ namespace NVMotors.Data.Models
         public string PhoneNumber  { get; set; } = string.Empty;
 
         public bool IsApproved { get; set; } = false;
+        public ICollection<Query> Queries { get; set; } = new List<Query>();
+
     }
 }

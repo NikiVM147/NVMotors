@@ -17,8 +17,8 @@ namespace NVMotors.Data
         public DbSet<AdImage> AdsImages { get; set; }
         public DbSet<MotorImage> MotorImages { get; set; }
         public DbSet<MotorCategory> MotorCategories { get; set; }
+        public DbSet<Query> Queries { get; set; }
 
-        //public DbSet<AppUser> AppUsers { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

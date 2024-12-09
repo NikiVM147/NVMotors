@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NVMotors.Data;
 
@@ -11,9 +12,11 @@ using NVMotors.Data;
 namespace NVMotors.Data.Migrations
 {
     [DbContext(typeof(NVMotorsDbContext))]
-    partial class NVMotorsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241209100142_addedQueryTable")]
+    partial class addedQueryTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -366,18 +369,17 @@ namespace NVMotors.Data.Migrations
                         .HasMaxLength(5000)
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("RequesterId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
 
                     b.HasIndex("AdId");
-
-                    b.HasIndex("RequesterId");
 
                     b.ToTable("Queries");
                 });
@@ -538,15 +540,7 @@ namespace NVMotors.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("NVMotors.Data.Models.AppUser", "Requester")
-                        .WithMany()
-                        .HasForeignKey("RequesterId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Ad");
-
-                    b.Navigation("Requester");
                 });
 
             modelBuilder.Entity("NVMotors.Data.Models.Ad", b =>
