@@ -15,8 +15,10 @@ namespace NVMotors.Tests
     {
         private NVMotorsDbContext context;
         private AdService adService;
-        private Guid motorId; 
-
+        private Guid motorId;
+        private Guid adId;
+        private Guid userId;
+        private Ad ad;
         [SetUp]
         public void Setup()
         {
@@ -28,6 +30,8 @@ namespace NVMotors.Tests
             adService = new AdService(context);
 
             motorId = Guid.NewGuid();
+            adId = Guid.NewGuid();
+            userId = Guid.NewGuid();
             var motor = new Motor
             {
                 Id = motorId,
@@ -47,10 +51,20 @@ namespace NVMotors.Tests
                 {
                     Name = "ATV"
                 },
-                IsDeleted = false
+                IsDeleted = false,
+                SellerId = userId,
             };
-
+            ad = new Ad
+            {
+                Id = adId,
+                MotorId = motorId,
+                Description = "Ad Details",
+                Price = 2500,
+                Town = "Test Town",
+                PhoneNumber = "1234567890"
+            };
             context.Motors.Add(motor);
+            context.Ads.Add(ad);
             context.SaveChanges();
         }
         [Test]
@@ -69,8 +83,47 @@ namespace NVMotors.Tests
             Assert.That(adFound.MotorId, Is.EqualTo(motorId));
         }
 
+        [Test]
+        public async Task GetAdDetailsAsyncShouldWork()
+        {
+            var model = await adService.GetAdDetailsAsync(adId, userId);
+            Assert.That(model, Is.Not.Null);
+            Assert.That(model.Town, Is.EqualTo("Test Town"));
+        }
+        [Test]
+        public async Task IndexGetAllAds_ShouldReturnFilteredAds()
+        {
+            var filters = new AdFilterViewModel
+            {
+                MinPrice = 3000
+            };
+            var result = await adService.IndexGetAllAds(filters, null, 1, 12);
 
-
+            Assert.That(result.Ads.Count, Is.EqualTo(0));
+        }
+        [Test]
+        public async Task DeleteAdShouldWork()
+        {
+            await adService.DeleteAdAsync(adId);
+            Assert.That(context.Ads.Count, Is.EqualTo(0));
+        }
+        [Test]
+        public async Task EditAdShouldWork()
+        {
+            var editModel = new CreateAdViewModel
+            {
+                Id = ad.Id,
+                MotorModelId = motorId,
+                Description = "Updated Description",
+                Price = 1800,
+                Town = "Updated Town",
+                PhoneNumber = "0987654321"
+            };
+            var adId = await adService.EditAdAsync(editModel);
+            var adFound = await context.Ads.FirstOrDefaultAsync(a => a.Id == adId);
+            Assert.That(adFound.Description, Is.EqualTo(editModel.Description));
+            Assert.That(adFound.Town, Is.EqualTo(editModel.Town));
+        }
         [TearDown]
         public void TearDown()
         {
