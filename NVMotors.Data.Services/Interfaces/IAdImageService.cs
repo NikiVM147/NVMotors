@@ -11,5 +11,7 @@ namespace NVMotors.Sevices.Data.Interfaces
     public interface IAdImageService
     {
         Task AddImagesAsync(CreateAdImagesViewModel imageModel);
+        Task<ManageAdImagesViewModel> ManageImagesAsync(Guid id);
+        Task DeleteImageAsync(Guid imageId, Guid adId);
     }
 }

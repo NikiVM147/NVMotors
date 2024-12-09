@@ -22,7 +22,7 @@ namespace NVMotors.Sevices.Data
         public async Task AddImagesAsync(CreateAdImagesViewModel imageModel)
         {
             var ad = await context.Ads.FirstOrDefaultAsync(a => a.Id == imageModel.AdId);
-            if (ad == null)
+            if (ad == null) 
             {
                 throw new ArgumentNullException("Ad not found");
             }
@@ -59,6 +59,48 @@ namespace NVMotors.Sevices.Data
             await context.SaveChangesAsync();
         }
 
+        public async Task DeleteImageAsync(Guid imageId, Guid adId)
+        {
+            var adImage = await context.AdsImages
+                .Include(ai => ai.Image)
+                .FirstOrDefaultAsync(ai => ai.AdId == adId && ai.ImageId == imageId);
 
+            if (adImage == null)
+            {
+                throw new ArgumentNullException("Ad image not found");
+            }
+
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", adImage.Image.ImageUrl.TrimStart('/'));
+            if (System.IO.File.Exists(filePath))
+            {
+                System.IO.File.Delete(filePath);
+            }
+            context.AdsImages.Remove(adImage);
+            context.MotorImages.Remove(adImage.Image);
+            await context.SaveChangesAsync();
+        }
+
+        public async Task<ManageAdImagesViewModel> ManageImagesAsync(Guid id)
+        {
+            var ad = await context.Ads
+                .Include(a => a.AdsImages).ThenInclude(ai => ai.Image)
+                .FirstOrDefaultAsync(a => a.Id == id);
+
+            if (ad == null)
+            {
+                throw new NullReferenceException("Ad not found!");
+            }
+
+            var model = new ManageAdImagesViewModel
+            {
+                AdId = ad.Id,
+                ExistingImages = ad.AdsImages.Select(i => new ImageViewModel
+                {
+                    Id = i.Image.Id,
+                    Url = i.Image.ImageUrl,
+                }).ToList()
+            };
+            return model;
+        }
     }
 }

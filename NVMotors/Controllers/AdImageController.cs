@@ -53,50 +53,36 @@ namespace NVMotors.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> ManageImages(Guid id)
         {
-            var ad = await context.Ads
-                .Include(a => a.AdsImages).ThenInclude(ai => ai.Image)
-                .FirstOrDefaultAsync(a => a.Id == id);
-
-            if (ad == null)
+            try
             {
-                return NotFound();
+                var model = await adImageService.ManageImagesAsync(id);
+
+                return View(model);
+            }
+            catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException)
+            {
+
+                TempData[nameof(Error)] = ex.Message;
+                return RedirectToAction("IndexAds", "Ad");
             }
 
-            var model = new ManageAdImagesViewModel
-            {
-                AdId = ad.Id,
-                ExistingImages = ad.AdsImages.Select(i => new ImageViewModel
-                {
-                    Id = i.Image.Id,
-                    Url = i.Image.ImageUrl,
-                }).ToList()
-            };
-
-            return View(model);
         }
         [HttpPost]
         public async Task<IActionResult> DeleteImage(Guid imageId, Guid adId)
         {
-            var adImage = await context.AdsImages
-                .Include(ai => ai.Image)
-                .FirstOrDefaultAsync(ai => ai.AdId == adId && ai.ImageId == imageId);
-
-            if (adImage == null)
+            try
             {
-                return NotFound();
+                await adImageService.DeleteImageAsync(imageId, adId);
+                TempData["Success"] = "Image deleted successfully.";
+                return RedirectToAction(nameof(ManageImages), new { id = adId });
+            }
+            catch (Exception ex) when (ex is ArgumentNullException || ex is NullReferenceException)
+            {
+
+                TempData[nameof(Error)] = ex.Message;
+                return RedirectToAction("IndexAds", "Ad");
             }
 
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", adImage.Image.ImageUrl.TrimStart('/'));
-            if (System.IO.File.Exists(filePath))
-            {
-                System.IO.File.Delete(filePath);
-            }
-            context.AdsImages.Remove(adImage);
-            context.MotorImages.Remove(adImage.Image);
-            await context.SaveChangesAsync();
-
-            TempData["Success"] = "Image deleted successfully.";
-            return RedirectToAction(nameof(ManageImages), new { id = adId });
         }
         [HttpPost]
         public IActionResult SetSuccessMessage()
