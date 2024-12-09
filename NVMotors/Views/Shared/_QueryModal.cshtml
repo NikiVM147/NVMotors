@@ -8,9 +8,9 @@
                 <h5 class="modal-title" id="queryModalLabel">Мake a request</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form id="queryForm" method="post" action="@Url.Action("CreateQuery", "Query")">
+            <form id="queryForm" method="post" action="@Url.Action("MakeQuery", "Query")">
                 <div class="modal-body">
-                    <input type="hidden" name="AdId" value="@Model.Id" />
+                    <input type="hidden" name="AdId" value="@Model.AdId" />
                     <div class="mb-3">
                         <label for="PhoneNumber" class="form-label">Phone number:</label>
                         <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" required />
@@ -25,6 +25,7 @@
                     <button type="submit" class="btn btn-primary">Send</button>
                 </div>
             </form>
+
         </div>
     </div>
 </div>

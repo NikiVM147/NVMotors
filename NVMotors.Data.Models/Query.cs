@@ -27,5 +27,7 @@ namespace NVMotors.Data.Models
         public Guid RequesterId { get; set; }
         [ForeignKey(nameof(RequesterId))]
         public AppUser Requester { get; set; } = null!;
+        [Required]
+        public DateTime DateRequested { get; set; }
     }
 }

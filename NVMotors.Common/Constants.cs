@@ -28,7 +28,7 @@
         public const int MinLenghtName = 2; 
         public const int MaxLenghtName = 30;
 
-        public const string Error = "error occured";
+        public const string Error = "Error occured";
         public const string Success = "Success"; 
 
 
