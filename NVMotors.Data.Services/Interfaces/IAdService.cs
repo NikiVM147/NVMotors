@@ -14,7 +14,10 @@ namespace NVMotors.Sevices.Data.Interfaces
         Task<AdViewModel> IndexGetAllAds(AdFilterViewModel filters, string searchQuery, int page, int pageSize);
         Task<Guid> CreateAdAsync(CreateAdViewModel adModel);
         Task<AdDetailViewModel> GetAdDetailsAsync(Guid id, Guid userId);
-        IEnumerable<AdIndexViewModel> AllAdsToModel(IQueryable<Ad> ads);
+        Task DeleteAdAsync(Guid id);
+        Task<CreateAdViewModel> GetEditViewModelAsync(Guid id, Guid motorId);
+        Task<Guid> EditAdAsync(CreateAdViewModel editModel);
+        Task<bool> ValidateMotorId(Guid id);
 
 
     }

@@ -29,8 +29,7 @@
         public const int MaxLenghtName = 30;
 
         public const string Error = "Error occured";
-        public const string Success = "Success"; 
-
-
+        public const string Success = "Success";
+        public const string Information = "Information";
     }
 }

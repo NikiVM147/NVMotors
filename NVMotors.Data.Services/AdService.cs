@@ -24,6 +24,15 @@ namespace NVMotors.Sevices.Data
 
         public async Task<Guid> CreateAdAsync(CreateAdViewModel adModel)
         {
+            if (adModel == null)
+            {
+                throw new ArgumentNullException("Error occured! Invalid data");
+            }
+            
+            if (!await ValidateMotorId(adModel.MotorModelId))
+            {
+                throw new NullReferenceException("Invalid Motor.");
+            }
             var ad = new Ad
             {
                 DateAd = DateTime.Now,
@@ -40,12 +49,7 @@ namespace NVMotors.Sevices.Data
 
         public async Task<AdDetailViewModel> GetAdDetailsAsync(Guid id, Guid userId)
         {
-            var ad = await context.Ads.Include(a => a.Motor)
-                .ThenInclude(m => m.MotorCategory)
-                .Include(a => a.Motor).ThenInclude(m => m.Specification)
-                .Include(a => a.AdsImages)
-                .ThenInclude(ai => ai.Image)
-                .FirstOrDefaultAsync(a => a.Id == id);
+            var ad = await GetAdByIdAsync(id);
             var model = new AdDetailViewModel
             {
                 Id = id,
@@ -69,7 +73,8 @@ namespace NVMotors.Sevices.Data
             };
             return model;
         }
-     
+
+       
         public async Task<AdViewModel> IndexGetAllAds(AdFilterViewModel filters, string searchQuery, int page, int pageSize)
         {
             var transmissionTypes = await context.Ads
@@ -102,11 +107,13 @@ namespace NVMotors.Sevices.Data
                 .ToListAsync();
 
             var makes = await context.Motors
+                .Where(m => m.IsDeleted == false)
                 .Select(m => m.Make)
                 .Distinct()
                 .ToListAsync();
 
             var models = await context.Motors
+                 .Where(m => m.IsDeleted == false)
                 .Select(m => m.Model)
                 .Distinct()
                 .ToListAsync();
@@ -124,8 +131,6 @@ namespace NVMotors.Sevices.Data
             if (!string.IsNullOrEmpty(searchQuery))
             {
                 adsQuery = adsQuery.Where(a => (a.Motor.Make.ToLower() + a.Motor.Model.ToLower()).Contains(searchQuery.ToLower()));
-
-
             }
 
             var totalAds = await adsQuery.CountAsync();
@@ -166,7 +171,63 @@ namespace NVMotors.Sevices.Data
 
             return viewModel;
         }
+        public async Task DeleteAdAsync(Guid id)
+        {
+            var ad = await GetAdByIdAsync(id);
+            if (ad != null)
+            {
+                context.Remove(ad);
+                context.SaveChanges();
+            }
+        }
 
+
+        public async Task<CreateAdViewModel> GetEditViewModelAsync(Guid id, Guid motorId)
+        {
+            var ad = await GetAdByIdAsync(id);
+            var model = new CreateAdViewModel()
+            {
+                Id = id,
+                MotorModelId = motorId,
+                DateAd = ad.DateAd,
+                Description = ad.Description,
+                Price = ad.Price,
+                Town = ad.Town,
+                PhoneNumber = ad.PhoneNumber,
+            };
+            return model;
+        }
+
+        public async Task<Guid> EditAdAsync(CreateAdViewModel editModel)
+        {
+            var ad = await GetAdByIdAsync(editModel.Id);
+            if (ad != null)
+            {
+                ad.Description = editModel.Description;
+                ad.Price = editModel.Price;
+                ad.Town = editModel.Town;
+                ad.PhoneNumber = editModel.PhoneNumber;
+                ad.IsApproved = false;
+            }
+            await context.SaveChangesAsync();
+            return ad.Id;
+        }
+        private async Task<Ad> GetAdByIdAsync(Guid id)
+        {
+            var ad =  await context.Ads
+                .Include(a => a.Motor)
+                .ThenInclude(m => m.MotorCategory)
+                .Include(a => a.Motor)
+                .ThenInclude(m => m.Specification)
+                .Include(a => a.AdsImages)
+                .ThenInclude(ai => ai.Image)
+                .FirstOrDefaultAsync(a => a.Id == id);
+            if(ad == null)
+            {
+                throw new NullReferenceException("Ad not found!");
+            }
+            return ad;
+        }
         private IQueryable<Ad> ApplyFilters(IQueryable<Ad> query, AdFilterViewModel filters)
         {
             if (filters.MinYear.HasValue)
@@ -196,16 +257,16 @@ namespace NVMotors.Sevices.Data
             if (!string.IsNullOrEmpty(filters.Condition))
                 query = query.Where(a => a.Motor.Specification.Condition.Contains(filters.Condition));
             if (!string.IsNullOrEmpty(filters.Make))
-                query = query.Where(a => a.Motor.Make.Contains(filters.Make));  
+                query = query.Where(a => a.Motor.Make.Contains(filters.Make));
             if (!string.IsNullOrEmpty(filters.Model))
                 query = query.Where(a => a.Motor.Model.Contains(filters.Model));
             if (!string.IsNullOrEmpty(filters.Category))
                 query = query.Where(a => a.Motor.MotorCategory.Name.Contains(filters.Category));
 
-            return query;   
+            return query;
         }
 
-        public IEnumerable<AdIndexViewModel> AllAdsToModel(IQueryable<Ad> ads) 
+        private IEnumerable<AdIndexViewModel> AllAdsToModel(IQueryable<Ad> ads)
         {
             return ads.Select(a => new AdIndexViewModel
             {
@@ -219,5 +280,16 @@ namespace NVMotors.Sevices.Data
 
             });
         }
+        public async Task<bool> ValidateMotorId(Guid id)
+        {
+            var motorExists = await context.Motors.AnyAsync(m => m.Id == id);
+            if (!motorExists)
+            {
+                throw new NullReferenceException("Invalid Motor.");
+            }
+            return true;
+        }
+
     }
+
 }

@@ -79,7 +79,7 @@
             Back
         </button>
     </div>
-     @if (!Model.IsSeller)
+     @if (!Model.IsSeller && !User.IsInRole("Administrator"))
     {
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#queryModal">
             Мake a request
