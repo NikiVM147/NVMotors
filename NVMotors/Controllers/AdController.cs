@@ -9,11 +9,9 @@ namespace NVMotors.Web.Controllers
 {
     public class AdController : BaseController
     {
-        private readonly NVMotorsDbContext context;
         private readonly IAdService adService;
-        public AdController(NVMotorsDbContext _context, IAdService _adService)
+        public AdController( IAdService _adService)
         {
-            context = _context;
             adService = _adService;
         }
         
