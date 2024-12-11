@@ -17,8 +17,8 @@ namespace NVMotors.Web.ViewModels.Query
         [RegularExpression(@"^(\+359|0)\d{9}$", ErrorMessage = "Please enter valid phone number")]
         public string PhoneNumber { get; set; } = string.Empty;
         [Required]
-        [MinLength(DescriptionMinLengt)]
-        [MaxLength(DescriptionMaxLengt)]
+        [MinLength(DescriptionQueryMinLengt)]
+        [MaxLength(DescriptionQueryMaxLengt)]
         public string Description { get; set; } = string.Empty;
         [Required]
         [ForeignKey(nameof(AdId))]

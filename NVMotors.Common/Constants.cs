@@ -31,5 +31,8 @@
         public const string ErrorData = "Error occured";
         public const string SuccessData = "Success";
         public const string Information = "Information";
+
+        public const int DescriptionQueryMinLengt = 10;
+        public const int DescriptionQueryMaxLengt = 500;
     }
 }

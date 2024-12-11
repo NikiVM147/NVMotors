@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Yo67/AGY7KtQ2pZ3pbTt3MaOBRU+v/YZKRhWLN3zMc4=",
+  "Hash": "v7EvVoTYD5sN+WnsJMiVwshi7ok4U3pMggDoyJ4sZNE=",
   "Source": "NVMotors.Web",
   "BasePath": "_content/NVMotors.Web",
   "Mode": "Default",
@@ -1252,6 +1252,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\abd77565-a16e-4423-a2ff-41bb9462d51c.jpg",
+      "SourceId": "NVMotors.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\",
+      "BasePath": "_content/NVMotors.Web",
+      "RelativePath": "images/abd77565-a16e-4423-a2ff-41bb9462d51c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\abd77565-a16e-4423-a2ff-41bb9462d51c.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\BMW.jpg",
       "SourceId": "NVMotors.Web",
       "SourceType": "Discovered",
@@ -1288,6 +1307,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\BMW1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\db0ef748-b81f-4c3a-9f61-9cab053aa7e4.jpg",
+      "SourceId": "NVMotors.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\",
+      "BasePath": "_content/NVMotors.Web",
+      "RelativePath": "images/db0ef748-b81f-4c3a-9f61-9cab053aa7e4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\db0ef748-b81f-4c3a-9f61-9cab053aa7e4.jpg"
     },
     {
       "Identity": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\ducati.jpg",
@@ -1668,25 +1706,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\triumph1.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\Yamaha.jpg",
-      "SourceId": "NVMotors.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\",
-      "BasePath": "_content/NVMotors.Web",
-      "RelativePath": "images/Yamaha.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Yamaha.jpg"
     },
     {
       "Identity": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\yamaha1.jpg",

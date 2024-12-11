@@ -6,9 +6,11 @@ using System.Security.Claims;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static NVMotors.Common.Constants;
 using NVMotors.Sevices.Data.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace NVMotors.Web.Controllers
 {
+    [Authorize]
     public class QueryController : BaseController
     {
         private readonly IQueryService queryService;
@@ -55,6 +57,8 @@ namespace NVMotors.Web.Controllers
             {
                 if (!ModelState.IsValid)
                 {
+                    TempData["ShowModal"] = "true";
+                    TempData[nameof(ErrorData)] = "Invalid data";
                     return RedirectToAction("Details", "Ad", new { id = queryModel.AdId });
                 }
                 await queryService.CreateQueryAsync(queryModel, GetCurrentUserId());

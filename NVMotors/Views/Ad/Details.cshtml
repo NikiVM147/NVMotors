@@ -1,6 +1,5 @@
 ﻿@using NVMotors.Web.ViewModels.Query;
 @model NVMotors.Web.ViewModels.Ad.AdDetailViewModel
-
 @{
     ViewData["Title"] = "Ad Details";
 }
@@ -84,21 +83,32 @@
             Back
         </button>
     </div>
-     @if (!Model.IsSeller && !User.IsInRole("Administrator"))
+    @if (!Model.IsSeller && !User.IsInRole("Administrator") && User.Identity.IsAuthenticated)
     {
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#queryModal">
             Мake a request
         </button>
     }
+   
 </div>
 @await Html.PartialAsync("_QueryModal", new MakeQueryViewModel { AdId = Model.Id })
+
 @section Scripts {
     <script>
+        @if (TempData["ShowModal"] != null)
+        {
+            <text>
+                 var myModal = new bootstrap.Modal(document.getElementById('queryModal'));
+            myModal.show();
+            </text>
+        }
+
         document.querySelectorAll('.gallery-thumbnail').forEach(function (thumbnail) {
             thumbnail.addEventListener('click', function () {
                 var imageUrl = thumbnail.getAttribute('data-image-url');
                 document.getElementById('mainImage').src = imageUrl;
             });
         });
+       
     </script>
 }
