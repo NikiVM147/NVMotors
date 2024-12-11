@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OktxRY/GrHr7XO0I+8G3ukBHjPM6nGFDqnHivLomnL4=",
+  "Hash": "dfKCvAh5iNhuaWG6imao2Y3SCeZsZng9OpTJ2u+tRXw=",
   "Source": "NVMotors.Web",
   "BasePath": "_content/NVMotors.Web",
   "Mode": "Default",
@@ -1326,25 +1326,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\ducati1.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\f4897989-1215-467a-b4f3-6ba6ad476e96.jpg",
-      "SourceId": "NVMotors.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\",
-      "BasePath": "_content/NVMotors.Web",
-      "RelativePath": "images/f4897989-1215-467a-b4f3-6ba6ad476e96.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\f4897989-1215-467a-b4f3-6ba6ad476e96.jpg"
     },
     {
       "Identity": "C:\\Users\\Niki\\source\\repos\\NVMotors\\NVMotors\\wwwroot\\images\\Guzzi.jpg",

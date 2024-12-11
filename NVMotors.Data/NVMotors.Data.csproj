@@ -42,6 +42,9 @@
     <None Update="DataSets\Motors.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="DataSets\Queries.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="DataSets\Specifications.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

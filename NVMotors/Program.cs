@@ -65,6 +65,8 @@ using (var scope = app.Services.CreateScope())
     seedService.SeedData("DataSets/MotorImages.json", scope.ServiceProvider.GetRequiredService<NVMotorsDbContext>().MotorImages);
     seedService.SeedData("DataSets/Ads.json", scope.ServiceProvider.GetRequiredService<NVMotorsDbContext>().Ads);
     seedService.SeedData("DataSets/AdsImages.json", scope.ServiceProvider.GetRequiredService<NVMotorsDbContext>().AdsImages);
+    seedService.SeedData("DataSets/Queries.json", scope.ServiceProvider.GetRequiredService<NVMotorsDbContext>().Queries);
+
 }
 
 // Configure the HTTP request pipeline.

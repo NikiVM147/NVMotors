@@ -307,3 +307,4 @@ C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\DataSets\Motors.js
 C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\DataSets\MotorImages.json
 C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\DataSets\Ads.json
 C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\DataSets\AdsImages.json
+C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\DataSets\Queries.json

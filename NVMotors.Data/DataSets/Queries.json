@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "f8b35762-4cfb-4b8c-b5a3-239ee143dc42",
+    "PhoneNumber": "+359899123456",
+    "Description": "2021 Honda CRF250R, excellent condition, used for off-road adventures.",
+    "AdId": "d8d07085-c91b-4f84-82d2-0c27471b74d1",
+    "RequesterId": "0a865bea-1234-43ae-ad43-84633ee9d6df",
+    "DateRequested": "2024-12-11T10:30:00"
+  },
+  {
+    "Id": "b49b072d-d32e-4931-825b-b9c5b3277a27",
+    "PhoneNumber": "+359888987654",
+    "Description": "2020 Yamaha YZF-R6, sport bike, great condition, high performance.",
+    "AdId": "4bfe7c9d-7d5f-4660-96cf-70f4e9c29539",
+    "RequesterId": "0a865bea-1234-43ae-ad43-84633ee9d6df",
+    "DateRequested": "2024-12-11T11:30:00"
+  },
+  {
+    "Id": "d27a2d4e-b557-4ca5-a3a3-17db9c7b5f4d",
+    "PhoneNumber": "+359887654321",
+    "Description": "2022 Kawasaki Ninja 400, used but in excellent condition, perfect for daily rides.",
+    "AdId": "f5e7cf43-9c60-4b34-bc0c-d6014db5f925",
+    "RequesterId": "0a865bea-1234-43ae-ad43-84633ee9d6df",
+    "DateRequested": "2024-12-11T12:30:00"
+  }
+]
