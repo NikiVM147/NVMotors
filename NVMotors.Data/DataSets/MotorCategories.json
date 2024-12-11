@@ -1,35 +1,46 @@
 [
   {
+    "Id": "d38c5f83-79d4-4870-85c0-e08d7b6db73a",
     "Name": "ATV"
   },
   {
+    "Id": "1a2f3d4b-b241-46fa-8f52-50566ec98168",
     "Name": "Buggy"
   },
   {
+    "Id": "564f93b3-bfbf-4f93-bb10-b0221e917de1",
     "Name": "Enduro"
   },
   {
+    "Id": "9cf10c1d-c2ea-428d-8ec7-b591c8f4203e",
     "Name": "Snowmobile"
   },
   {
+    "Id": "b3a6e6c7-65de-4ac1-8c6e-5d99f9609735",
     "Name": "Cross"
   },
   {
+    "Id": "4fcf65a8-9d10-470b-bf8e-4a1c91c2f0d0",
     "Name": "Track"
   },
   {
+    "Id": "0cced17c-7437-409a-9546-83222a813f01",
     "Name": "Scooter"
   },
   {
+    "Id": "02bc9ff3-8708-4a24-b474-ec07cd7b6d85",
     "Name": "Tourer"
   },
   {
+    "Id": "9a89cfed-70b9-4734-81b4-5f556a7b39e3",
     "Name": "Chopper"
   },
   {
+    "Id": "0e5a7252-8bc5-408d-bc44-522f7bc4b39e",
     "Name": "Super Moto"
   },
   {
+    "Id": "96dca6f8-7f02-4a99-9fe2-c1b77a207c80",
     "Name": "Trailer"
   }
 ]

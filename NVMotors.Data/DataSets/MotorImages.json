@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "b3c680b1-1f84-4f57-8ac4-46b9f43b5e0e",
+    "ImageUrl": "/images/BMW.jpg"
+  },
+  {
+    "Id": "53fdd1f5-9289-4b62-9b28-032b4c20e3d6",
+    "ImageUrl": "/images/BMW1.jpg"
+  },
+  {
+    "Id": "7d35c33d-cf2a-4a04-a3bb-f68fdd4e0e3c",
+    "ImageUrl": "/images/ducati.jpg"
+  },
+  {
+    "Id": "26a1f1d3-cfbc-473f-a973-c4899830735b",
+    "ImageUrl": "/images/ducati1.jpg"
+  },
+  {
+    "Id": "db99d8be-bb33-4ef2-9b5e-1b17b31b3b29",
+    "ImageUrl": "/images/Guzzi.jpg"
+  },
+  {
+    "Id": "5b519a1d-7ed7-4d97-b39d-bf8b6cba4f7c",
+    "ImageUrl": "/images/Guzzi1.jpg"
+  },
+  {
+    "Id": "a3ed2d2b-9f50-4b7e-a22b-b58a051f1e8e",
+    "ImageUrl": "/images/harley.jpg"
+  },
+  {
+    "Id": "c6c73b1c-d4a1-45e5-9741-b0cf8a6c9be6",
+    "ImageUrl": "/images/harley1.jpg"
+  },
+  {
+    "Id": "16c1b539-f4c7-4e92-b97f-f3b2a9ecb722",
+    "ImageUrl": "/images/honda.jpg"
+  },
+  {
+    "Id": "d8c743b7-2cc7-450b-b055-991ff07e85f6",
+    "ImageUrl": "/images/honda1.jpg"
+  },
+  {
+    "Id": "8d700dd0-4e8f-49fd-8b9f-63f416fe3012",
+    "ImageUrl": "/images/kawasaki.jpg"
+  },
+  {
+    "Id": "8f9bc957-c348-4716-a1b6-0300f89d9458",
+    "ImageUrl": "/images/kawasaki1.jpg"
+  },
+  {
+    "Id": "6b041f3e-3107-4b3d-b156-f7a2a5d97adf",
+    "ImageUrl": "/images/KTM.jpg"
+  },
+  {
+    "Id": "cf83508d-2fdd-47a7-9a96-634f82f57b98",
+    "ImageUrl": "/images/KTM1.jpg"
+  },
+  {
+    "Id": "69e60f34-4b7b-4b0b-bb55-c383db0fa663",
+    "ImageUrl": "/images/suzuki.jpg"
+  },
+  {
+    "Id": "6f01841a-23db-46b9-bb34-c0d4fc93e65e",
+    "ImageUrl": "/images/suzuki_gsx_r600.jpg"
+  },
+  {
+    "Id": "23eae567-d8d3-48e0-bb78-7678fd9f53c3",
+    "ImageUrl": "/images/triumph.jpg"
+  },
+  {
+    "Id": "c8be9f57-b687-4458-baa5-e4c6a3d8b045",
+    "ImageUrl": "/images/triumph1.jpg"
+  },
+  {
+    "Id": "b1979d35-4c88-46f5-a490-2deab4acb3b5",
+    "ImageUrl": "/images/Yamaha.jpg"
+  },
+  {
+    "Id": "f43c5ca4-39cf-4e72-85a4-cf4317f7d0a5",
+    "ImageUrl": "/images/yamaha1.jpg"
+  }
+]

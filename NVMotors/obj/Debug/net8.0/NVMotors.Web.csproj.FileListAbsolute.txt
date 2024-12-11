@@ -302,3 +302,8 @@ C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\runtimes\win-x86\n
 C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\NVMotors.Sevices.Data.dll
 C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\NVMotors.Sevices.Data.pdb
 C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\DataSets\MotorCategories.json
+C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\DataSets\Specifications.json
+C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\DataSets\Motors.json
+C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\DataSets\MotorImages.json
+C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\DataSets\Ads.json
+C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\DataSets\AdsImages.json

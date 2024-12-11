@@ -15,34 +15,41 @@ namespace NVMotors.Data
         {
             var userManager = serviceProvider.GetRequiredService<UserManager<AppUser>>();
 
-            var adminEmail = "admin@gmail.com";
-            var adminPassword = "123456";
-
-            var adminUser = await userManager.FindByEmailAsync(adminEmail);
-            if (adminUser == null)
-            {
-                adminUser = new AppUser
+            var users = new List<AppUser>{
+                new AppUser
                 {
-                    UserName = adminEmail,
-                    Email = adminEmail,
-                    EmailConfirmed = true,
+                    Id = Guid.Parse("06808eb6-53c1-40b1-8802-40a511d6a737"),
+                    UserName = "admin@gmail.com",
+                    Email = "admin@gmail.com",
                     FirstName = "admin",
                     LastName = "admin",
-                };
-
-                var result = await userManager.CreateAsync(adminUser, adminPassword);
-                if (result.Succeeded)
+                },
+                new AppUser
                 {
-                    await userManager.AddToRoleAsync(adminUser, "Administrator");
-                }
-            }
-            foreach (var user in userManager.Users.ToList()) 
+                    Id = Guid.Parse("e6d7e2cf-f056-43b2-bdb0-97b817006d74"),
+                    UserName = "seller@gmail.com",
+                    Email = "seller@gmail.com",
+                    FirstName = "Seller",
+                    LastName = "Seller",
+                },
+                new AppUser
+                {
+                    Id = Guid.Parse("0a865bea-1234-43ae-ad43-84633ee9d6df"),
+                    UserName = "buyer@gmail.com",
+                    Email = "buyer@gmail.com",
+                    FirstName = "Buyer",
+                    LastName = "Buyer",
+                } };
+            foreach (var user in users) 
             {
-                if (user.UserName != adminEmail)
+                var exists = await userManager.FindByIdAsync(user.Id.ToString());
+                if (exists == null)
                 {
-                    if (!await userManager.IsInRoleAsync(user, "User")) 
+                    var result = await userManager.CreateAsync(user, "123456");
+                    if (result.Succeeded)
                     {
-                        await userManager.AddToRoleAsync(user, "User");
+                        var role = user.Email == "admin@gmail.com" ? "Administrator" : "User";
+                        await userManager.AddToRoleAsync(user, role);
                     }
                 }
             }

@@ -1,0 +1,112 @@
+[
+  {
+    "Id": "e3a7552e-4f5b-4328-b3f3-b1d3f8bc1c29",
+    "Year": 2021,
+    "HorsePower": 150,
+    "EngineDisplacement": 1000,
+    "TransmissionType": "Automatic",
+    "FuelType": "Petrol",
+    "Color": "Red",
+    "Condition": "New"
+  },
+  {
+    "Id": "6db44f59-32b5-41c5-b340-d35ff2561c92",
+    "Year": 2020,
+    "HorsePower": 75,
+    "EngineDisplacement": 900,
+    "TransmissionType": "Automatic",
+    "FuelType": "Petrol",
+    "Color": "Black",
+    "Condition": "Used"
+  },
+  {
+    "Id": "9c24a9c4-b3ed-42ed-b59b-fb53a8b4c4b3",
+    "Year": 2019,
+    "HorsePower": 120,
+    "EngineDisplacement": 1000,
+    "TransmissionType": "Automatic",
+    "FuelType": "Petrol",
+    "Color": "Black",
+    "Condition": "New"
+  },
+  {
+    "Id": "43de9c77-853f-4f32-8d2b-970a53c71a11",
+    "Year": 2022,
+    "HorsePower": 200,
+    "EngineDisplacement": 1000,
+    "TransmissionType": "Manual",
+    "FuelType": "Petrol",
+    "Color": "White",
+    "Condition": "Used"
+  },
+  {
+    "Id": "b89c1f6a-881b-4635-92e2-36c80438e710",
+    "Year": 2023,
+    "HorsePower": 100,
+    "EngineDisplacement": 600,
+    "TransmissionType": "Manual",
+    "FuelType": "Petrol",
+    "Color": "Blue",
+    "Condition": "Damaged"
+  },
+  {
+    "Id": "bc9e85bc-d58d-4668-a0f7-b961c65fe6b2",
+    "Year": 2021,
+    "HorsePower": 220,
+    "EngineDisplacement": 1199,
+    "TransmissionType": "Manual",
+    "FuelType": "Petrol",
+    "Color": "Red",
+    "Condition": "Parts"
+  },
+  {
+    "Id": "d1109c45-4996-468f-b3a9-83b8a0c13d4f",
+    "Year": 2021,
+    "HorsePower": 110,
+    "EngineDisplacement": 600,
+    "TransmissionType": "Manual",
+    "FuelType": "Petrol",
+    "Color": "Blue",
+    "Condition": "New"
+  },
+  {
+    "Id": "f01d5d62-3253-453f-b3ea-2b573d7c1d2c",
+    "Year": 2022,
+    "HorsePower": 47,
+    "EngineDisplacement": 250,
+    "TransmissionType": "Manual",
+    "FuelType": "Petrol",
+    "Color": "Red",
+    "Condition": "Used"
+  },
+  {
+    "Id": "d834c477-60c3-45c8-bd2d-6b7675c5e6f0",
+    "Year": 2023,
+    "HorsePower": 47,
+    "EngineDisplacement": 400,
+    "TransmissionType": "Manual",
+    "FuelType": "Electric",
+    "Color": "Green",
+    "Condition": "Used"
+  },
+  {
+    "Id": "9fd11038-110d-463b-92f0-d17167d0b2f7",
+    "Year": 2022,
+    "HorsePower": 90,
+    "EngineDisplacement": 600,
+    "TransmissionType": "Automatic",
+    "FuelType": "Petrol",
+    "Color": "Green",
+    "Condition": "Damaged"
+  },
+  {
+    "Id": "ba245fd5-5781-4f84-945e-daf11f3de1fe",
+    "Year": 2020,
+    "HorsePower": 65,
+    "EngineDisplacement": 390,
+    "TransmissionType": "Manual",
+    "FuelType": "Petrol",
+    "Color": "Orange",
+    "Condition": "New"
+  }
+]

@@ -31,6 +31,7 @@ builder.Services.AddIdentity<AppUser, IdentityRole<Guid>>(cfg =>
     .AddDefaultTokenProviders()
     .AddDefaultUI();
 
+builder.Services.AddTransient<SeedService>();
 builder.Services.AddScoped<IMotorService, MotorService>();
 builder.Services.AddScoped<IAdService, AdService>();
 builder.Services.AddScoped<IAdImageService, AdImageService>();
@@ -43,10 +44,6 @@ var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
 {
-    var seedService = scope.ServiceProvider.GetRequiredService<SeedService>();
-    var json = "DataSets/MotorCategories.json";
-    seedService.SeedCategories(json);
-
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
     var roles = new[] { "User", "Administrator" };
 
@@ -59,9 +56,19 @@ using (var scope = app.Services.CreateScope())
     }
     await SeedUsers.SeedRolesAndUsers(scope.ServiceProvider);
 }
+using (var scope = app.Services.CreateScope())
+{
+    var seedService = scope.ServiceProvider.GetRequiredService<SeedService>();
+    seedService.SeedData("DataSets/MotorCategories.json", scope.ServiceProvider.GetRequiredService<NVMotorsDbContext>().MotorCategories);
+    seedService.SeedData("DataSets/Specifications.json", scope.ServiceProvider.GetRequiredService<NVMotorsDbContext>().Specifications);
+    seedService.SeedData("DataSets/Motors.json", scope.ServiceProvider.GetRequiredService<NVMotorsDbContext>().Motors);
+    seedService.SeedData("DataSets/MotorImages.json", scope.ServiceProvider.GetRequiredService<NVMotorsDbContext>().MotorImages);
+    seedService.SeedData("DataSets/Ads.json", scope.ServiceProvider.GetRequiredService<NVMotorsDbContext>().Ads);
+    seedService.SeedData("DataSets/AdsImages.json", scope.ServiceProvider.GetRequiredService<NVMotorsDbContext>().AdsImages);
+}
 
-    // Configure the HTTP request pipeline.
-    if (app.Environment.IsDevelopment())
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();
 }

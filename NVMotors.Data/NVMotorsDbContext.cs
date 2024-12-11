@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using NVMotors.Data.Models;
+using NVMotors.Data.Models.Enums;
+using System.Reflection.Emit;
 
 namespace NVMotors.Data
 {

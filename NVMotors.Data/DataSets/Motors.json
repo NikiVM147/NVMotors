@@ -1,0 +1,92 @@
+[
+  {
+    "Id": "9eae15c1-dc13-4d93-bb45-1c43a12a4d8a",
+    "Make": "Honda",
+    "Model": "CRF250R",
+    "SpecificationId": "F01D5D62-3253-453F-B3EA-2B573D7C1D2C",
+    "MotorCategoryId": "B3A6E6C7-65DE-4AC1-8C6E-5D99F9609735",
+    "SellerId": "e6d7e2cf-f056-43b2-bdb0-97b817006d74",
+    "IsDeleted": false
+  },
+  {
+    "Id": "1f3a0c29-2a21-4926-977f-2b7c402d6ff3",
+    "Make": "Yamaha",
+    "Model": "YZF-R6",
+    "SpecificationId": "B89C1F6A-881B-4635-92E2-36C80438E710",
+    "MotorCategoryId": "4FCF65A8-9D10-470B-BF8E-4A1C91C2F0D0",
+    "SellerId": "e6d7e2cf-f056-43b2-bdb0-97b817006d74",
+    "IsDeleted": false
+  },
+  {
+    "Id": "c5e4b5f3-65cc-4887-9ba5-e12fa6b2d78e",
+    "Make": "Kawasaki",
+    "Model": "Ninja 400",
+    "SpecificationId": "D834C477-60C3-45C8-BD2D-6B7675C5E6F0",
+    "MotorCategoryId": "4FCF65A8-9D10-470B-BF8E-4A1C91C2F0D0",
+    "SellerId": "e6d7e2cf-f056-43b2-bdb0-97b817006d74",
+    "IsDeleted": false
+  },
+  {
+    "Id": "74d9e6b2-e2a0-4731-94d2-13f2327e4d8b",
+    "Make": "Suzuki",
+    "Model": "GSX-R600",
+    "SpecificationId": "D1109C45-4996-468F-B3A9-83B8A0C13D4F",
+    "MotorCategoryId": "4FCF65A8-9D10-470B-BF8E-4A1C91C2F0D0",
+    "SellerId": "e6d7e2cf-f056-43b2-bdb0-97b817006d74",
+    "IsDeleted": false
+  },
+  {
+    "Id": "1b93a56e-3214-49c4-a03b-e04f19d768de",
+    "Make": "BMW",
+    "Model": "S1000RR",
+    "SpecificationId": "43DE9C77-853F-4F32-8D2B-970A53C71A11",
+    "MotorCategoryId": "4FCF65A8-9D10-470B-BF8E-4A1C91C2F0D0",
+    "SellerId": "e6d7e2cf-f056-43b2-bdb0-97b817006d74",
+    "IsDeleted": false
+  },
+  {
+    "Id": "d1e70419-82a4-47b1-97f4-b6bcffcd835d",
+    "Make": "Harley-Davidson",
+    "Model": "Sportster S",
+    "SpecificationId": "E3A7552E-4F5B-4328-B3F3-B1D3F8BC1C29",
+    "MotorCategoryId": "9A89CFED-70B9-4734-81B4-5F556A7B39E3",
+    "SellerId": "e6d7e2cf-f056-43b2-bdb0-97b817006d74",
+    "IsDeleted": false
+  },
+  {
+    "Id": "86e16d44-b17e-4975-9bb6-b60b6595c77a",
+    "Make": "Ducati",
+    "Model": "Panigale V4",
+    "SpecificationId": "BC9E85BC-D58D-4668-A0F7-B961C65FE6B2",
+    "MotorCategoryId": "4FCF65A8-9D10-470B-BF8E-4A1C91C2F0D0",
+    "SellerId": "e6d7e2cf-f056-43b2-bdb0-97b817006d74",
+    "IsDeleted": false
+  },
+  {
+    "Id": "bc25b7e1-71d3-4502-bd91-b810627db31f",
+    "Make": "Triumph",
+    "Model": "Street Triple",
+    "SpecificationId": "9FD11038-110D-463B-92F0-D17167D0B2F7",
+    "MotorCategoryId": "02BC9FF3-8708-4A24-B474-EC07CD7B6D85",
+    "SellerId": "e6d7e2cf-f056-43b2-bdb0-97b817006d74",
+    "IsDeleted": false
+  },
+  {
+    "Id": "69a340d5-23cf-4f16-b77c-8d71222f58a2",
+    "Make": "Moto Guzzi",
+    "Model": "V7",
+    "SpecificationId": "6DB44F59-32B5-41C5-B340-D35FF2561C92",
+    "MotorCategoryId": "02BC9FF3-8708-4A24-B474-EC07CD7B6D85",
+    "SellerId": "e6d7e2cf-f056-43b2-bdb0-97b817006d74",
+    "IsDeleted": false
+  },
+  {
+    "Id": "b98fbb3e-0e75-4666-b2c2-5fc2e69c5c65",
+    "Make": "KTM",
+    "Model": "RC 390",
+    "SpecificationId": "BA245FD5-5781-4F84-945E-DAF11F3DE1FE",
+    "MotorCategoryId": "4FCF65A8-9D10-470B-BF8E-4A1C91C2F0D0",
+    "SellerId": "e6d7e2cf-f056-43b2-bdb0-97b817006d74",
+    "IsDeleted": false
+  }
+]

@@ -19,3 +19,8 @@ C:\Users\Niki\source\repos\NVMotors\NVMotors.Data\obj\Debug\net8.0\NVMotors.Data
 C:\Users\Niki\source\repos\NVMotors\NVMotors.Data\obj\Debug\net8.0\NVMotors.Data.genruntimeconfig.cache
 C:\Users\Niki\source\repos\NVMotors\NVMotors.Data\obj\Debug\net8.0\ref\NVMotors.Data.dll
 C:\Users\Niki\source\repos\NVMotors\NVMotors.Data\bin\Debug\net8.0\DataSets\MotorCategories.json
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Data\bin\Debug\net8.0\DataSets\Specifications.json
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Data\bin\Debug\net8.0\DataSets\Motors.json
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Data\bin\Debug\net8.0\DataSets\MotorImages.json
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Data\bin\Debug\net8.0\DataSets\Ads.json
+C:\Users\Niki\source\repos\NVMotors\NVMotors.Data\bin\Debug\net8.0\DataSets\AdsImages.json

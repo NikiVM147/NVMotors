@@ -18,9 +18,9 @@ namespace NVMotors.Sevices.Data
         {
             context = _context;
         }
-        public void SeedCategories(string json)
+        public void SeedData<T>(string json, DbSet<T> table) where T : class
         {
-            if (!context.MotorCategories.Any()) 
+            if (!table.Any()) 
             {
                 var path = Path.Combine(AppContext.BaseDirectory, json);
                 if (!File.Exists(path))
@@ -28,12 +28,12 @@ namespace NVMotors.Sevices.Data
                     throw new FileNotFoundException("JSON file not found.", path);
                 }
 
-                var data = File.ReadAllText(path);
-                var categories = JsonSerializer.Deserialize<List<MotorCategory>>(data);
+                var jsonData = File.ReadAllText(path);
+                var data = JsonSerializer.Deserialize<List<T>>(jsonData);
 
-                if (categories != null)
+                if (data != null)
                 {
-                    context.MotorCategories.AddRange(categories);
+                    table.AddRange(data);
                     context.SaveChanges();
                 }
             }

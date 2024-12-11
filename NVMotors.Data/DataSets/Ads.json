@@ -1,0 +1,102 @@
+[
+  {
+    "Id": "d8d07085-c91b-4f84-82d2-0c27471b74d1",
+    "DateAd": "2024-12-11T10:00:00",
+    "Description": "2021 Honda CRF250R, excellent condition, used for off-road adventures.",
+    "MotorId": "9eae15c1-dc13-4d93-bb45-1c43a12a4d8a",
+    "Price": 9000.00,
+    "Town": "Sofia",
+    "PhoneNumber": "+359899123456",
+    "IsApproved": true
+  },
+  {
+    "Id": "4bfe7c9d-7d5f-4660-96cf-70f4e9c29539",
+    "DateAd": "2024-12-11T11:00:00",
+    "Description": "2020 Yamaha YZF-R6, sport bike, great condition, high performance.",
+    "MotorId": "1f3a0c29-2a21-4926-977f-2b7c402d6ff3",
+    "Price": 12000.00,
+    "Town": "Plovdiv",
+    "PhoneNumber": "+359888987654",
+    "IsApproved": false
+  },
+  {
+    "Id": "f5e7cf43-9c60-4b34-bc0c-d6014db5f925",
+    "DateAd": "2024-12-11T12:00:00",
+    "Description": "2022 Kawasaki Ninja 400, used but in excellent condition, perfect for daily rides.",
+    "MotorId": "c5e4b5f3-65cc-4887-9ba5-e12fa6b2d78e",
+    "Price": 9500.00,
+    "Town": "Varna",
+    "PhoneNumber": "+359887654321",
+    "IsApproved": true
+  },
+  {
+    "Id": "bb78d07a-5f3f-44c4-9a64-e098581d52b9",
+    "DateAd": "2024-12-11T13:00:00",
+    "Description": "2021 Suzuki GSX-R600, low mileage, well-maintained, fantastic for racing.",
+    "MotorId": "74d9e6b2-e2a0-4731-94d2-13f2327e4d8b",
+    "Price": 11000.00,
+    "Town": "Burgas",
+    "PhoneNumber": "+359888555777",
+    "IsApproved": true
+  },
+  {
+    "Id": "db2c3b19-ef1e-4236-8a7d-b39ef2f02d44",
+    "DateAd": "2024-12-11T14:00:00",
+    "Description": "2020 BMW S1000RR, powerful engine, top condition, ready for a new owner.",
+    "MotorId": "1b93a56e-3214-49c4-a03b-e04f19d768de",
+    "Price": 17000.00,
+    "Town": "Sofia",
+    "PhoneNumber": "+359876543210",
+    "IsApproved": false
+  },
+  {
+    "Id": "b55f94fe-4502-409e-baf1-d1e774fbc9a5",
+    "DateAd": "2024-12-11T15:00:00",
+    "Description": "2022 Harley-Davidson Sportster S, fully restored, ideal for collectors.",
+    "MotorId": "d1e70419-82a4-47b1-97f4-b6bcffcd835d",
+    "Price": 22000.00,
+    "Town": "Plovdiv",
+    "PhoneNumber": "+359899654321",
+    "IsApproved": true
+  },
+  {
+    "Id": "9d029cb1-2ba1-4c7a-baad-57c3128b828d",
+    "DateAd": "2024-12-11T16:00:00",
+    "Description": "2022 Ducati Panigale V4, excellent condition, low mileage, great for performance.",
+    "MotorId": "86e16d44-b17e-4975-9bb6-b60b6595c77a",
+    "Price": 21000.00,
+    "Town": "Varna",
+    "PhoneNumber": "+359876543987",
+    "IsApproved": true
+  },
+  {
+    "Id": "1a3d7fb5-8b51-4a7d-bd65-66f21c49a2bb",
+    "DateAd": "2024-12-11T17:00:00",
+    "Description": "2020 Triumph Street Triple, very reliable, low mileage, with additional modifications.",
+    "MotorId": "bc25b7e1-71d3-4502-bd91-b810627db31f",
+    "Price": 12000.00,
+    "Town": "Sofia",
+    "PhoneNumber": "+359878654321",
+    "IsApproved": false
+  },
+  {
+    "Id": "f9c6233e-4406-44ed-97c8-3f877e8c5e74",
+    "DateAd": "2024-12-11T18:00:00",
+    "Description": "2023 Moto Guzzi V7, classic style, perfect condition, ideal for long rides.",
+    "MotorId": "69a340d5-23cf-4f16-b77c-8d71222f58a2",
+    "Price": 13000.00,
+    "Town": "Burgas",
+    "PhoneNumber": "+359876543210",
+    "IsApproved": true
+  },
+  {
+    "Id": "e908ad60-961f-47e2-b045-8c1d38831bc2",
+    "DateAd": "2024-12-11T19:00:00",
+    "Description": "2022 KTM RC 390, amazing performance, brand new condition.",
+    "MotorId": "b98fbb3e-0e75-4666-b2c2-5fc2e69c5c65",
+    "Price": 11500.00,
+    "Town": "Sofia",
+    "PhoneNumber": "+359889876543",
+    "IsApproved": true
+  }
+]
