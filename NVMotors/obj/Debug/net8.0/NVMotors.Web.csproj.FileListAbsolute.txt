@@ -308,3 +308,4 @@ C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\DataSets\MotorImag
 C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\DataSets\Ads.json
 C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\DataSets\AdsImages.json
 C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\DataSets\Queries.json
+C:\Users\Niki\source\repos\NVMotors\NVMotors\bin\Debug\net8.0\System.ClientModel.dll

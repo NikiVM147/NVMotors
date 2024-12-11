@@ -13,12 +13,20 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 body {
-  margin-bottom: 60px;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .hero-section {
@@ -188,4 +196,9 @@ section.container h4 {
 
 .btn-primary:hover {
     background-color: #0056b3;
+}
+footer.footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
 }
